@@ -3,6 +3,8 @@ var homeFooter = new HomeFooter();
 
 $(function() {
   
+  loginModal = new LoginModal();
+  
   $("#second").bootFolio({
     bfLayout: "bflayhover",
     bfFullWidth:"box", 
