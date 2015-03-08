@@ -19,7 +19,7 @@ var AdminTools = Backbone.View.extend({
 		newPostNav.render();
 	},
 	render: function() {
-		this.$el.html(this.template());
+		this.$el.append(this.template());
 		return this;
 	},
 });

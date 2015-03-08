@@ -4,8 +4,14 @@ var NewPostView = Backbone.View.extend({
 	initialize: function() {
 		this.render();
 	},
+	events: {
+		'click .close' : 'hide',
+	},
 	render: function() {
-		this.$el.html(this.template());
+		this.$el.prepend(this.template());
 		return this;
 	},
+	hide: function() {
+		$('#new-post').hide();
+	}
 });

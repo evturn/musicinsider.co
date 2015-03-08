@@ -12,7 +12,10 @@ var NewPostNav = Backbone.View.extend({
 		this.$el.prepend(this.template());
 		return this;
 	},
-	newPostForm: function() {
+	newPostForm: function(e) {
+		e.preventDefault();
 		var newPostView = new NewPostView();
+		$('#new-post').hide();
+		$('#new-post').slideToggle();
 	},
 });
