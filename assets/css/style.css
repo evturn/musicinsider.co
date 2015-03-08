@@ -26,7 +26,7 @@
 
 @import url(http://fonts.googleapis.com/css?family=Dosis:400,500,300,200,600,700,800);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic,900,900italic,100,100italic);
-@import url(assets/css/lib/font-awesome.css);
+@import url(./lib/font-awesome.css);
 
 body { 
     background:#fff;
@@ -3397,7 +3397,7 @@ figure.effect-milo:hover .image {
 
 .dmtop {
     background-color:#0b0b0b;
-    background-image: url(assets/img/arrow.png);
+    background-image: url(../img/arrow.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     z-index: 9999;
