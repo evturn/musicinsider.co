@@ -14,6 +14,7 @@ var NewPostNav = Backbone.View.extend({
 	},
 	newPostForm: function(e) {
 		e.preventDefault();
+		$('#new-post').remove();
 		var newPostView = new NewPostView();
 		$('#new-post').hide();
 		$('#new-post').slideToggle();

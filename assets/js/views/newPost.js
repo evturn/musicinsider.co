@@ -13,5 +13,8 @@ var NewPostView = Backbone.View.extend({
 	},
 	hide: function() {
 		$('#new-post').slideToggle();
+		setTimeout(function() {
+			$('#new-post').remove();
+		}, 500);
 	}
 });

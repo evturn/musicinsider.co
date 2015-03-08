@@ -12,11 +12,15 @@ var AdminTools = Backbone.View.extend({
 	showLogin: function() {
 		$('#login-form').slideToggle();
 	},
-	showNewPostBtn: function() {
-		console.log('Login button clicked');
+	showNewPostBtn: function(e) {
+    console.log('we fading!');
+		e.preventDefault();
 		$('#login-form').remove();
 		newPostNav = new NewPostNav();
 		newPostNav.render();
+		$('#new-post-btn').css({opacity: 0})
+  	$('#new-post-btn').fadeTo({opacity: 1}, 5000);
+
 	},
 	render: function() {
 		this.$el.append(this.template());
