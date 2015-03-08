@@ -29,5 +29,6 @@ var NewPostView = Backbone.View.extend({
     	body: body
     });
     return false;
+    this.hide();
 	},
 });
