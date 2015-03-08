@@ -1,8 +1,5 @@
-# Music Insider
+# Music Insider Podcast Website
 
-## Music Insider Podcast Website
-
-### Landing
 ![Alt text](https://raw.githubusercontent.com/evturn/musicinsider.co/master/assets/img/music-insider-1.png)
 
 ### Latest Episodes
