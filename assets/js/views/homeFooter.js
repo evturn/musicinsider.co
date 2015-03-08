@@ -6,10 +6,14 @@ var HomeFooter = Backbone.View.extend({
 		$('#login-form').hide();
 	},
 	events: {
-		'click #admin' : 'showLogin'
+		'click #admin' 		 : 'showLogin',
+		'click #login-btn' : 'userLoginAuth'
 	},
 	showLogin: function() {
 		$('#login-form').slideToggle();
+	},
+	userLoginAuth: function() {
+		console.log('User attemping to log in.');
 	},
 	render: function() {
 		this.$el.html(this.template());
