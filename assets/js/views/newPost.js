@@ -1,4 +1,4 @@
-var NewPostView = Backbone.View.extend({
+var NewPostForm = Backbone.View.extend({
 	el: '#admin-tools',
 	template: _.template($('#new-post-template').html()),
 	initialize: function() {
