@@ -3,7 +3,6 @@ var NewPostForm = Backbone.View.extend({
 	template: _.template($('#new-post-template').html()),
 	initialize: function() {
 		this.listenTo(this.collection);
-		console.log('allPosts', allPosts);
 		this.render();
 	},
 	events: {

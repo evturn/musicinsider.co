@@ -24,7 +24,6 @@
     <link href="assets/css/lib/extralayers.css" rel="stylesheet">
     <link href="assets/css/lib/animate.css" rel="stylesheet">
     <link href="assets/css/lib/carousel.css" rel="stylesheet">
-    <link href="assets/css/lib/owl-carousel.css" rel="stylesheet">
     <link href="assets/css/lib/et-line.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 
@@ -316,28 +315,11 @@
 
 
 		<script type="text/template" id="blog-post-template">
-			<div class="blog-item">
-        <div class="entry">
-          <img src="assets/img/blog_01.jpg" alt="" class="img-responsive">
-          <div class="magnifier">
-            <div class="buttons text-center">
-              <h3><a href="single-onepage.html">Read more</a></h3>
-            </div><!-- end buttons -->
-          </div>
-        </div><!-- end entry -->
-        <div class="desc">
-          <h3><a href="#" title=""></a>Episode 1 - Jesse Ventura</h3>
-          <p>Experts from all sides of the industry. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Curabitur blandit tempus porttitor. Sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-        </div><!-- end desc -->
-        <div class="meta">
-          <div class="pull-left">
-            <p>March  3, 2015</p>
-          </div><!-- end left -->
-          <div class="pull-right">
-            <p><a href="#">2 Comment</a> <a href="#">32 Likes</a> <a href="#"><i class="fa fa-share-alt"></i></a></p>
-          </div><!-- end right -->
-        </div><!-- end meta -->
-      </div><!-- end blog -->
+			<div class="col-xs-12 col-sm-6 ">
+        <img src="assets/img/blog_01.jpg" alt="" class="img-responsive">
+        <h3><a href="#" title=""></a><%= title %></h3>
+        <p><%= body %></p>
+      </div>
 		</script>
 
 
@@ -431,9 +413,6 @@
     <script src="assets/js/lib/jquery.jigowatt.js"></script>
     <!-- Parallax -->
     <script src="assets/js/lib/smooth-scroll.js"></script>
-    <!-- Carousel -->
-    <script src="assets/js/lib/owl.carousel.js"></script>
-    <script src="assets/js/lib/owl-scripts.js"></script>
     <!-- Verttical Carousel -->
     <script src="assets/js/lib/jquery.bxslider.js"></script>
     <!-- Lightbox Scripts -->
