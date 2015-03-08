@@ -1,6 +1,6 @@
 var adminTools = new AdminTools();
 allPosts = new AllPosts();
-
+blogPost = new BlogPost({collection: allPosts});
 
 $(function() {
 
