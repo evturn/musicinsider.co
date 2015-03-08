@@ -348,7 +348,7 @@
 
 
 	<div class="darkcopyrights copyrights" id="admin-tools"></div>
-
+	<section id="new-post" class="section-p"></section>
 		
   <div class="dmtop">Scroll to Top</div>
 
@@ -387,16 +387,40 @@
 		      </div>
 	      </div>
 	    </div>
-
 	    <div class="container">
 	      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 	        <p><a href="#login-form" id="admin"><i class="fa fa-birthday-cake"></i></a><p>
 	        <p>Copyright 2015 ©  Music Insider | All Rights Reserved</p>
 	      </div><!-- end col-lg-4 -->
 	    </div><!-- end container -->
-	
 		</script>
 
+<script type="text/template" id="new-post-template">
+	<div class="container">	
+		<div class="section-title text-center">
+    	<h3><span class="font-backend">N</span> New Post</h3>
+		</div>
+		<div class="section-wrapper">
+			<form class="form-horizontal">
+				<div class="form-group form-group-lg">
+					<div class="col-xs-12 col-sm-9 col-sm-offset-1">
+						<input type="text" class="form-control" name="text" placeholder="Title" autofocus>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-xs-12 col-sm-9 col-sm-offset-1">
+						<textarea id="post-body" class="form-control" rows="10"></textarea>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-xs-1 col-sm-1 col-sm-offset-1">
+						<button type="submit" class="btn btn-primary btn-lg">Publish</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</script>
 
     <!-- jQuery -->
     <script src="assets/js/lib/jquery.js"></script>
@@ -436,5 +460,8 @@
     <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
     <script type="text/javascript" src="assets/plugins/rs-plugin/js/jquery.themepunch.tools.min.js"></script>   
     <script type="text/javascript" src="assets/plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-    <script type="text/javascript" src="assets/js/views/homeFooter.js"></script>
+    <script type="text/javascript" src="assets/js/models/post.js"></script>
+  	<script type="text/javascript" src="assets/js/collections/allPosts.js"></script>
+    <script type="text/javascript" src="assets/js/views/newPost.js"></script>
+    <script type="text/javascript" src="assets/js/views/adminTools.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>

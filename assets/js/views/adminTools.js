@@ -15,6 +15,7 @@ var AdminTools = Backbone.View.extend({
 	userLoginAuth: function() {
 		console.log('User attemping to log in.');
 		$('#login-form').html('');
+		var newPost = new NewPostView();
 	},
 	render: function() {
 		this.$el.html(this.template());
