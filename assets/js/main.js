@@ -1,4 +1,4 @@
-$(function () {
+$(function() {
   
   $("#second").bootFolio({
     bfLayout: "bflayhover",
