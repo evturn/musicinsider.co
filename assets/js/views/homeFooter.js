@@ -1,6 +1,6 @@
-var NewPostView = Backbone.View.extend({
-	el: '#new-post',
-	template: _.template($('#new-post-template').html()),
+var HomeFooter = Backbone.View.extend({
+	el: '#home-footer',
+	template: _.template($('#home-footer-template').html()),
 	initialize: function() {
 		this.render();
 	},

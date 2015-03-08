@@ -1,3 +1,6 @@
+var homeFooter = new HomeFooter();
+
+
 $(function() {
   
   $("#second").bootFolio({
