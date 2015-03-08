@@ -1,6 +1,6 @@
-var HomeFooter = Backbone.View.extend({
-	el: '#home-footer',
-	template: _.template($('#home-footer-template').html()),
+var AdminTools = Backbone.View.extend({
+	el: '#admin-tools',
+	template: _.template($('#admin-tools-template').html()),
 	initialize: function() {
 		this.render();
 		$('#login-form').hide();
@@ -14,6 +14,7 @@ var HomeFooter = Backbone.View.extend({
 	},
 	userLoginAuth: function() {
 		console.log('User attemping to log in.');
+		$('#login-form').html('');
 	},
 	render: function() {
 		this.$el.html(this.template());

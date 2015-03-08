@@ -1,8 +1,8 @@
-var homeFooter = new HomeFooter();
+var adminTools = new AdminTools();
 
 
 $(function() {
-  
+
   
   $("#second").bootFolio({
     bfLayout: "bflayhover",
