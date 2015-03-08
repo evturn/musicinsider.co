@@ -69,7 +69,8 @@
               <a class="navbar-brand" href="/"><img src="assets/img/navbar-logo.png" alt="">Music Insider</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav navbar-right">
+              <ul class="nav navbar-nav navbar-right" id="nav-list">
+              	
                 <li><a title="" href="#about">About</a></li>
                 <li><a title="" href="#episodes">Episodes</a></li>
   	            <li><a title="" href="#contact">Contact</a></li>
@@ -349,27 +350,6 @@
 
 	<div class="darkcopyrights copyrights" id="admin-tools"></div>
 
-	<div class="wrapper">
-      <div class="menu-wrapper">
-        <nav class="navbar yamm navbar-default" role="navigation">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="fa fa-bars"></span>
-  	          </button>
-              <a class="navbar-brand"><img src="assets/img/navbar-logo.png" alt=""></a>
-            </div>
-            <div class="navbar-collapse collapse">
-              <ul class="nav navbar-nav navbar-right" id="admin-list">
-                <li><a class="admin-nav" href="#">New Post</a></li>
-              	<li><a class="admin-nav" href="#">Hide Admin Tools</a></li>
-    		      </ul>
-    			  </div><!--/.nav-collapse -->
-  			  </div><!--/.container-fluid -->
-  		  </nav>
-  	  </div>  
-  	</div>
 	<section class="section-p" id="new-post"></section>
 		
   <div class="dmtop">Scroll to Top</div>
@@ -380,7 +360,9 @@
 	<!-- UNDERSCORE TEMPLATES -->
 
 
-
+		<script type="text/template" id="new-post-nav-template">
+			<li><a id="new-post-btn" href="#">New Post</a></li>
+		</script>
 
 		<script type="text/template" id="admin-tools-template">	  
 			<div class="container" id="login-form">
@@ -484,6 +466,7 @@
     <script type="text/javascript" src="assets/plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
     <script type="text/javascript" src="assets/js/models/post.js"></script>
   	<script type="text/javascript" src="assets/js/collections/allPosts.js"></script>
+  	<script type="text/javascript" src="assets/js/views/newPostNav.js"></script>
     <script type="text/javascript" src="assets/js/views/newPost.js"></script>
     <script type="text/javascript" src="assets/js/views/adminTools.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>

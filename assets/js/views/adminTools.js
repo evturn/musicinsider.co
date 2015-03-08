@@ -7,15 +7,16 @@ var AdminTools = Backbone.View.extend({
 	},
 	events: {
 		'click #admin' 		 : 'showLogin',
-		'click #login-btn' : 'userLoginAuth'
+		'click #login-btn' : 'showNewPostBtn'
 	},
 	showLogin: function() {
 		$('#login-form').slideToggle();
 	},
-	userLoginAuth: function() {
+	showNewPostBtn: function() {
 		console.log('Login button clicked');
-		$('#login-form').html('');
-		var newPost = new NewPostView();
+		$('#login-form').remove();
+		newPostNav = new NewPostNav();
+		newPostNav.render();
 	},
 	render: function() {
 		this.$el.html(this.template());
