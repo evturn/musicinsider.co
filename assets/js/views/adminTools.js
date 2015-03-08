@@ -13,7 +13,7 @@ var AdminTools = Backbone.View.extend({
 		$('#login-form').slideToggle();
 	},
 	userLoginAuth: function() {
-		console.log('User attemping to log in.');
+		console.log('Login button clicked');
 		$('#login-form').html('');
 		var newPost = new NewPostView();
 	},
