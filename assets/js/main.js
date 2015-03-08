@@ -1,8 +1,9 @@
 var adminTools = new AdminTools();
 allPosts = new AllPosts();
+allBlogPosts = new AllBlogPosts({collection: allPosts});
 
 $(function() {
-allBlogPosts = new AllBlogPosts({collection: allPosts});
+
 
   $("#second").bootFolio({
     bfLayout: "bflayhover",

@@ -1,8 +1,7 @@
 var AllBlogPosts = Backbone.View.extend({
-	el: '#owl-blog',
+	el: '#podcast-episode',
 	initialize: function() {
-		this.listenTo(this.collection, 'reset', this.addAll)
-		this.addAll();
+		this.listenTo(this.collection, 'all', this.addAll);
 	},
 	addOne: function(model) {
 		var blogPost = new BlogPost({model: model});

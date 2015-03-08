@@ -139,19 +139,21 @@
         <h3><span class="font-backend">E</span> Episodes</h3>
         <p class="lead">Music Insider talks to the best and only the best when being the best because we're the best and that's what the best do best believe I will place my bets on the New York Knicks<br> because I like losing.</p>
       </div><!-- end sectiontitle -->
-
-      <div class="section-wrapper">
-        <div id="owl-blog">
-
-          <!-- EPIDODE 1 -->
-          
-
-         
-        </div><!-- end owl-blog -->
-      </div><!-- end section-wrapper -->
-    
     </div><!-- end container -->
-  </section><!-- end section -->
+ <div class="container">
+    <div class="row">
+      <div id="post-content" class="col-md-12 col-sm-12 col-xs-12 pull-left">
+      	<div class="blog-list row" id="podcast-episode">
+ 
+        </div><!-- end blog list -->
+      </div><!-- end col -->
+		</div><!-- end row -->
+	</div><!-- end container -->
+	</section><!-- end section -->
+
+
+
+
 
 
   <!-- IMAGE POP-UP -->
@@ -315,11 +317,29 @@
 
 
 		<script type="text/template" id="blog-post-template">
-			<div class="col-xs-12 col-sm-6 ">
-        <img src="assets/img/blog_01.jpg" alt="" class="img-responsive">
-        <h3><a href="#" title=""></a><%= title %></h3>
-        <p><%= body %></p>
-      </div>
+			          <div class="blog-item col-md-6">
+            <div class="post-media entry">
+              <img src="assets/img/blog_01.jpg" alt="" class="img-responsive">
+              <div class="magnifier">
+	              <div class="buttons text-center">
+                  <h3><a href="single-onepage.html">Read more</a></h3>
+                </div><!-- end buttons -->
+              </div>
+		        </div><!-- end entry -->
+	          <div class="desc">
+	            <h3><a href="#" title=""><%= title %></a></h3>
+		          <p><%= body %></p>
+            </div><!-- end desc -->
+            <div class="meta">
+              <div class="pull-left">
+                <p>February  26, 2015</p>
+            </div><!-- end left -->
+            <div class="pull-right">
+              <p><a href="#">2 Comment</a> <a href="#">32 Likes</a> <a href="#"><i class="fa fa-share-alt"></i></a></p>
+            </div><!-- end right -->
+          	</div><!-- end meta -->
+        	</div><!-- end blog -->
+      
 		</script>
 
 
@@ -413,6 +433,9 @@
     <script src="assets/js/lib/jquery.jigowatt.js"></script>
     <!-- Parallax -->
     <script src="assets/js/lib/smooth-scroll.js"></script>
+     <!-- Carousel -->
+    <script src="assets/js/lib/owl.carousel.js"></script>
+    <script src="assets/js/lib/owl-scripts.js"></script>
     <!-- Verttical Carousel -->
     <script src="assets/js/lib/jquery.bxslider.js"></script>
     <!-- Lightbox Scripts -->
