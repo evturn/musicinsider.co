@@ -1,0 +1,1 @@
+var AllBlogPosts = Backbone.View.extend({});

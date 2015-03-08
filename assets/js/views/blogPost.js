@@ -1,17 +1,11 @@
 var BlogPost = Backbone.View.extend({
-	el: '#owl-blog',
 	template: _.template($('#blog-post-template').html()),
 	initialize: function() {
 		this.listenTo(this.collection);
 		this.render();
 	},
 	render: function() {
-		this.$el.append(this.template());
+		this.$el.html(this.template(this.model.toJSON()));
 		return this;
 	},
-	// addAll: function() {
-	// 	this.collection.each(function(model) {
-			
-	// 	})
-	// },
 });
