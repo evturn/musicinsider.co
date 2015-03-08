@@ -69,8 +69,7 @@
               <a class="navbar-brand" href="/"><img src="assets/img/navbar-logo.png" alt="">Music Insider</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav navbar-right" id="nav-list">
-              	
+              <ul class="nav navbar-nav navbar-right" id="nav-list">     	
                 <li><a title="" href="#about">About</a></li>
                 <li><a title="" href="#episodes">Episodes</a></li>
   	            <li><a title="" href="#contact">Contact</a></li>
@@ -350,7 +349,6 @@
 
 	<div class="darkcopyrights copyrights" id="admin-tools"></div>
 
-	<section class="section-p" id="new-post"></section>
 		
   <div class="dmtop">Scroll to Top</div>
 
@@ -361,15 +359,15 @@
 
 
 		<script type="text/template" id="new-post-nav-template">
-			<li><a id="new-post-btn" href="#">New Post</a></li>
+			<li><a id="new-post-btn" href="#new-post">New Post</a></li>
 		</script>
 
-		<script type="text/template" id="admin-tools-template">	  
+		<script type="text/template" id="login-template">	  
 			<div class="container" id="login-form">
 				<div class="row">
 					<div class="col-xs-12 col-sm-6 col-sm-offset-3">
 		      	<a type="button" class="close"><i class="fa fa-times fa-2x"></i></a>
-			        <h3 class="section-title">Music Insider | Admin</h3>
+			        <h3 class="section-title">Music Insider | Login</h3>
 		      </div>
 		      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
 			      <form class="form-signin" role="form">  
@@ -400,30 +398,36 @@
 		</script>
 
 <script type="text/template" id="new-post-template">
-	<div class="container">	
-		<div class="section-title text-center">
-    	<h3><span class="font-backend">N</span> New Post</h3>
-		</div>
-		<div class="section-wrapper">
+	<div class="container" id="new-post">
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      	<a type="button" class="close"><i class="fa fa-times fa-2x"></i></a>
+        <h3 class="section-title">Music Insider | New Post</h3>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
 			<form class="form-horizontal">
-				<div class="form-group form-group-lg">
-					<div class="col-xs-12 col-sm-9 col-sm-offset-1">
+				<div class="form-group">
+					
 						<input type="text" class="form-control" name="text" placeholder="Title" autofocus>
-					</div>
+					
 				</div>
 				<div class="form-group">
-					<div class="col-xs-12 col-sm-9 col-sm-offset-1">
+					
 						<textarea id="post-body" class="form-control" rows="10"></textarea>
-					</div>
+					
 				</div>
 				<div class="form-group">
-					<div class="col-xs-1 col-sm-1 col-sm-offset-1">
+					
 						<button type="submit" class="btn btn-primary btn-lg">Publish</button>
-					</div>
+					
 				</div>
 			</form>
-		</div>
-	</div>
+			     </div>
+					<div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
+		        <p><a href="http://evturn.com" class="evturn-login"><img id="evturn-security" src="http://ramenbuffet.com/assets/ev.png"> Powered by evturn.com</a></p>
+		      </div>
+	      </div>
+	    </div>
 </script>
 
     <!-- jQuery -->

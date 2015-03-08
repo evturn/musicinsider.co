@@ -1,5 +1,5 @@
 var NewPostView = Backbone.View.extend({
-	el: '#new-post',
+	el: '#admin-tools',
 	template: _.template($('#new-post-template').html()),
 	initialize: function() {
 		this.render();

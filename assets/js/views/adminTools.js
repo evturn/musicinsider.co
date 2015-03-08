@@ -1,6 +1,6 @@
 var AdminTools = Backbone.View.extend({
 	el: '#admin-tools',
-	template: _.template($('#admin-tools-template').html()),
+	template: _.template($('#login-template').html()),
 	initialize: function() {
 		this.render();
 		$('#login-form').hide();

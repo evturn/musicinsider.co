@@ -5,9 +5,14 @@ var NewPostNav = Backbone.View.extend({
 	initalize: function() {
 		this.render();
 	},
+	events: {
+		'click #new-post-btn' : 'newPostForm'
+	},
 	render: function() {
 		this.$el.prepend(this.template());
 		return this;
 	},
-
+	newPostForm: function() {
+		var newPostView = new NewPostView();
+	},
 });
