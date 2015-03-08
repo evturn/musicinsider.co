@@ -1,6 +1,6 @@
-var Post = new Backbone.Model.extend({
+var Post = Backbone.Model.extend({
 	defaults: {
-		title: '',
-		body: ''
-	}
+		title: 'Untitled',
+		body: 'Almost, but no.'
+	},
 });

@@ -1,4 +1,5 @@
 var adminTools = new AdminTools();
+allPosts = new AllPosts();
 
 
 $(function() {
