@@ -2,8 +2,7 @@ var AdminNav = Backbone.View.extend({
 	el: '#admin-list',
 	tagName: 'li',
 	template: _.template($('#admin-nav-template').html()),
-	initalize: function() {
-		this.toggleAdminTools();
+	initialize: function() {
 		this.render();
 	},
 	events: {
@@ -44,6 +43,7 @@ var AdminNav = Backbone.View.extend({
 		if (!unauthConfirm) {
 			console.log('User logged out!');
 			adminNav.render();
+			$('.admin-nav').remove();
 		}
 	},
 });
