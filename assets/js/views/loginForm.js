@@ -10,9 +10,9 @@ var LoginForm = Backbone.View.extend({
 	},
 	login: function(e) {
 		e.preventDefault();
-		userEmail = $('#email').val();
+		userEmail 	 = $('#email').val();
 		userPassword = $('#password').val();
-		var refUsers = new Firebase("https://musicinsider.firebaseio.com/users");
+		var refUsers = new Firebase(FIREBASE_URL + 'users');
 		refUsers.authWithPassword({
 			email    : userEmail,
 			password : userPassword
@@ -21,7 +21,9 @@ var LoginForm = Backbone.View.extend({
     		console.log("Login Failed!", error);
   		} else {
     	console.log("Authenticated successfully with payload:", authData);
-    	$('#login-form').remove();
+    	$('#login-form').fadeOut('slow', function() {
+    		$('#login-form').remove();
+    	});
 			adminNav.render();
   		}
 		}.bind(this));
@@ -31,9 +33,8 @@ var LoginForm = Backbone.View.extend({
 		return this;
 	},
 	close: function() {
-		$('#login-form').slideToggle();
-		setTimeout(function() {
-			$('#login-form').remove();
-		}, 800);
+		$('#login-form').fadeOut('fast', function() {
+    		$('#login-form').remove();
+    	});
 	},
 });

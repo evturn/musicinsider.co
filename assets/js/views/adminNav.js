@@ -36,7 +36,7 @@ var AdminNav = Backbone.View.extend({
 	},
 	logout: function() {
 		FIREBASE_URL.unauth();
-		var refUsers = new Firebase(FIREBASE_URL + 'users');
+		var refUsers 			= new Firebase(FIREBASE_URL + 'users');
 		var unauthConfirm = refUsers.getAuth();
 		if (!unauthConfirm) {
 			adminNav.render();

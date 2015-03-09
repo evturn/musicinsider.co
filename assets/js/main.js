@@ -16,8 +16,8 @@ firebaseUsers.onAuth(function(authData) {
   }
 });
 
-adminNav = new AdminNav();
-allPosts = new AllPosts();
+adminNav     = new AdminNav();
+allPosts     = new AllPosts();
 allPosts.fetch();
 allBlogPosts = new AllBlogPosts({collection: allPosts});
 
