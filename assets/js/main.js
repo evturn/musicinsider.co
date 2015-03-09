@@ -1,17 +1,30 @@
 var FIREBASE_URL = new Firebase('https://musicinsider.firebaseio.com/')
-var refPosts = new Firebase('https://musicinsider.firebaseio.com/posts');
-refPosts.on("value", function(snapshot) {
+firebasePosts = new Firebase(FIREBASE_URL + 'posts');
+firebaseUsers = new Firebase(FIREBASE_URL + 'users');
+
+firebasePosts.on("value", function(snapshot) {
   console.log(snapshot.val());
 }, function (errorObject) {
   console.log("The read failed: " + errorObject.code);
+});
+var adminNav = new AdminNav();
+
+firebaseUsers.onAuth(function(authData) {
+  if (authData) {
+    console.log("Authenticated with uid:", authData.uid);
+  } else {
+    console.log("Client unauthenticated.")
+    $('#admin-list').show();
+    
+  }
 });
 
 allPosts = new AllPosts();
 allPosts.fetch();
 allBlogPosts = new AllBlogPosts({collection: allPosts});
 
-$(function() {
 
+$(function() {
 
   $("#second").bootFolio({
     bfLayout: "bflayhover",

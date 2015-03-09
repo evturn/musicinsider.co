@@ -3,13 +3,12 @@ var LoginForm = Backbone.View.extend({
 	template: _.template($('#login-template').html()),
 	initialize: function() {
 		this.render();
-		this.checkAuth();
 	},
 	events: {
-		'click #login-btn' : 'userAuth',
+		'click #login-btn' : 'login',
 		'click .close' 	 : 'close'
 	},
-	userAuth: function(e) {
+	login: function(e) {
 		e.preventDefault();
 		userEmail = $('#email').val();
 		userPassword = $('#password').val();
@@ -35,10 +34,8 @@ var LoginForm = Backbone.View.extend({
 		}
 	},
 	showAdminTools: function() {
-		username = FIREBASE_URL.getAuth().password.email;
     console.log('we fading!');
 		$('#login-form').remove();
-		adminNav = new AdminNav();
 		adminNav.render();
   	$('.admin-nav').fadeTo({opacity: 1}, 5000)
 	},
