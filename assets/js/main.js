@@ -1,6 +1,4 @@
-var FIREBASE_URL = new Firebase('https://musicinsider.firebaseio.com/')
-var firebasePosts = new Firebase(FIREBASE_URL + 'posts');
-var firebaseUsers = new Firebase(FIREBASE_URL + 'users');
+new AppView();
 
 firebasePosts.on("value", function(snapshot) {
   console.log(snapshot.val());
@@ -16,10 +14,6 @@ firebaseUsers.onAuth(function(authData) {
   }
 });
 
-adminNav     = new AdminNav();
-allPosts     = new AllPosts();
-allPosts.fetch();
-allBlogPosts = new AllBlogPosts({collection: allPosts});
 
 
 $(function() {
