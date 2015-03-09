@@ -27,7 +27,7 @@ var NewPostForm = Backbone.View.extend({
     	title: title,
     	body: body
     });
-    return false;
     this.hide();
+    return false;
 	},
 });
