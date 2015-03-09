@@ -6,8 +6,8 @@ var AdminNav = Backbone.View.extend({
 		this.render();
 	},
 	events: {
-		'click #admin' 		 : 'toggleAuth',
-		'click #new-post-btn' : 'newPostForm'
+		'click #admin' 		 		: 'toggleAuth',
+		'click #new-post-btn' : 'postForm'
 	},
 	toggleAuth: function(e) {
 		e.preventDefault();
@@ -24,13 +24,13 @@ var AdminNav = Backbone.View.extend({
 		this.$el.html(this.template());
 		return this;
 	},
-	// newPostForm: function(e) {
-	// 	e.preventDefault();
-	// 	$('#new-post').remove();
-	// 	var newPostForm = new NewPostForm({collection: allPosts});
-	// 	$('#new-post').hide();
-	// 	$('#new-post').slideToggle();
-	// },
+	postForm: function(e) {
+		e.preventDefault();
+		$('#new-post').remove();
+		var newPostForm = new NewPostForm({collection: allPosts});
+		$('#new-post').hide();
+		$('#new-post').slideToggle();
+	},
 	logout: function() {
 		FIREBASE_URL.unauth();
 		var refUsers = new Firebase("https://musicinsider.firebaseio.com/users");
