@@ -68,6 +68,7 @@
               <a class="navbar-brand" href="/"><img src="assets/img/navbar-logo.png" alt="">Music Insider</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-left" id="admin-list"></ul>
               <ul class="nav navbar-nav navbar-right" id="nav-list">     	
                 <li><a title="" href="#about">About</a></li>
                 <li><a title="" href="#episodes">Episodes</a></li>
@@ -341,7 +342,7 @@
 	<script type="text/template" id="new-post-nav-template">
     
     <%  if (username) { %>
-          <li href="#" id="user-display"><a><i class="fa fa-user"></i>Sup, <%= username %></a></li>
+          <li href="#" id="user-display"><a><i class="fa fa-user"></i> <%= username %></a></li>
     <%  } %>
     <li><a href="#" id="logout"><i class="fa fa-user"></i> Logout</a></li>
 		<li><a href="#admin-tools" id="new-post-btn"><i class="fa fa-user"></i> New Post</a></li>

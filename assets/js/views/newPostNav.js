@@ -1,5 +1,5 @@
 var NewPostNav = Backbone.View.extend({
-	el: '#nav-list',
+	el: '#admin-list',
 	tagName: 'li',
 	template: _.template($('#new-post-nav-template').html()),
 	initalize: function() {
@@ -27,10 +27,7 @@ var NewPostNav = Backbone.View.extend({
 		var unauthConfirm = refUsers.getAuth();
 		if (!unauthConfirm) {
 			console.log('User logged out!');
-			$('#logout').fadeTo({opacity: 0}, 5000);
-			$('#new-post-btn').fadeTo({opacity: 0}, 5000);
-			$('#logout').remove();
-			$('#new-post-btn').remove();
+			this.$el.fadeTo({opacity: 0}, 5000);
 		}
 	},
 });

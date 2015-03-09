@@ -44,8 +44,7 @@ var AdminTools = Backbone.View.extend({
 		$('#login-form').remove();
 		newPostNav = new NewPostNav();
 		newPostNav.render();
-		$('#new-post-btn').css({opacity: 0})
-  	$('#new-post-btn').fadeTo({opacity: 1}, 5000)
+  	$('#admin-list').fadeTo({opacity: 1}, 5000)
 	},
 	render: function() {
 		this.$el.append(this.template());
