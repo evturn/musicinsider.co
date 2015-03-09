@@ -8,6 +8,7 @@ ref.on("value", function(snapshot) {
 
 var adminTools = new AdminTools();
 allPosts = new AllPosts();
+allPosts.fetch();
 allBlogPosts = new AllBlogPosts({collection: allPosts});
 
 $(function() {
