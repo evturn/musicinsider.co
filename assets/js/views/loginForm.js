@@ -21,23 +21,22 @@ var LoginForm = Backbone.View.extend({
     		console.log("Login Failed!", error);
   		} else {
     	console.log("Authenticated successfully with payload:", authData);
-    	this.checkAuth();
+    	this.showAdminTools();
   		}
 		}.bind(this));
 	},
-	checkAuth: function() {
-		var refUsers = new Firebase("https://musicinsider.firebaseio.com/users");
-		var authData = refUsers.getAuth();
-		if (authData) {
-  		console.log("Authenticated user with uid:", authData.uid);
-		this.showAdminTools();
-		}
-	},
+	// checkAuth: function() {
+	// 	var refUsers = new Firebase("https://musicinsider.firebaseio.com/users");
+	// 	var authData = refUsers.getAuth();
+	// 	if (authData) {
+ //  		console.log("Authenticated user with uid:", authData.uid);
+	// 	this.showAdminTools();
+	// 	}
+	// },
 	showAdminTools: function() {
-    console.log('we fading!');
+    console.log('Showing Admin-Nav!');
 		$('#login-form').remove();
 		adminNav.render();
-  	$('.admin-nav').fadeTo({opacity: 1}, 5000)
 	},
 	render: function() {
 		this.$el.append(this.template());

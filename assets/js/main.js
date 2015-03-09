@@ -7,15 +7,14 @@ firebasePosts.on("value", function(snapshot) {
 }, function (errorObject) {
   console.log("The read failed: " + errorObject.code);
 });
-var adminNav = new AdminNav();
 
+
+adminNav = new AdminNav();
 firebaseUsers.onAuth(function(authData) {
   if (authData) {
     console.log("Authenticated with uid:", authData.uid);
   } else {
-    console.log("Client unauthenticated.")
-    $('#admin-list').show();
-    
+    console.log("Client unauthenticated.")  
   }
 });
 
