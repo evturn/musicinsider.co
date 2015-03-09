@@ -26,8 +26,9 @@ var AdminTools = Backbone.View.extend({
     		console.log("Login Failed!", error);
   		} else {
     	console.log("Authenticated successfully with payload:", authData);
+    	this.checkAuth();
   		}
-		});
+		}.bind(this));
 	},
 	checkAuth: function() {
 		var refUsers = new Firebase("https://musicinsider.firebaseio.com/users");
