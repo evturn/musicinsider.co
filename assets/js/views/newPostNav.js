@@ -1,7 +1,7 @@
 var AdminNav = Backbone.View.extend({
 	el: '#admin-list',
 	tagName: 'li',
-	template: _.template($('#new-post-nav-template').html()),
+	template: _.template($('#admin-nav-template').html()),
 	initalize: function() {
 		this.render();
 	},
@@ -15,7 +15,7 @@ var AdminNav = Backbone.View.extend({
 		var authData = refUsers.getAuth();
 		if (!authData) {
   		console.log("Authenticated user with uid:", authData.uid);
-			loginForm.render();
+  		loginForm = new LoginForm();
 			console.log('Showing the login form somewhere');
 		} else {
 			this.userLogout();

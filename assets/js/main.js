@@ -6,10 +6,6 @@ refPosts.on("value", function(snapshot) {
   console.log("The read failed: " + errorObject.code);
 });
 
-
-
-
-var loginForm = new LoginForm();
 allPosts = new AllPosts();
 allPosts.fetch();
 allBlogPosts = new AllBlogPosts({collection: allPosts});
