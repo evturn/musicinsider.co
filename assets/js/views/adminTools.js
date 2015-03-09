@@ -17,7 +17,7 @@ var AdminTools = Backbone.View.extend({
 		e.preventDefault();
 		userEmail = $('#email').val();
 		userPassword = $('#password').val();
-		var ref = new Firebase("https://musicinsider.firebaseio.com/users");
+		var refUsers = new Firebase("https://musicinsider.firebaseio.com/users");
 		ref.authWithPassword({
 			email    : userEmail,
 			password : userPassword
@@ -30,14 +30,15 @@ var AdminTools = Backbone.View.extend({
 		});
 	},
 	checkAuth: function() {
-		var ref = new Firebase("https://musicinsider.firebaseio.com/users");
-		var authData = ref.getAuth();
+		var refUsers = new Firebase("https://musicinsider.firebaseio.com/users");
+		var authData = refUsers.getAuth();
 		if (authData) {
   		console.log("Authenticated user with uid:", authData.uid);
 		this.showNewPostBtn();
 		}
 	},
 	showNewPostBtn: function() {
+		username = FIREBASE_URL.getAuth().password.email;
     console.log('we fading!');
 		$('#login-form').remove();
 		newPostNav = new NewPostNav();

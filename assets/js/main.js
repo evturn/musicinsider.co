@@ -1,5 +1,6 @@
-var ref = new Firebase('https://musicinsider.firebaseio.com/posts');
-ref.on("value", function(snapshot) {
+var FIREBASE_URL = new Firebase('https://musicinsider.firebaseio.com/')
+var refPosts = new Firebase('https://musicinsider.firebaseio.com/posts');
+refPosts.on("value", function(snapshot) {
   console.log(snapshot.val());
 }, function (errorObject) {
   console.log("The read failed: " + errorObject.code);
