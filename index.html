@@ -339,6 +339,11 @@
 	</script>
 
 	<script type="text/template" id="new-post-nav-template">
+    
+    <%  if (username) { %>
+          <li>Sup, <%= username %></li>
+    <%  } %>
+    <li><a href="#" id="logout"><i class="fa fa-user"></i> Logout</a></li>
 		<li><a href="#admin-tools" id="new-post-btn"><i class="fa fa-user"></i> New Post</a></li>
 	</script>
 

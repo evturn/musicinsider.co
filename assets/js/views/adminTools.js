@@ -18,7 +18,7 @@ var AdminTools = Backbone.View.extend({
 		userEmail = $('#email').val();
 		userPassword = $('#password').val();
 		var refUsers = new Firebase("https://musicinsider.firebaseio.com/users");
-		ref.authWithPassword({
+		refUsers.authWithPassword({
 			email    : userEmail,
 			password : userPassword
 		}, function(error, authData) {
