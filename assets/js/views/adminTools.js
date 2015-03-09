@@ -6,7 +6,8 @@ var LoginForm = Backbone.View.extend({
 		this.checkAuth();
 	},
 	events: {
-		'click #login-btn' : 'userAuth'
+		'click #login-btn' : 'userAuth',
+		'click .close' 	 : 'close'
 	},
 	userAuth: function(e) {
 		e.preventDefault();
@@ -44,5 +45,11 @@ var LoginForm = Backbone.View.extend({
 	render: function() {
 		this.$el.append(this.template());
 		return this;
+	},
+	close: function() {
+		$('#login-form').slideToggle();
+		setTimeout(function() {
+			$('#login-form').remove();
+		}, 500);
 	},
 });

@@ -6,14 +6,14 @@ var NewPostForm = Backbone.View.extend({
 		this.render();
 	},
 	events: {
-		'click .close' 	 : 'hide',
+		'click .close' 	 : 'close',
 		'click #publish' : 'createPost'
 	},
 	render: function() {
 		this.$el.prepend(this.template());
 		return this;
 	},
-	hide: function() {
+	close: function() {
 		$('#new-post').slideToggle();
 		setTimeout(function() {
 			$('#new-post').remove();
