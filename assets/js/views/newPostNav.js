@@ -1,4 +1,4 @@
-var NewPostNav = Backbone.View.extend({
+var AdminNav = Backbone.View.extend({
 	el: '#admin-list',
 	tagName: 'li',
 	template: _.template($('#new-post-nav-template').html()),

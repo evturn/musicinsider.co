@@ -38,8 +38,8 @@ var LoginForm = Backbone.View.extend({
 		username = FIREBASE_URL.getAuth().password.email;
     console.log('we fading!');
 		$('#login-form').remove();
-		newPostNav = new NewPostNav();
-		newPostNav.render();
+		adminNav = new AdminNav();
+		adminNav.render();
   	$('.admin-nav').fadeTo({opacity: 1}, 5000)
 	},
 	render: function() {
