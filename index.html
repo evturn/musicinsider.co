@@ -81,6 +81,8 @@
     </header><!-- end header -->
   </div>
 
+  <section
+
   <!-- SLIDING BANNER   -->
   <article class="slider-wrapper">
     <div class="tp-banner-container">
@@ -133,6 +135,7 @@
     </div>  
   </article>
 
+
   <!-- LATEST EPISODES -->
   <section id="episodes" class="section-w clearfix">
     <div class="container">
@@ -144,8 +147,14 @@
 	 <div class="container">
 	    <div class="row">
 	      <div id="post-content" class="col-md-12 col-sm-12 col-xs-12 pull-left">
-	      	<div class="blog-list row" id="podcast-episode"></div><!-- end blog list -->
-	      </div><!-- end col -->
+	      
+        	<div class="blog-list row" id="podcast-episode">
+           
+            <!-- INJECTED VIEWS -->
+
+          </div><!-- end blog list -->
+	      
+        </div><!-- end col -->
 			</div><!-- end row -->
 		</div><!-- end container -->
 	</section><!-- end section -->
@@ -304,7 +313,13 @@
   </footer><!-- end footer -->
 
 
-	<div class="darkcopyrights copyrights" id="admin-tools"></div>
+	<div class="darkcopyrights copyrights" id="admin-tools">
+   <div class="container">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <p>Copyright 2015 ©  Music Insider | All Rights Reserved</p>
+      </div><!-- end col-lg-4 -->
+    </div><!-- end container --> 
+  </div>
 
 		
   <div class="dmtop">Scroll to Top</div>
@@ -340,11 +355,11 @@
 	</script>
 
 	<script type="text/template" id="new-post-nav-template">
-    <li><a href="#" id="logout"><i class="fa fa-power-off"></i> <%= !username ? 'Admin' : 'Logout' %></a></li>
+    <li><a href="#" id="admin"><i class="fa fa-power-off"></i> <%= !username ? 'Admin' : 'Logout' %></a></li>
     <%  if (username) { %>
-          <li href="#" id="user-display"><a><i class="fa fa-user"></i> <%= username %></a></li>
+          <li href="#" class="admin-nav" id="user-display"><a><i class="fa fa-user"></i> <%= username %></a></li>
     <%  } %>
-		<li><a href="#" id="new-post-btn"><i class="fa fa-plus"></i> Post</a></li>
+		<li><a href="#" class="admin-nav" id="new-post-btn"><i class="fa fa-plus"></i> Post</a></li>
 	</script>
 
 	<script type="text/template" id="login-template">	  
@@ -374,12 +389,6 @@
 	      </div>
       </div>
     </div>
-    <div class="container">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <p><a href="#admin-tools" id="admin"><i class="fa fa-birthday-cake"></i></a><p>
-        <p>Copyright 2015 ©  Music Insider | All Rights Reserved</p>
-      </div><!-- end col-lg-4 -->
-    </div><!-- end container -->
 	</script>
 
   <script type="text/template" id="new-post-template">

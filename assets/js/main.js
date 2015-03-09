@@ -9,7 +9,7 @@ refPosts.on("value", function(snapshot) {
 
 
 
-var adminTools = new AdminTools();
+var loginForm = new LoginForm();
 allPosts = new AllPosts();
 allPosts.fetch();
 allBlogPosts = new AllBlogPosts({collection: allPosts});
