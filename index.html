@@ -340,10 +340,10 @@
 	</script>
 
 	<script type="text/template" id="new-post-nav-template">
+    <li><a href="#" id="logout"><i class="fa fa-power-off"></i> <%= !username ? 'Admin' : 'Logout' %></a></li>
     <%  if (username) { %>
           <li href="#" id="user-display"><a><i class="fa fa-user"></i> <%= username %></a></li>
     <%  } %>
-    <li><a href="#" id="logout"><i class="fa fa-power-off"></i> Logout</a></li>
 		<li><a href="#" id="new-post-btn"><i class="fa fa-plus"></i> Post</a></li>
 	</script>
 
