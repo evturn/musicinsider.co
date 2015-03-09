@@ -4,29 +4,9 @@ var LoginForm = Backbone.View.extend({
 	initialize: function() {
 		this.render();
 		this.checkAuth();
-		$('#login-form').hide();
 	},
 	events: {
-		'click #admin' 		 : 'toggleAuth',
 		'click #login-btn' : 'userAuth'
-	},
-	toggleAuth: function(e) {
-		e.preventDefault();
-		var refUsers = new Firebase("https://musicinsider.firebaseio.com/users");
-		var authData = refUsers.getAuth();
-		if (authData) {
-  		console.log("Authenticated user with uid:", authData.uid);
-		$('#login-form').slideToggle();
-		console.log('Showing the login form somewhere');
-		} else {
-			FIREBASE_URL.unauth();
-				var refUsers = new Firebase("https://musicinsider.firebaseio.com/users");
-				var unauthConfirm = refUsers.getAuth();
-					if (!unauthConfirm) {
-						console.log('User logged out!');
-						$('.admin-nav').fadeTo({opacity: 0}, 5000);
-					}
-		}
 	},
 	userAuth: function(e) {
 		e.preventDefault();

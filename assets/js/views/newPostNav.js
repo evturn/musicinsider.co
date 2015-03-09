@@ -6,8 +6,20 @@ var NewPostNav = Backbone.View.extend({
 		this.render();
 	},
 	events: {
-		'click #new-post-btn' : 'newPostForm',
-		'click #logout'				: 'userLogout'
+		'click #admin' 		 : 'toggleAuth',
+		'click #new-post-btn' : 'newPostForm'
+	},
+	toggleAuth: function(e) {
+		e.preventDefault();
+		var refUsers = new Firebase("https://musicinsider.firebaseio.com/users");
+		var authData = refUsers.getAuth();
+		if (authData) {
+  		console.log("Authenticated user with uid:", authData.uid);
+			loginForm.render();
+			console.log('Showing the login form somewhere');
+		} else {
+			this.userLogout();
+		}
 	},
 	render: function() {
 		this.$el.prepend(this.template());
@@ -27,7 +39,7 @@ var NewPostNav = Backbone.View.extend({
 		var unauthConfirm = refUsers.getAuth();
 		if (!unauthConfirm) {
 			console.log('User logged out!');
-			this.$el.fadeTo({opacity: 0}, 5000);
+			$('.admin-nav').fadeTo({opacity: 0}, 5000);
 		}
 	},
 });
