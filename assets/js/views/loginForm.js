@@ -34,6 +34,6 @@ var LoginForm = Backbone.View.extend({
 		$('#login-form').slideToggle();
 		setTimeout(function() {
 			$('#login-form').remove();
-		}, 500);
+		}, 800);
 	},
 });

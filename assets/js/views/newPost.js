@@ -17,7 +17,7 @@ var NewPostForm = Backbone.View.extend({
 		$('#new-post').slideToggle();
 		setTimeout(function() {
 			$('#new-post').remove();
-		}, 500);
+		}, 800);
 	},
 	createPost: function(e) {
 		e.preventDefault();
