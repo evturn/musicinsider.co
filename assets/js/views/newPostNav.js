@@ -13,12 +13,13 @@ var AdminNav = Backbone.View.extend({
 		e.preventDefault();
 		var refUsers = new Firebase("https://musicinsider.firebaseio.com/users");
 		var authData = refUsers.getAuth();
-		if (authData) {
+		if (!authData) {
   		console.log("Authenticated user with uid:", authData.uid);
 			loginForm.render();
 			console.log('Showing the login form somewhere');
 		} else {
 			this.userLogout();
+			console.log('Reading someone trying to logout');
 		}
 	},
 	render: function() {
@@ -32,8 +33,7 @@ var AdminNav = Backbone.View.extend({
 		$('#new-post').hide();
 		$('#new-post').slideToggle();
 	},
-	userLogout: function(e) {
-		e.preventDefault();
+	userLogout: function() {
 		FIREBASE_URL.unauth();
 		var refUsers = new Firebase("https://musicinsider.firebaseio.com/users");
 		var unauthConfirm = refUsers.getAuth();
