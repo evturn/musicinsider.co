@@ -3,26 +3,27 @@ var AdminNav = Backbone.View.extend({
 	tagName: 'li',
 	template: _.template($('#admin-nav-template').html()),
 	initalize: function() {
+		this.toggleAdminTools();
 		this.render();
 	},
 	events: {
 		'click #admin' 		 		: 'toggleAuth',
 		'click #new-post-btn' : 'postForm'
 	},
+	render: function() {
+		this.$el.html(this.template());
+		return this;
+	},
 	toggleAuth: function(e) {
 		e.preventDefault();
 		var authData = firebaseUsers.getAuth();
 		if (!authData) {
-			console.log('Showing the login form somewhere');
-  		loginForm = new LoginForm();
+			console.log('toggleAuth showing the login form');
+  		this.showLoginForm();
 		} else {
-			console.log('Reading someone trying to logout');
+			console.log('toggleAuth trying to logout');
 			this.logout();
 		}
-	},
-	render: function() {
-		this.$el.html(this.template());
-		return this;
 	},
 	postForm: function(e) {
 		e.preventDefault();
@@ -30,6 +31,11 @@ var AdminNav = Backbone.View.extend({
 		var newPostForm = new NewPostForm({collection: allPosts});
 		$('#new-post').hide();
 		$('#new-post').slideToggle();
+	},
+	showLoginForm: function() {		
+		loginForm = new LoginForm();
+		$('#login-form').hide();
+		$('#login-form').slideToggle();
 	},
 	logout: function() {
 		FIREBASE_URL.unauth();

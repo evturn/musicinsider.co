@@ -10,11 +10,12 @@ firebasePosts.on("value", function(snapshot) {
 
 
 adminNav = new AdminNav();
+
 firebaseUsers.onAuth(function(authData) {
   if (authData) {
     console.log("Authenticated with uid:", authData.uid);
   } else {
-    console.log("Client unauthenticated.")  
+    console.log("Client unauthenticated.");
   }
 });
 
