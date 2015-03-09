@@ -77,6 +77,9 @@
     			  </div><!--/.nav-collapse -->
   			  </div><!--/.container-fluid -->
   		  </nav>
+        <div id="admin-workbench">
+
+        </div>
   	  </div><!-- end menu-wrapper -->
     </header><!-- end header -->
   </div>
@@ -313,7 +316,7 @@
   </footer><!-- end footer -->
 
 
-	<div class="darkcopyrights copyrights" id="admin-tools">
+	<div class="darkcopyrights copyrights">
    <div class="container">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <p>Copyright 2015 ©  Music Insider | All Rights Reserved</p>
@@ -357,7 +360,7 @@
 	<script type="text/template" id="admin-nav-template">
     <li><a href="#" id="admin"><i class="fa fa-power-off"></i> <%= firebaseUsers.getAuth() === null ? 'Admin' : 'Logout' %></a></li>
     <%= firebaseUsers.getAuth() === null ? undefined : 
-		'<li><a href="#" class="admin-nav" id="new-post-btn"><i class="fa fa-plus"></i> Post</a></li>' %>
+		'<li><a href="#" class="admin-tools" id="new-post-btn"><i class="fa fa-plus"></i> Post</a></li>' %>
 	</script>
 
 	<script type="text/template" id="login-template">	  

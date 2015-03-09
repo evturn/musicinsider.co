@@ -9,7 +9,6 @@ firebasePosts.on("value", function(snapshot) {
 });
 
 
-adminNav = new AdminNav();
 
 firebaseUsers.onAuth(function(authData) {
   if (authData) {
@@ -19,6 +18,7 @@ firebaseUsers.onAuth(function(authData) {
   }
 });
 
+adminNav = new AdminNav();
 allPosts = new AllPosts();
 allPosts.fetch();
 allBlogPosts = new AllBlogPosts({collection: allPosts});

@@ -38,12 +38,12 @@ var AdminNav = Backbone.View.extend({
 	},
 	logout: function() {
 		FIREBASE_URL.unauth();
-		var refUsers = new Firebase("https://musicinsider.firebaseio.com/users");
+		var refUsers = new Firebase(FIREBASE_URL + 'users');
 		var unauthConfirm = refUsers.getAuth();
 		if (!unauthConfirm) {
 			console.log('User logged out!');
 			adminNav.render();
-			$('.admin-nav').remove();
+			$('.admin-tools').hide();
 		}
 	},
 });
