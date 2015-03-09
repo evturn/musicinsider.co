@@ -27,6 +27,10 @@ var NewPostNav = Backbone.View.extend({
 		var unauthConfirm = refUsers.getAuth();
 		if (!unauthConfirm) {
 			console.log('User logged out!');
+			$('#logout').fadeTo({opacity: 0}, 5000);
+			$('#new-post-btn').fadeTo({opacity: 0}, 5000);
+			$('#logout').remove();
+			$('#new-post-btn').remove();
 		}
 	},
 });
