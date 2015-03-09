@@ -3,6 +3,7 @@ var AdminTools = Backbone.View.extend({
 	template: _.template($('#login-template').html()),
 	initialize: function() {
 		this.render();
+		this.checkAuth();
 		$('#login-form').hide();
 	},
 	events: {
@@ -25,13 +26,19 @@ var AdminTools = Backbone.View.extend({
     		console.log("Login Failed!", error);
   		} else {
     	console.log("Authenticated successfully with payload:", authData);
-    	
   		}
 		});
 	},
-	showNewPostBtn: function(e) {
+	checkAuth: function() {
+		var ref = new Firebase("https://musicinsider.firebaseio.com/users");
+		var authData = ref.getAuth();
+		if (authData) {
+  		console.log("Authenticated user with uid:", authData.uid);
+		this.showNewPostBtn();
+		}
+	},
+	showNewPostBtn: function() {
     console.log('we fading!');
-		e.preventDefault();
 		$('#login-form').remove();
 		newPostNav = new NewPostNav();
 		newPostNav.render();
