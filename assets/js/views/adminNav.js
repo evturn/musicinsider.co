@@ -17,10 +17,8 @@ var AdminNav = Backbone.View.extend({
 		e.preventDefault();
 		var authData = firebaseUsers.getAuth();
 		if (!authData) {
-			console.log('toggleAuth showing the login form');
   		this.showLoginForm();
 		} else {
-			console.log('toggleAuth trying to logout');
 			this.logout();
 		}
 	},
@@ -41,7 +39,6 @@ var AdminNav = Backbone.View.extend({
 		var refUsers = new Firebase(FIREBASE_URL + 'users');
 		var unauthConfirm = refUsers.getAuth();
 		if (!unauthConfirm) {
-			console.log('User logged out!');
 			adminNav.render();
 			$('.admin-tools').hide();
 		}

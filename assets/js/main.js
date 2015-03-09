@@ -1,14 +1,12 @@
 var FIREBASE_URL = new Firebase('https://musicinsider.firebaseio.com/')
-firebasePosts = new Firebase(FIREBASE_URL + 'posts');
-firebaseUsers = new Firebase(FIREBASE_URL + 'users');
+var firebasePosts = new Firebase(FIREBASE_URL + 'posts');
+var firebaseUsers = new Firebase(FIREBASE_URL + 'users');
 
 firebasePosts.on("value", function(snapshot) {
   console.log(snapshot.val());
 }, function (errorObject) {
   console.log("The read failed: " + errorObject.code);
 });
-
-
 
 firebaseUsers.onAuth(function(authData) {
   if (authData) {
