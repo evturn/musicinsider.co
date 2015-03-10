@@ -1,6 +1,6 @@
-var NewPostForm = Backbone.View.extend({
+var PostForm = Backbone.View.extend({
 	el: '#admin-workbench',
-	template: _.template($('#new-post-template').html()),
+	template: _.template($('#post-form-template').html()),
 	initialize: function() {
 		this.listenTo(this.collection);
 		this.render();
@@ -14,10 +14,9 @@ var NewPostForm = Backbone.View.extend({
 		return this;
 	},
 	close: function() {
-		$('#new-post').slideToggle();
-		setTimeout(function() {
-			$('#new-post').remove();
-		}, 800);
+		$('#post-form').fadeOut('fast', function() {
+    		$('#post-form').remove();
+    	});
 	},
 	createPost: function(e) {
 		e.preventDefault();

@@ -24,10 +24,10 @@ var AdminNav = Backbone.View.extend({
 	},
 	postForm: function(e) {
 		e.preventDefault();
-		$('#new-post').remove();
-		var newPostForm = new NewPostForm({collection: allPosts});
-		$('#new-post').hide();
-		$('#new-post').slideToggle();
+		$('#post-form').remove();
+		var postForm = new PostForm({collection: allPosts});
+		$('#post-form').hide();
+		$('#post-form').slideToggle();
 	},
 	showLoginForm: function() {		
 		loginForm = new LoginForm();
