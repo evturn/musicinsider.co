@@ -31,6 +31,9 @@ var EditForm = Backbone.View.extend({
   	} else {
     console.log('Synchronization succeeded');
     allPosts.fetch();
+    	$('#edit-form').fadeOut('fast', function() {
+    		$('#edit-form').remove();
+    	});
   	}
 	},
 	
