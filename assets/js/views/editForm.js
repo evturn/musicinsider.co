@@ -36,10 +36,10 @@ var EditForm = Backbone.View.extend({
     self.exit();
   	}
 	},
-	// clear: function(e) {
-	// 	e.preventDefault();
-	// 	deleteRef 	 = new Firebase(FIREBASE_URL + 'posts');
-	// 	console.log(deleteRef);
-	// 	// removePost.remove(this.onComplete);
-	// },
+	clear: function(e) {
+		e.preventDefault();
+		deleteRef 	 = new Firebase(FIREBASE_URL + 'posts/' + selectedPost.id);
+		console.log(deleteRef);
+		deleteRef.remove(this.onComplete);
+	},
 });
