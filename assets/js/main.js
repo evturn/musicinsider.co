@@ -11,7 +11,6 @@ clientState = function() {
   };
     
 
-
 $(function() {
 
   $("#second").bootFolio({

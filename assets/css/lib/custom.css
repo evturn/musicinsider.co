@@ -1,0 +1,85 @@
+
+/* ----------------------------------------------------
+  ADD YOUR CUSTOM STYLES HERE
+------------------------------------------------------- */
+
+#admin {
+	color: #fff;
+	float: left;
+}
+
+a.navbar-brand {
+	padding: 15px 0;
+	width: 40px;
+}
+
+#evturn-security {
+	height: 50px;
+	width: 50px;
+}
+
+.evturn-footer {
+	float: left;
+	color: #ccc;
+	font-size: 10px;
+	opacity: .3;
+}
+
+.evturn-login {
+	color: #ccc;
+	text-transform: none;
+	font-size: 10px;
+}
+
+h3.section-title, .blog-item h3 a {
+	text-transform: uppercase;
+	margin-top: 5px;
+	margin-left: 5px;
+	background-color: #000;
+	border-radius: 3%;
+	color: #fff;
+}
+
+.blog-item h3 a:hover {
+	color: #ccc;
+
+}
+
+a.close {
+	color: #fff;
+	opacity: .6;
+}
+
+a.close:hover, a.close:after {
+	color: #fff;
+	opacity: 1;
+}
+
+.btn {
+	border-radius: 8%;
+	text-transform: uppercase;
+	font-size: 13px;
+	font-weight: 500;
+}
+
+input.form-control {
+	font-size: 20px;
+	font-weight: 500;
+}
+
+textarea.form-control {
+	font-size: 20px;
+	font-weight: 500;
+	height: 100%;
+	resize: vertical;
+	border-radius: 1.5%;
+}
+
+.section-p {
+	padding-top: 40px;
+}
+
+.navbar-nav > li > a.admin-nav {
+	background-color: #000;
+	opacity: 1;
+}

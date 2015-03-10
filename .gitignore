@@ -1,6 +1,2 @@
-assets/plugins
-*~
-assets/css/lib
-*~
-assets/js/lib
+node_modules
 *~
