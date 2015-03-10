@@ -6,7 +6,7 @@ var LoginForm = Backbone.View.extend({
 	},
 	events: {
 		'click #login-btn' : 'login',
-		'click .close' 	 	 : 'exitForm'
+		'click .close' 	 	 : 'exit'
 	},
 	login: function(e) {
 		e.preventDefault();
@@ -33,7 +33,7 @@ var LoginForm = Backbone.View.extend({
 		this.$el.append(this.template());
 		return this;
 	},
-	exitForm: function() {
+	exit: function() {
 		$('#login-form').fadeOut('fast', function() {
     		$('#login-form').remove();
     	});

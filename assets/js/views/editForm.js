@@ -7,7 +7,7 @@ var EditForm = Backbone.View.extend({
 		this.render();
 	},
 	events: {
-		'click .close' 	 : 'close',
+		'click .close' 	 : 'exit',
 		'click #update'  : 'update'
 	},
 	render: function() {

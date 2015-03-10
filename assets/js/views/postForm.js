@@ -6,19 +6,19 @@ var PostForm = Backbone.View.extend({
 		this.render();
 	},
 	events: {
-		'click .close' 	 : 'exitForm',
-		'click #publish' : 'createPost'
+		'click .close' 	 : 'exit',
+		'click #publish' : 'create'
 	},
 	render: function() {
 		this.$el.prepend(this.template());
 		return this;
 	},
-	exitForm: function() {
+	exit: function() {
 		$('#post-form').fadeOut('fast', function() {
     		$('#post-form').remove();
   	});
 	},
-	createPost: function(e) {
+	create: function(e) {
 		e.preventDefault();
 		title = $('#post-title').val();
 		body  = $('#post-body').val();
