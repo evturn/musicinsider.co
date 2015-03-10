@@ -7,7 +7,8 @@ var PostForm = Backbone.View.extend({
 	},
 	events: {
 		'click .close' 	 : 'exit',
-		'click #publish' : 'create'
+		'click #publish' : 'create',
+		'click #upload'	 : 'upload'
 	},
 	render: function() {
 		this.$el.prepend(this.template());
@@ -15,8 +16,11 @@ var PostForm = Backbone.View.extend({
 	},
 	exit: function() {
 		$('#post-form').fadeOut('fast', function() {
-    		$('#post-form').remove();
+  		$('#post-form').remove();
   	});
+	},
+	upload: function(e) {
+		e.preventDefault();
 	},
 	create: function(e) {
 		e.preventDefault();
@@ -24,7 +28,8 @@ var PostForm = Backbone.View.extend({
 		body  = $('#post-body').val();
     this.collection.create({
     	title: title,
-    	body: body
+    	body: body,
+    	file: file
     });
     this.exit();
     return false;
