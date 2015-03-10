@@ -29,7 +29,8 @@ var AdminNav = Backbone.View.extend({
 		$('#post-form').hide();
 		$('#post-form').slideToggle();
 	},
-	showLoginForm: function() {		
+	showLoginForm: function() {	
+		$('#login-form').remove();	
 		loginForm = new LoginForm();
 		$('#login-form').hide();
 		$('#login-form').slideToggle();

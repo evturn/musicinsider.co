@@ -21,18 +21,18 @@ var AppView = Backbone.View.extend({
 		});
 	},
 	firebaseInit: function() {
-		FIREBASE_URL = new Firebase('https://musicinsider.firebaseio.com/');
+		FIREBASE_URL 	= new Firebase('https://musicinsider.firebaseio.com/');
 		firebasePosts = new Firebase(FIREBASE_URL + 'posts');
 		firebaseUsers = new Firebase(FIREBASE_URL + 'users');
 		this.readFirebasePosts();
 		this.readFirebaseUsers();
 	},
 	blogInit: function() {
-		allPosts     = new AllPosts();
+		allPosts      = new AllPosts();
 		allPosts.fetch();
-		allBlogPosts = new AllBlogPosts({collection: allPosts});
+		allBlogPosts  = new AllBlogPosts({collection: allPosts});
 	},
 	adminInit: function() {
-		adminNav     = new AdminNav();
+		adminNav      = new AdminNav();
 	},
 });
