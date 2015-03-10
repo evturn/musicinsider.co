@@ -9,6 +9,7 @@ var AllBlogPosts = Backbone.View.extend({
 		clientState();
 	},
 	addAll: function() {
+		this.$el.empty();
 		this.collection.each(function(model) {
 			this.addOne(model);
 		}.bind(this));

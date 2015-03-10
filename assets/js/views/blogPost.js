@@ -8,9 +8,8 @@ var BlogPost = Backbone.View.extend({
 	},
 	edit: function() {
 		selectedPost = this.model.attributes;
-		editForm 		 = new EditForm();
-	},
-	
+		editForm 		 = new EditForm({collection: allPosts});
+	},	
 	render: function() {
 		this.$el.html(this.template(this.model.toJSON()));
 		return this;

@@ -2,6 +2,7 @@ var EditForm = Backbone.View.extend({
 	el: '#admin-workbench',
 	template: _.template($('#edit-form-template').html()),
 	initialize: function() {
+		this.listenTo(this.collection);
 		this.render();
 	},
 	events: {
@@ -29,6 +30,7 @@ var EditForm = Backbone.View.extend({
     	console.log('Synchronization failed');
   	} else {
     console.log('Synchronization succeeded');
+    allPosts.fetch();
   	}
 	},
 	
