@@ -19,8 +19,9 @@ var PostForm = Backbone.View.extend({
   		$('#post-form').remove();
   	});
 	},
-	upload: function(e) {
-		e.preventDefault();
+	upload: function() {
+		
+		console.log('View felt it.')
 	},
 	create: function(e) {
 		e.preventDefault();
@@ -28,8 +29,7 @@ var PostForm = Backbone.View.extend({
 		body  = $('#post-body').val();
     this.collection.create({
     	title: title,
-    	body: body,
-    	file: file
+    	body: body
     });
     this.exit();
     return false;

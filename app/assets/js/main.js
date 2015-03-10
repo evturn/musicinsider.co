@@ -13,6 +13,15 @@ clientState = function() {
 
 $(function() {
 
+  $('#fileupload').fileupload({ 
+    dataType: 'json', 
+    done: function(e, data) { 
+      $.each(data.result.files, function(index, file) { 
+        console.log(file.originalName);
+      }); 
+    }
+  });
+
   $("#second").bootFolio({
     bfLayout: "bflayhover",
     bfFullWidth:"box", 
@@ -80,18 +89,5 @@ $(function() {
     hideAllCaptionAtLilmit:0,
     startWithSlide:0    
   }); 
-
-  $ (document).ready(function(){ 
-        $('#fileupload').fileupload({ 
-          dataType: 'json', 
-          done: function(e, data) { 
-           $.each(data.result.files, function(index, file) { 
-              $('#fileUploads').append($('<div class="upload">' + 
-                '<span class="glyphicon glyphicon-ok"></span>' +
-               '&nbsp;' + file.originalName + '</div>'));
-            }); 
-          }
-        });
-    });
 
 });

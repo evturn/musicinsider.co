@@ -1,5 +1,6 @@
 var express = require('express'),
 		 logger = require('morgan'),
+ bodyParser = require('body-parser'),
  formidable = require('formidable'),
 	 jqupload = require('jquery-file-upload-middleware');
 
@@ -8,6 +9,8 @@ var app = express();
 app.set('port', process.env.PORT || 3000);
 app.use(logger('dev'));
 
+parseUrlencoded = bodyParser.urlencoded({extended: false});
+
 app.use(express.static(__dirname + '/app'));
 
 // Uploads
@@ -15,10 +18,10 @@ app.use('/audio', function(req, res, next) {
 	var now = Date.now();
 	jqupload.fileHandler({
 		uploadDir: function(){
-			return __dirname + '/app/assets/audio/' + now;
+			return __dirname + '/app/assets/audio/';
 		},
 		uploadUrl: function(){
-			return '/audio/' + now; },
+			return '/audio/'},
 		})(req, res, next);
 });
 
@@ -30,7 +33,7 @@ app.post('/audio', function(req, res) {
 		console.log(fields);
 		console.log('received files:');
 		console.log(files);
-    res.redirect(303, '/audio');
+    res.json(303, files);
   });
 });
 
