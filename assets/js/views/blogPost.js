@@ -4,11 +4,26 @@ var BlogPost = Backbone.View.extend({
 		this.render();
 	},
 	events: {
-		'click #edit' : 'editPost'
+		'click #edit' 	: 'edit',
+		'click #update' : 'update'
 	},
-	editPost: function() {
-		postId	= this.model.get('id');
-		console.log(postId);
+	edit: function() {
+		newTitle	= this.model.get('title');
+		newBody  = this.model.get('body');
+		postId		= this.model.get('id');
+	},
+	update: function() {
+		title = $('#post-title').val();
+		body  = $('#post-body').val();
+		postRef = new Firebase(FIREBASE_URL + 'posts/');
+		postRef.update({id: postId, title: title, body: body}, this.onComplete);
+	},
+	onComplete: function(error) {
+		if (error) {
+    	console.log('Synchronization failed');
+  	} else {
+    console.log('Synchronization succeeded');
+  	}
 	},
 	render: function() {
 		this.$el.html(this.template(this.model.toJSON()));
