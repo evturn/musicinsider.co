@@ -394,6 +394,24 @@
 	</script>
 
   <script type="text/template" id="post-form-template">
+
+  <form class="form-horizontal" role="form" enctype="multipart/form-data" method="POST" action="/audio">
+  <div class="form-group">
+    <label for="fieldPhoto" class="col-sm-2 control-label">Vacation photo </label>
+    <div class="col-sm-4">
+      <span class="btn btn-default btn-file"> Upload
+        <input type="file" class="form-control" accept="image/*" data-url="/audio" multiple id="fieldPhoto" name="photo">
+      </span>
+      <div id="uploads"></div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-4">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+  </form>
+
   	<div class="container" id="post-form">
   		<div class="row">
   			<div class="col-xs-12 col-sm-6 col-sm-offset-3">
@@ -408,19 +426,6 @@
   					<div class="form-group">
   						<textarea id="post-body" class="form-control" rows="10"></textarea>	
   					</div>
-            <div class="form-group">
-              <span class="btn btn-success fileinput-button">
-                <i class="glyphicon glyphicon-plus"></i>
-                <span>Upload</span>
-                <input id="fileupload" type="file" name="files[]" multiple>
-              </span>
-              <br>
-              <br>   
-              <div id="progress" class="progress">
-                 <div class="progress-bar progress-bar-success"></div>
-              </div>
-              <div id="files" class="files"></div>
-            </div>
   					<div class="form-group">
   						<button type="submit" id="publish" class="btn btn-primary btn-lg">Publish</button>
   					</div>

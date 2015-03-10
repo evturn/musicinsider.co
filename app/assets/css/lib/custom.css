@@ -3,6 +3,12 @@
   ADD YOUR CUSTOM STYLES HERE
 ------------------------------------------------------- */
 
+
+.bar {
+    height: 18px;
+    background: green;
+}
+
 #admin {
 	color: #fff;
 	float: left;
