@@ -1,12 +1,12 @@
 var EditForm = Backbone.View.extend({
 	el: '#admin-workbench',
-	template: _.template($('#post-form-template').html()),
+	template: _.template($('#edit-form-template').html()),
 	initialize: function() {
 		this.render();
 	},
 	events: {
 		'click .close' 	 : 'close',
-		'click #update' : 'update'
+		'click #update'  : 'update'
 	},
 	render: function() {
 		this.$el.prepend(this.template());
@@ -17,15 +17,18 @@ var EditForm = Backbone.View.extend({
     		$('#edit-form').remove();
     	});
 	},
-	update: function(e) {
-		e.preventDefault();
+	update: function() {
 		title = $('#post-title').val();
 		body  = $('#post-body').val();
-    this.model.set({
-    	title: title,
-    	body: body
-    });
-    this.hide();
-    return false;
+		postRef = new Firebase(FIREBASE_URL + 'posts/');
+		postRef.update({id: postId, title: title, body: body}, this.onComplete);
 	},
+	onComplete: function(error) {
+		if (error) {
+    	console.log('Synchronization failed');
+  	} else {
+    console.log('Synchronization succeeded');
+  	}
+	},
+	
 });
