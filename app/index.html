@@ -23,7 +23,6 @@
     <link href="assets/css/lib/bootstrap.css" rel="stylesheet">
     <link href="assets/css/lib/extralayers.css" rel="stylesheet">
     <link href="assets/css/lib/animate.css" rel="stylesheet">
-    <link href="assets/css/lib/jquery.fileupload.css" rel="stylesheet">
     <link href="assets/css/lib/carousel.css" rel="stylesheet">
     <link href="assets/css/lib/et-line.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
@@ -394,52 +393,35 @@
     </div>
 	</script>
 
-<script type="text/template" id="post-form-template">
-  <div id="post-form">
-    <div class="container">
+  <script type="text/template" id="post-form-template">
+    <div class="container" id="post-form">
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-sm-offset-3">
           <a type="button" class="close"><i class="fa fa-times fa-2x"></i></a>
           <h3 class="section-title">Music Insider | New Post</h3>
         </div>
-        <form class="form-horizontal" role="form" enctype="multipart/form-data" method="POST" action="/audio">
-          <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
-            <div class="form-group">
-              <span class="btn btn-primary fileinput-button">
-                <i class="fa fa-file-audio-o fa-3x"></i>
-                <span> <h4>Select File</h4></span>
-                <input type="file" accept="audio/*" data-url="/audio" multiple id="fileupload" name="podcast">
-              </span>
-              <button type="submit" id="upload" class="btn btn-primary"><i class="fa fa-upload fa-3x"></i> <h4>Start Upload</h4></button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
 
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-            <form class="form-horizontal">
-              <div class="form-group">
-                <h4 class="post-label">Title</h4>
-                <input id="post-title" type="text" class="form-control" name="text" placeholder="Title">  
-              </div>
-              <div class="form-group">
-                <h4 class="post-label">Description</h4>
-                <textarea id="post-body" class="form-control" rows="10"></textarea> 
-              </div>
-              <div class="form-group">
-                <button type="submit" id="publish" class="btn btn-primary btn-lg"><i class="fa fa-check-circle fa-3x"></i> <h4>Publish</h4></button>
-              </div>
-            </form>
-    	    </div>
-    			<div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
-    	      <p><a href="http://evturn.com" class="evturn-login"><img id="evturn-security" src="http://ramenbuffet.com/assets/ev.png"> Powered by evturn.com</a></p>
-    	    </div>
-    	  </div>
-    	</div>
-    </div>
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+          <form class="form-horizontal">
+            <div class="form-group">
+              <h4 class="post-label">Title</h4>
+              <input id="post-title" type="text" class="form-control" name="text" placeholder="Title">  
+            </div>
+            <div class="form-group">
+              <h4 class="post-label">Description</h4>
+              <textarea id="post-body" class="form-control" rows="10"></textarea> 
+            </div>
+            <div class="form-group">
+              <button type="submit" id="publish" class="btn btn-primary btn-lg"><i class="fa fa-check-circle fa-3x"></i> <h4>Publish</h4></button>
+            </div>
+          </form>
+  	    </div>
+
+  			<div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
+  	      <p><a href="http://evturn.com" class="evturn-login"><img id="evturn-security" src="http://ramenbuffet.com/assets/ev.png"> Powered by evturn.com</a></p>
+  	    </div>
+  	  </div>
+  	</div>
   </script>
 
   <script type="text/template" id="edit-form-template">
@@ -482,12 +464,6 @@
     <script src="https://cdn.firebase.com/js/client/2.2.2/firebase.js"></script>
     <!-- BackboneFire -->
     <script src="https://cdn.firebase.com/libs/backbonefire/0.5.1/backbonefire.min.js"></script>
-    <!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
-    <script src="assets/plugins/jqfa/vendor/jquery.ui.widget.js"></script>
-    <!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
-    <script src="assets/plugins/jqfa/jquery.iframe-transport.js"></script>
-    <!-- The basic File Upload plugin -->
-    <script src="assets/plugins/jqfa/jquery.fileupload.js"></script>
     <!-- Bootstrap JS -->
     <script src="assets/js/lib/bootstrap.min.js"></script>    
     <!-- Menu Display -->
