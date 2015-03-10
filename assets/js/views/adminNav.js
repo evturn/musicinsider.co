@@ -40,7 +40,7 @@ var AdminNav = Backbone.View.extend({
 		var unauthConfirm = refUsers.getAuth();
 		if (!unauthConfirm) {
 			adminNav.render();
-			$('.admin-tools').hide();
+			clientState();
 		}
 	},
 });

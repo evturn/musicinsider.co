@@ -1,36 +1,18 @@
 var app = new AppView();
 
-firebasePosts.on("value", function(snapshot) {
-  console.log(snapshot.val());
-  clientState();
-}, function (errorObject) {
-  console.log("The read failed: " + errorObject.code);
-});
-
-firebaseUsers.onAuth(function(authData) {
-  if (authData) {
-    console.log("Authenticated with uid:", authData.uid);
-  } else {
-    console.log("Client unauthenticated.");
-  }
-});
-
 clientState = function() { 
   var authData = firebaseUsers.getAuth();
     if (authData === null) {
       $('.admin-tools').hide();
-      console.log('hide fired!');
     }
     if (authData !== null) {
       $('.admin-tools').show();
-      console.log('show fired!');
     }
   };
     
 
 
 $(function() {
-    clientState();
 
   $("#second").bootFolio({
     bfLayout: "bflayhover",
