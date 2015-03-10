@@ -1,15 +1,8 @@
 var AppView = Backbone.View.extend({
 	initialize: function() {
-		FIREBASE_URL = new Firebase('https://musicinsider.firebaseio.com/')
-		firebasePosts = new Firebase(FIREBASE_URL + 'posts');
-		firebaseUsers = new Firebase(FIREBASE_URL + 'users');
-		this.readFirebasePosts();
-		this.readFirebaseUsers();
-		adminNav     = new AdminNav();
-		allPosts     = new AllPosts();
-		allPosts.fetch();
-		allBlogPosts = new AllBlogPosts({collection: allPosts});
-
+		this.firebaseInit();
+		this.blogInit();
+		this.adminInit();
 	},
 	readFirebasePosts: function() {
 		firebasePosts.on("value", function(snapshot) {
@@ -26,5 +19,20 @@ var AppView = Backbone.View.extend({
     		console.log("Client unauthenticated.");
   		}
 		});
+	},
+	firebaseInit: function() {
+		FIREBASE_URL = new Firebase('https://musicinsider.firebaseio.com/');
+		firebasePosts = new Firebase(FIREBASE_URL + 'posts');
+		firebaseUsers = new Firebase(FIREBASE_URL + 'users');
+		this.readFirebasePosts();
+		this.readFirebaseUsers();
+	},
+	blogInit: function() {
+		allPosts     = new AllPosts();
+		allPosts.fetch();
+		allBlogPosts = new AllBlogPosts({collection: allPosts});
+	},
+	adminInit: function() {
+		adminNav     = new AdminNav();
 	},
 });
