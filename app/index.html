@@ -394,37 +394,41 @@
 	</script>
 
   <script type="text/template" id="post-form-template">
-<form class="form-horizontal" role="form" enctype="multipart/form-data" method="POST" action="/audio">
-              <div class="form-group pull-left">
-              <span class="btn btn-default btn-file"> Upload
-                <input type="file" class="form-control" accept="audio/*" data-url="/audio" multiple id="field-audio" name="podcast">
-                </span>
-                <div id="fileUploads"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+            <a type="button" class="close"><i class="fa fa-times fa-2x"></i></a>
+            <h3 class="section-title">Music Insider | New Post</h3>
+          </div>
+          <form class="form-horizontal" role="form" enctype="multipart/form-data" method="POST" action="/audio">
+            <div class="form-group">
+              <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                <input type="file" accept="audio/*" data-url="/audio" multiple id="field-audio" name="podcast">
               </div>
-              <div class="form-group pull-right">
-                <button type="submit" class="btn btn-primary">Upload</button>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                <button type="submit" class="btn btn-primary">Start Upload</button>
               </div>
-            </form>
+            </div>
+          </form>
+        </div>
+     </div>
+
+    <div class="container" id="post-form">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+          <form class="form-horizontal">
+            <div class="form-group">
+              <input id="post-title" type="text" class="form-control" name="text" placeholder="Title">  
+            </div>
+            <div class="form-group">
+              <textarea id="post-body" class="form-control" rows="10"></textarea> 
+            </div>
             <div class="form-group">
               <button type="submit" id="publish" class="btn btn-primary btn-lg">Publish</button>
             </div>
           </form>
-  
-
-  	<div class="container" id="post-form">
-  		<div class="row">
-  			<div class="col-xs-12 col-sm-6 col-sm-offset-3">
-        	<a type="button" class="close"><i class="fa fa-times fa-2x"></i></a>
-          <h3 class="section-title">Music Insider | New Post</h3>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-  				<form class="form-horizontal">
-  					<div class="form-group">
-  						<input id="post-title" type="text" class="form-control" name="text" placeholder="Title">	
-  					</div>
-  					<div class="form-group">
-  						<textarea id="post-body" class="form-control" rows="10"></textarea>	
-  					</div>
   	    </div>
   			<div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
   	      <p><a href="http://evturn.com" class="evturn-login"><img id="evturn-security" src="http://ramenbuffet.com/assets/ev.png"> Powered by evturn.com</a></p>
