@@ -17,11 +17,12 @@ var EditForm = Backbone.View.extend({
     		$('#edit-form').remove();
     	});
 	},
-	update: function() {
+	update: function(e) {
+		e.preventDefault();
 		title = $('#post-title').val();
 		body  = $('#post-body').val();
 		postRef = new Firebase(FIREBASE_URL + 'posts/');
-		postRef.update({id: postId, title: title, body: body}, this.onComplete);
+		postRef.push({id: selectedPost.id, title: title, body: body}, this.onComplete);
 	},
 	onComplete: function(error) {
 		if (error) {
