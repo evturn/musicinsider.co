@@ -2,6 +2,7 @@ var EditForm = Backbone.View.extend({
 	el: '#admin-workbench',
 	template: _.template($('#edit-form-template').html()),
 	initialize: function() {
+		self = this;
 		this.listenTo(this.collection);
 		this.render();
 	},
@@ -13,10 +14,10 @@ var EditForm = Backbone.View.extend({
 		this.$el.prepend(this.template(selectedPost));
 		return this;
 	},
-	close: function() {
+	exit: function() {
 		$('#edit-form').fadeOut('fast', function() {
-    		$('#edit-form').remove();
-    	});
+  		$('#edit-form').remove();
+    });
 	},
 	update: function(e) {
 		e.preventDefault();
@@ -31,9 +32,7 @@ var EditForm = Backbone.View.extend({
   	} else {
     console.log('Synchronization succeeded');
     allPosts.fetch();
-    	$('#edit-form').fadeOut('fast', function() {
-    		$('#edit-form').remove();
-    	});
+    self.exit();
   	}
 	},
 	
