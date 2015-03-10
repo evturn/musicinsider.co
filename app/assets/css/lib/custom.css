@@ -37,7 +37,7 @@ a.navbar-brand {
 	font-size: 10px;
 }
 
-h3.section-title, .blog-item h3 a {
+.post-label, h3.section-title, .blog-item h3 a {
 	text-transform: uppercase;
 	margin-top: 5px;
 	margin-left: 5px;
