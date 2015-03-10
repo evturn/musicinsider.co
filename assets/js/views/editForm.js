@@ -9,7 +9,7 @@ var EditForm = Backbone.View.extend({
 		'click #update'  : 'update'
 	},
 	render: function() {
-		this.$el.prepend(this.template());
+		this.$el.prepend(this.template(selectedPost));
 		return this;
 	},
 	close: function() {
