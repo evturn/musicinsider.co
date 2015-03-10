@@ -408,6 +408,19 @@
   					<div class="form-group">
   						<textarea id="post-body" class="form-control" rows="10"></textarea>	
   					</div>
+            <div class="form-group">
+              <span class="btn btn-success fileinput-button">
+                <i class="glyphicon glyphicon-plus"></i>
+                <span>Upload</span>
+                <input id="fileupload" type="file" name="files[]" multiple>
+              </span>
+              <br>
+              <br>   
+              <div id="progress" class="progress">
+                 <div class="progress-bar progress-bar-success"></div>
+              </div>
+              <div id="files" class="files"></div>
+            </div>
   					<div class="form-group">
   						<button type="submit" id="publish" class="btn btn-primary btn-lg">Publish</button>
   					</div>
@@ -458,6 +471,12 @@
     <script src="https://cdn.firebase.com/js/client/2.2.2/firebase.js"></script>
     <!-- BackboneFire -->
     <script src="https://cdn.firebase.com/libs/backbonefire/0.5.1/backbonefire.min.js"></script>
+    <!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
+    <script src="assets/plugins/jqfa/vendor/jquery.ui.widget.js"></script>
+    <!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+    <script src="assets/plugins/jqfa/jquery.iframe-transport.js"></script>
+    <!-- The basic File Upload plugin -->
+    <script src="assets/plugins/jqfa/jquery.fileupload.js"></script>
     <!-- Bootstrap JS -->
     <script src="assets/js/lib/bootstrap.min.js"></script>    
     <!-- Menu Display -->
