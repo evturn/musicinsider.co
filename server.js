@@ -30,7 +30,7 @@ app.post('/audio', function(req, res) {
 		console.log(fields);
 		console.log('received files:');
 		console.log(files);
-    res.redirect(303);
+    res.redirect(303, '/audio');
   });
 });
 
