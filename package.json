@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/evturn/musicinsider.co",
   "dependencies": {
-    "express": "^4.12.2"
+    "express": "^4.12.2",
+    "morgan": "^1.5.1"
   }
 }
