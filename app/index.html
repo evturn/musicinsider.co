@@ -23,6 +23,7 @@
     <link href="assets/css/lib/bootstrap.css" rel="stylesheet">
     <link href="assets/css/lib/extralayers.css" rel="stylesheet">
     <link href="assets/css/lib/animate.css" rel="stylesheet">
+    <link href="assets/css/lib/jquery.fileupload.css" rel="stylesheet">
     <link href="assets/css/lib/carousel.css" rel="stylesheet">
     <link href="assets/css/lib/et-line.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
@@ -403,12 +404,17 @@
           <form class="form-horizontal" role="form" enctype="multipart/form-data" method="POST" action="/audio">
             <div class="form-group">
               <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-                <input type="file" accept="audio/*" data-url="/audio" multiple id="field-audio" name="podcast">
+                <span class="btn btn-primary fileinput-button">
+                  <i class="fa fa-plus fa-3x"></i>
+                  <span> Select File</span>
+                  <input type="file" accept="audio/*" data-url="/audio" multiple id="fileupload" name="podcast">
+                </span>
+                <br>
               </div>
             </div>
             <div class="form-group">
               <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-                <button type="submit" class="btn btn-primary">Start Upload</button>
+                <button type="submit" class="btn btn-primary"><i class="fa fa-upload fa-3x"></i> Start Upload</button>
               </div>
             </div>
           </form>

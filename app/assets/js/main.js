@@ -82,7 +82,7 @@ $(function() {
   }); 
 
   $ (document).ready(function(){ 
-        $('#field-audio').fileupload({ 
+        $('#fileupload').fileupload({ 
           dataType: 'json', 
           done: function(e, data) { 
            $.each(data.result.files, function(index, file) { 
