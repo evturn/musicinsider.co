@@ -25,6 +25,7 @@ var LoginForm = Backbone.View.extend({
     		$('#login-form').remove();
     	});
 			adminNav.render();
+			clientState();
   		}
 		}.bind(this));
 	},

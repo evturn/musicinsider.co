@@ -7,14 +7,6 @@ var AppView = Backbone.View.extend({
 		allPosts     = new AllPosts();
 		allPosts.fetch();
 		allBlogPosts = new AllBlogPosts({collection: allPosts});
-		this.clientState();
 	},
-	clientState: function() {
-		var authData = firebaseUsers.getAuth();
-		if (!authData) {
-  		$('.admin-tools').remove();
-		} else {
-			$('.admin-tools').show();
-		}
-	},
+
 });
