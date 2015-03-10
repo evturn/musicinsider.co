@@ -4,9 +4,10 @@ var BlogPost = Backbone.View.extend({
 		this.render();
 	},
 	events: {
-		'click #edit' 	: 'edit',
+		'click #edit' 	: 'edit'
 	},
 	edit: function() {
+		postModel		 = this.model;
 		selectedPost = this.model.attributes;
 		editForm 		 = new EditForm({collection: allPosts});
 	},	

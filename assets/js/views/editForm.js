@@ -7,8 +7,9 @@ var EditForm = Backbone.View.extend({
 		this.render();
 	},
 	events: {
-		'click .close' 	 : 'exit',
-		'click #update'  : 'update'
+		'click .close' 	 	: 'exit',
+		'click #update'  	: 'update',
+		'click #destroy'  : 'clear'
 	},
 	render: function() {
 		this.$el.prepend(this.template(selectedPost));
@@ -23,8 +24,8 @@ var EditForm = Backbone.View.extend({
 		e.preventDefault();
 		title = $('#post-title').val();
 		body  = $('#post-body').val();
-		postRef = new Firebase(FIREBASE_URL + 'posts/');
-		postRef.push({id: selectedPost.id, title: title, body: body}, this.onComplete);
+		postRef = new Firebase(FIREBASE_URL + 'posts/' + selectedPost.id);
+		postRef.update({title: title, body: body}, this.onComplete);
 	},
 	onComplete: function(error) {
 		if (error) {
@@ -35,5 +36,10 @@ var EditForm = Backbone.View.extend({
     self.exit();
   	}
 	},
-	
+	// clear: function(e) {
+	// 	e.preventDefault();
+	// 	deleteRef 	 = new Firebase(FIREBASE_URL + 'posts');
+	// 	console.log(deleteRef);
+	// 	// removePost.remove(this.onComplete);
+	// },
 });
