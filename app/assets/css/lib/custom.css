@@ -2,7 +2,9 @@
 /* ----------------------------------------------------
   ADD YOUR CUSTOM STYLES HERE
 ------------------------------------------------------- */
-
+.slider_01, .tp-caption.slider_01, .slider_02, .tp-caption.slider_02 {
+	color: #000;
+}
 
 .bar {
     height: 18px;
