@@ -9,15 +9,16 @@ app.Dashboard = Backbone.View.extend({
 	formLoginTemplate : _.template($('#form-login-template').html()),
 	events: {
 		'click .btn-admin-create' 		 : 'newForm',
+		'click .btn-admin-hide' 		 	 : 'conceal',
 		'click .btn-admin-logout' 		 : 'logout',
 		'click .btn-form-admin-login'  : 'login',
 		'click .btn-form-admin-create' : 'create',
 		'click .btn-form-admin-update' : 'update',
-		'click .btn-form-admin-delete' : 'delete'
+		'click .btn-form-admin-delete' : 'clear',
 	},
 	initialize: function() {
 		this.render();
-		this.$el.hide();
+		this.conceal();
 	},
 	render: function() {
 		this.$el.html(this.dashboardTemplate());
@@ -58,12 +59,44 @@ app.Dashboard = Backbone.View.extend({
     		$('.error').text(error.message);
   		} else {
 	    	console.log("Authenticated successfully with payload:", authData);
-				dashboard.newForm();
+				dashboard.welcome();
 				$('.admin-tools-list').show();
 			}
 		}.bind(this));
 	},
 	logout: function() {
 		FIREBASE_URL.unauth();
+		this.conceal();
+	},
+	conceal: function() {
+		this.$el.fadeOut('fast', function() {
+    		this.$el.hide();
+    	}.bind(this));
+	},
+	editForm: function(model) {
+		console.log(model)
+		$('.admin-form-container').html(this.formEditTemplate(model));
+		return this;
+	},
+	edit: function(model) {
+		var title = $('#post-title').val();
+		var body  = $('#post-body').val();
+		var firebasePost = new Firebase(FIREBASE_URL + 'posts/' + model.id);
+		firebasePost.update({title: title, body: body}, this.onComplete);
+	},
+	onComplete: function(error) {
+		if (error) {
+    	console.log('Synchronization failed');
+  	} else {
+    	console.log('Synchronization succeeded');
+    	allPosts.fetch();
+    	this.conceal();
+  	}
+	},
+	clear: function(e) {
+		e.preventDefault();
+		var deleteRef 	 = new Firebase(FIREBASE_URL + 'posts/' + selectedPost.id);
+		console.log(deleteRef);
+		deleteRef.remove(this.onComplete);
 	},
 });

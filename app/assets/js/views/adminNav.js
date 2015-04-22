@@ -14,13 +14,4 @@ var AdminNav = Backbone.View.extend({
 			this.logout();
 		}
 	},
-	logout: function() {
-		FIREBASE_URL.unauth();
-		var refUsers 			= new Firebase(FIREBASE_URL + 'users');
-		var unauthConfirm = refUsers.getAuth();
-		if (!unauthConfirm) {
-			adminNav.render();
-			clientState();
-		}
-	},
 });

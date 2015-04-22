@@ -1,18 +1,17 @@
 var BlogPost = Backbone.View.extend({
-	template: _.template($('#blog-post-template').html()),
+	postTemplate: _.template($('#blog-post-template').html()),
 	initialize: function() {
 		this.render();
 	},
 	events: {
-		'click #edit' 	: 'edit'
+		'click .btn-admin-edit' : 'edit'
 	},
 	edit: function() {
-		postModel		 = this.model;
-		selectedPost = this.model.attributes;
-		editForm 		 = new EditForm({collection: allPosts});
+		dashboard.editForm(this.model.attributes);
+		return this;
 	},	
 	render: function() {
-		this.$el.html(this.template(this.model.toJSON()));
+		this.$el.html(this.postTemplate(this.model.toJSON()));
 		return this;
 	},
 });
