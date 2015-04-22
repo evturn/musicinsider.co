@@ -1,8 +1,23 @@
+.admin-dashboard {
+  z-index: 900;
+  background: #00BBB2;
+  border: 1px solid #fff;
+  border-top: none;
+}
 
+.admin-dashboard h2 {
+  color: #fff;
+  text-transform: uppercase;
+}
 
 .btn-admin-site {
   color: #fff;
   float: left;
+  cursor: pointer;
+}
+
+ul.admin-tools-list li {
+  display: inline-block;
   cursor: pointer;
 }
 
@@ -118,11 +133,6 @@ textarea.form-control {
   opacity: 1;
 }
 
-.admin-dashboard {
-  background: #fff;
-  color: #000;
-}
-
 .form-col {
   padding-right: 10px;
   padding-left: 10px;
@@ -134,12 +144,12 @@ textarea.form-control {
 }
 
 @media only screen and (max-width: 768px) {
-    .menu-wrapper {
-      background: #fff;
-      color: #000;
-    }
-    .navbar-default .navbar-toggle {
-        border: none;
-    }
+  .menu-wrapper {
+    background: #fff;
+    color: #000;
+  }
+  .navbar-default .navbar-toggle {
+      border: none;
+  }
 }
 
