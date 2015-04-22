@@ -100,6 +100,9 @@ textarea.form-control.admin-input {
   border: 2px solid #ddd;
 }
 
+p.lead {
+  font-family: 'Raleway', sans-serif;
+}
 
 .slider_01, .tp-caption.slider_01, .slider_02, .tp-caption.slider_02 {
   color: #fff;
@@ -168,28 +171,18 @@ textarea.form-control.admin-input {
   float: left;
 }
 
+.blog-item h3 {
+  text-align: center;
+}
+
+.blog-item h3 a {
+  color: #fff;
+}
+
 .blog-item h3 a:hover {
-  color: #ccc;
-}
-
-.desc {
-  min-height: 115px;
-}
-
-a.close {
   color: #000;
-  opacity: 1;
+  font-family: 'Raleway', sans-serif;
 }
-
-a.close:hover, a.close:after {
-  color: red;
-  opacity: 1;
-}
-
-.section-p {
-  padding-top: 40px;
-}
-
 
 .btn.btn-default.btn-lg.btn-general {
   color: #fff !important;
@@ -203,8 +196,13 @@ a.close:hover, a.close:after {
   font-size: 17px;
 }
 
+.concealed {
+  display: none;
+}
+
 .btn.btn-default.btn-lg.btn-general.btn-admin-edit {
   padding: 1px 15px;
+  border: none;
 }
 
 #post-content .meta .admin-tools .pull-right a.btn.btn-default.btn-lg.btn-general, #post-content .meta .pull-left p {

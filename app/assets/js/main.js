@@ -5,19 +5,7 @@ var dashboard = new app.Dashboard();
 
 new WOW().init();
 
-// clientState = function() { 
-//   var authData = firebaseUsers.getAuth();
-//   if (authData === null) {
-//     $('.admin-tools').hide();
-//   }
-//   if (authData !== null) {
-//     $('.admin-tools').show();
-//   }
-// };
-    
-
 $(function() {
-
 
   $('.btn-admin-site').on('click', function() {
     website.dashboard();

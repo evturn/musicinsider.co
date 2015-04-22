@@ -339,12 +339,15 @@
   </script>
 
   <script type="text/template" id="blog-post-template">
-    <div class="blog-item col-md-6">
+    <div class="blog-item col-md-6 col-sm-6 col-xs-12">
       <div class="post-media entry">
         <img src="assets/img/blog_01.jpg" class="img-responsive">
         <div class="magnifier">
           <div class="buttons text-center">
             <h3><a href="#">Listen</a></h3>
+            <div class="admin-tool">
+              <a class="btn btn-default btn-lg btn-general btn-admin-edit">Edit</a>
+            </div>
           </div><!-- end buttons -->
         </div>
       </div><!-- end entry -->
@@ -352,16 +355,6 @@
         <h3 class="section-title"><a href="#" id="post-title"><%= title %></a></h3>
         <p id="post-title"><%= body %></p>
       </div><!-- end desc -->
-      <div class="meta">
-        <div class="pull-left">
-          <p></p>
-      </div><!-- end left -->
-      <div class="pull-right">
-        <div class="form-group">
-          <a class="btn btn-default btn-lg btn-general btn-admin-edit">Edit</a>
-        </div>
-      </div><!-- end right -->
-      </div><!-- end meta -->
     </div><!-- end blog --> 
   </script>
 

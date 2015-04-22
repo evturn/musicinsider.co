@@ -60,7 +60,6 @@ app.Dashboard = Backbone.View.extend({
   		} else {
 	    	console.log("Authenticated successfully with payload:", authData);
 				dashboard.welcome();
-				$('.admin-tools-list').show();
 			}
 		}.bind(this));
 	},

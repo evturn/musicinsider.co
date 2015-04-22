@@ -16,24 +16,37 @@ app.App = Backbone.View.extend({
 		firebaseUsers.onAuth(function(authData) {
   		if (authData) {
     		console.log("Authenticated with uid:", authData.uid);
-    		$('.fa-user-secret').css({color: 'yellow'});
-    		$('.admin-dashboard .container-fluid').css({paddingTop: '0'})
+    		this.authenticated();
   		} else {
     		console.log("Client unauthenticated.");
-    		$('.fa-user-secret').css({color: '#ddd'});
+    		this.unauthenticated();
   		}
-		});
+		}.bind(this));
 	},
 	dashboard: function() {
 		firebaseUsers.onAuth(function(authData) {
   		if (authData) {
-    		dashboard.render();
+  			this.authenticated();
+  			dashboard.render();
   		} else {
+  			this.unauthenticated();
     		dashboard.loginForm();
-    		$('.admin-tools-list').hide();
-    		$('.admin-dashboard .container-fluid').css({paddingTop: '125px'})
   		}
-		});
+		}.bind(this));
+	},
+	authenticated: function() {
+    $('.fa-user-secret').css({color: 'yellow'});
+    $('.admin-tools-list').removeClass('concealed');
+    $('.admin-dashboard .container-fluid').css({paddingTop: '0'})
+    $('.admin-tool').removeClass('concealed');
+    console.log('HELLS YES WE ARE GOING TO BE SESSIONING!');
+	},
+	unauthenticated: function() {
+    $('.fa-user-secret').css({color: '#ddd'});
+    $('.admin-tools-list').addClass('concealed');
+    $('.admin-tool').addClass('concealed');
+    $('.admin-dashboard .container-fluid').css({paddingTop: '125px'})
+    console.log('YOU AIN\'T ALLOWED TO DO ANYTHING');
 	},
 	firebaseInit: function() {
 		FIREBASE_URL 	= new Firebase('https://musicinsider.firebaseio.com/');
