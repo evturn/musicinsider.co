@@ -1,13 +1,78 @@
+
+/*
 .admin-dashboard {
-  z-index: 900;
-  background: #00BBB2;
-  border: 1px solid #fff;
-  border-top: none;
-}
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  
+}*/
 
 .admin-dashboard h2 {
-  color: #fff;
+  color: #a8a8a8;
   text-transform: uppercase;
+  padding-left: 40px;
+}
+
+.admin-tools-container:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  color: transparent;
+  border: 10px solid black;
+  border-color: transparent transparent transparent;
+}
+
+.admin-tools-container {
+  width: 80%;
+  margin-left: 0;
+  z-index: 900;
+  background: #fff;
+  border-top: none;
+  border: 1px solid rgba(100, 100, 100, .4);
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+  overflow: visible;
+  position: absolute;
+}
+
+ul.admin-tools-list li {
+  display: inline-block;
+  padding-right: 15px;
+  color: #fff;
+  position: relative;
+}
+
+ul.admin-tools-list li a {
+  cursor: pointer;
+}
+
+.admin-tools-list i {
+  background: #FF8800;
+  border-bottom: 2px solid #b94721;
+  border-radius: 2px;
+  border-top: none;
+  color: #fff;
+  outline: 0;
+  height: 50px;
+  line-height: 1.6em;
+  text-align: center;
+  width: 50px;
+}
+
+.admin-tools-list i:hover {
+  background: #FF8800;
+  border-bottom: 2px solid #FF8800;
+  border-radius: 4px;
+  color: #fff;
+  margin-bottom: -2px;
+}
+
+.admin-tools-list i:focus {
+  background: #FF8800;
+  border-bottom: 2px solid #b94721;
+  color: #fff;
 }
 
 .btn-admin-site {
@@ -44,11 +109,6 @@ textarea.form-control {
 
 #login-form h3 {
   color: #fff;
-}
-
-ul.admin-tools-list li {
-  display: inline-block;
-  cursor: pointer;
 }
 
 .slider_01, .tp-caption.slider_01, .slider_02, .tp-caption.slider_02 {
@@ -130,8 +190,8 @@ a.close:hover, a.close:after {
 }
 
 .btn.btn-default.btn-lg.btn-general {
-  background: #FF8800;
   color: #fff;
+  background: #FF8800;
   border: 2px solid #00D6CC;
   border-radius: 4%;
   font-weight: 600;
