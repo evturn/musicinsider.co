@@ -125,7 +125,7 @@ p.lead {
 }
 
 .navbar-default {
-  padding: 50px;
+  /*padding: 50px;*/
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -173,7 +173,7 @@ p.lead {
   transition: all 0.8s;
 }
 
-button.navbar-toggle.collapsed {
+button.navbar-toggle.collapsed:hover {
   background: none;
 }
 
