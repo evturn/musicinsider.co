@@ -7,6 +7,7 @@ app.Dashboard = Backbone.View.extend({
 	formEditTemplate  : _.template($('#form-edit-template').html()),
 	formLoginTemplate  : _.template($('#form-login-template').html()),
 	events: {
+		'click .btn-admin-create' 		 : 'newForm',
 		'click .btn-form-admin-create' : 'create',
 		'click .btn-form-admin-update' : 'update',
 		'click .btn-form-admin-delete' : 'delete',
