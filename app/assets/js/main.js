@@ -4,15 +4,17 @@ var view = new AppView();
 var dashboard = new app.Dashboard();
 
 
-clientState = function() { 
-  var authData = firebaseUsers.getAuth();
-    if (authData === null) {
-      $('.admin-tools').hide();
-    }
-    if (authData !== null) {
-      $('.admin-tools').show();
-    }
-  };
+new WOW().init();
+
+// clientState = function() { 
+//   var authData = firebaseUsers.getAuth();
+//   if (authData === null) {
+//     $('.admin-tools').hide();
+//   }
+//   if (authData !== null) {
+//     $('.admin-tools').show();
+//   }
+// };
     
 
 $(function() {
