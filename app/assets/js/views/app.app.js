@@ -16,11 +16,11 @@ app.App = Backbone.View.extend({
 		firebaseUsers.onAuth(function(authData) {
   		if (authData) {
     		console.log("Authenticated with uid:", authData.uid);
-    		$('.fa.fa-gear').css({color: 'yellow'});
+    		$('.fa-user-secret').css({color: 'yellow'});
     		$('.admin-dashboard .container-fluid').css({paddingTop: '0'})
   		} else {
     		console.log("Client unauthenticated.");
-    		$('.fa.fa-gear').css({color: '#ddd'});
+    		$('.fa-user-secret').css({color: '#ddd'});
   		}
 		});
 	},
