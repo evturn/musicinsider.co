@@ -74,22 +74,49 @@
   	  </div><!-- end menu-wrapper -->
     </header>
   </div>
-
   
   <div class="admin-dashboard">
     <div class="row">
       <div class="admin-tools-container">
-        <h2>Dashboard</h2>
-        <ul class="admin-tools-list">
+        <ul class="admin-tools-list text-center">
           <li><a class="btn-admin-create"><i class="fa fa-plus fa-2x"></i></a></li>
           <li><a class="btn-admin-edit"><i class="fa fa-pencil fa-2x"></i></a></li>
           <li><a class="btn-admin-all"><i class="fa fa-list fa-2x"></i></a></li>
+          <li><a class="btn-admin-all"><i class="fa fa-cloud-upload fa-2x"></i></a></li>
         </ul>
-    
-        
+
+          <div class="container-fluid">
+            <div class="row">
+
+            <div class="col-md-4 col-sm-4">
+              
+            </div>
+
+            <div class="col-md-4 col-sm-4">
+              <a type="button" class="close"><i class="fa fa-times fa-2x"></i></a>
+              <h3 class="section-title text-center">Music Insider | New Post</h3>
+
+                <form class="form-horizontal">
+                  <div class="form-group">
+                    <h4 class="post-label">Title</h4>
+                    <input id="post-title" type="text" class="form-control admin-input" name="text" placeholder="Title">  
+                  </div>
+                  <div class="form-group">
+                    <h4 class="post-label">Description</h4>
+                    <textarea id="post-body" class="form-control admint-input" rows="10"></textarea> 
+                  </div>
+                  <div class="form-group">
+                    <a class="btn btn-default btn-lg btn-general">Publish</a>
+                  </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
-  </div>
   
 
   <article class="slider-wrapper">
@@ -316,36 +343,35 @@
 	</script>
 
 	<script type="text/template" id="login-template">	  
-		<div class="container" id="login-form">
-			<div class="row">
-				<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
-	      	<a type="button" class="close"><i class="fa fa-times fa-2x"></i></a>
-	        <h3 class="section-title text-center">Music Insider | Login</h3>
-	        <div class="row">
-    	      <div class="col-xs-12 col-sm-12 col-md-12">
-    		      <form class="form-horizontal" role="form">  
-    		        <div class="form-group">
-    		          <label>Email</label>
-    		          <input class="form-control admin-input" type="email" id="email">
-    		        </div>
-    		        <div class="form-group">
-    		          <label>Password</label>
-    		          <input class="form-control admin-input" type="password" id="password">
-    		        </div>
-    		        <div class="form-group">
-    		          <button type="submit" id="login-btn" class="btn btn-primary btn-lg btn-general">LOGIN</button>
-    		        </div>
-    		      </form>
-    	        <a><img class="img-responsive form-image" src="http://evturn.com/assets/img/ev-js.jpg"></a>
+		<div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 admin-form-login">
+          <a type="button" class="close"><i class="fa fa-times fa-2x"></i></a>
+          <h3 class="section-title text-center">Music Insider | Login</h3>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+              <form class="form-horizontal" role="form">  
+                <div class="form-group">
+                  <label>Email</label>
+                  <input class="form-control admin-input" type="email" id="email">
+                </div>
+                <div class="form-group">
+                  <label>Password</label>
+                  <input class="form-control admin-input" type="password" id="password">
+                </div>
+                <div class="form-group">
+                  <button type="submit" id="login-btn" class="btn btn-primary btn-lg btn-general">LOGIN</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      </div>
 	</script>
 
   <script type="text/template" id="post-form-template">
-    <div class="container" id="login-form">
+    <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
           <a type="button" class="close"><i class="fa fa-times fa-2x"></i></a>
@@ -365,7 +391,6 @@
                   <button type="submit" id="publish" class="btn btn-primary btn-lg"><i class="fa fa-check-circle fa-3x"></i> <h4>Publish</h4></button>
                 </div>
               </form>
-      	      <a><img class="img-responsive form-image" src="http://evturn.com/assets/img/ev-js.jpg"></a>
             </div>
           </div>
         </div>
@@ -374,7 +399,7 @@
   </script>
 
   <script type="text/template" id="edit-form-template">
-    <div class="container" id="login-form">
+    <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
           <a type="button" class="close"><i class="fa fa-times fa-2x"></i></a>
@@ -395,7 +420,7 @@
                     <button type="submit" id="destroy" class="btn btn-primary btn-lg"><i class="fa fa-bomb fa-3x"></i> <h4>Delete</h4></button>
                   </div>
                 </form>
-                <a><img class="img-responsive form-image" src="http://evturn.com/assets/img/ev-js.jpg"></a>
+                
               </div>
             </div>
           </div>
