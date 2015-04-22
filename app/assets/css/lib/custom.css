@@ -6,6 +6,17 @@
 	color: #000;
 }
 
+.menufix #home {
+  background: #fff;
+  border-bottom: 2px solid #ddd;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #000 !important;
+	font-size: 19px;
+}
+
+
 .bar {
   height: 18px;
   background: green;
