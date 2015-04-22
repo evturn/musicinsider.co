@@ -6,8 +6,8 @@ var PostForm = Backbone.View.extend({
 		this.render();
 	},
 	events: {
-		'click .close' 	 : 'exit',
-		'click #publish' : 'create'
+		'click .close' 	 					: 'exit',
+		'click .btn-admin-create' : 'create'
 	},
 	render: function() {
 		this.$el.prepend(this.template());

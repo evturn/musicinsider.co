@@ -5,8 +5,8 @@ var LoginForm = Backbone.View.extend({
 		this.render();
 	},
 	events: {
-		'click #login-btn' : 'login',
-		'click .close' 	 	 : 'exit'
+		'click .btn-admin-login' : 'login',
+		'click .close' 	 	 			 : 'exit'
 	},
 	login: function(e) {
 		e.preventDefault();

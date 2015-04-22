@@ -7,9 +7,9 @@ var EditForm = Backbone.View.extend({
 		this.render();
 	},
 	events: {
-		'click .close' 	 : 'exit',
-		'click #update'  : 'update',
-		'click #destroy' : 'clear'
+		'click .close' 	 					: 'exit',
+		'click .btn-admin-update' : 'update',
+		'click .btn-admin-delete' : 'clear'
 	},
 	render: function() {
 		this.$el.prepend(this.template(selectedPost));
