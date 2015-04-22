@@ -53,15 +53,15 @@
         <nav class="navbar yamm navbar-default" role="navigation">
           <div class="container-fluid">
             <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="fa fa-bars fa-2x"></span>
   	          </button>
               <a class="navbar-brand" href="#"><img src="assets/img/navbar-logo-square.png" alt=""></a>
             </div>
-            <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav navbar-left admin-nav">
-                
+            <div id="collapse" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-left">
+                <li><a class="btn-admin-site"><i class="fa fa-power-off"></i></a></li> 
               </ul>
               <ul class="nav navbar-nav navbar-right">     	
                 <li><a href="#about">About</a></li>
@@ -86,7 +86,7 @@
       <div class="tp-banner" >
         <ul>
           <li data-transition="slideup" data-slotamount="3" data-masterspeed="1000" data-thumb="assets/img/slider_27.jpg"  data-saveperformance="off"  data-title="Parallax 3D">
-            <img src="assets/img/dummy.png"  alt="" data-lazyload="assets/img/landing-w.png" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+            <img src="assets/img/dummy.png"  alt="" data-lazyload="assets/img/logo-1920.png" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
             <div class="tp-caption slider_01 skewfromright randomrotateout tp-resizeme rs-parallaxlevel-2"
                 data-x="left"
                 data-y="280" 
@@ -124,7 +124,7 @@
                 data-elementdelay="0.1"
                 data-endelementdelay="0.1"
                 data-endspeed="1000"
-                style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;"><a href="#" title="" class="btn btn-default btn-lg">Stream Now</a>
+                style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;"><a href="#" class="btn btn-default btn-lg btn-stream-now">Stream Now</a>
             </div>
           </li>
         </ul>   
@@ -302,11 +302,6 @@
       </div><!-- end right -->
     	</div><!-- end meta -->
   	</div><!-- end blog --> 
-	</script>
-
-	<script type="text/template" id="admin-nav-template">
-    <li><a href="#" class="btn-site-admin"><i class="fa fa-power-off"></i> <%= firebaseUsers.getAuth() === null ? 'Admin' : 'Logout' %></a></li> 
-		<li><a href="#" class="admin-tools" id="new-post-btn"><i class="fa fa-plus"></i> Post</a></li>
 	</script>
 
 	<script type="text/template" id="login-template">	  

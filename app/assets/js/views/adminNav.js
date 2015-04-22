@@ -1,17 +1,9 @@
 var AdminNav = Backbone.View.extend({
 	el: '.admin-nav',
 	tagName: 'li',
-	template: _.template($('#admin-nav-template').html()),
-	initialize: function() {
-		this.render();
-	},
 	events: {
-		'click .btn-site-admin' : 'toggleAuth',
-		'click #new-post-btn'   : 'postForm'
-	},
-	render: function() {
-		this.$el.html(this.template());
-		return this;
+		'click .btn-admin-site' : 'toggleAuth',
+		'click .btn-admin-post' : 'postForm'
 	},
 	toggleAuth: function(e) {
 		e.preventDefault();

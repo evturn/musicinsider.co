@@ -3,45 +3,60 @@
   ADD YOUR CUSTOM STYLES HERE
 ------------------------------------------------------- */
 .slider_01, .tp-caption.slider_01, .slider_02, .tp-caption.slider_02 {
-    color: #000;
+  color: #fff;
+}
+
+.menufix {
+  background: #00BBB2;
+}
+
+.section-g, .section-w {
+  background: #00BBB2;
+  color: #fff;
+}
+
+.btn-stream-now {
+  background: #FF8800;
+  color: #000;
+  border: 2px solid #00D6CC;
+  border-radius: 5%;
+  font-weight: 600;
 }
 
 .menufix .header-nav {
-  background: #fff;
-  border-bottom: 2px solid #ddd;
+  background: #000;
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: #000 !important;
-    font-size: 19px;
+  color: #fff !important;
+  font-size: 19px;
 }
-
 
 .bar {
   height: 18px;
   background: green;
 }
 
-.btn-site-admin {
-    color: #fff;
-    float: left;
+.btn-admin-site {
+  color: #fff;
+  float: left;
 }
 
 a.navbar-brand {
-    padding: 15px 0;
-    width: 40px;
+  padding: 15px 0;
+  width: 40px;
 }
 
 .post-label, h3.section-title, .blog-item h3 a {
-    text-transform: uppercase;
-    margin-top: 5px;
-    margin-left: 5px;
-    border-radius: 3%;
-    color: #000;
+  text-transform: uppercase;
+  margin-top: 5px;
+  margin-left: 5px;
+  border-radius: 3%;
+  color: #000;
 }
 
 .blog-item h3 a:hover {
-    color: #ccc;
+  color: #ccc;
 }
 
 .form-image {
@@ -55,63 +70,63 @@ a.navbar-brand {
 }
 
 a.close {
-    color: #000;
-    opacity: 1;
+  color: #000;
+  opacity: 1;
 }
 
 a.close:hover, a.close:after {
-    color: red;
-    opacity: 1;
+  color: red;
+  opacity: 1;
 }
 
 .btn {
-    border-radius: 8%;
-    text-transform: uppercase;
-    font-size: 13px;
-    font-weight: 500;
+  border-radius: 8%;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
 }
 
 input.form-control {
-    font-size: 20px;
-    font-weight: 500;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 textarea.form-control {
-    font-size: 20px;
-    font-weight: 500;
-    height: 100%;
-    resize: vertical;
-    border: 2px solid #ddd;
-    border-radius: 2px;
+  font-size: 20px;
+  font-weight: 500;
+  height: 100%;
+  resize: vertical;
+  border: 2px solid #ddd;
+  border-radius: 2px;
 }
 
 .form-control.admin-input {
-    border: 2px solid #ddd;
-    border-radius: 2px;
+  border: 2px solid #ddd;
+  border-radius: 2px;
 }
 
 .section-p {
-    padding-top: 40px;
+  padding-top: 40px;
 }
 
 .navbar-nav > li > a.admin-nav {
-    background-color: #000;
-    opacity: 1;
+  background-color: #000;
+  opacity: 1;
 }
 
 .admin-dashboard {
-    background: #fff;
-    color: #000;
+  background: #fff;
+  color: #000;
 }
 
 .form-col {
-    padding-right: 10px;
-    padding-left: 10px;
-    border: 2px solid #ddd;
+  padding-right: 10px;
+  padding-left: 10px;
+  border: 2px solid #ddd;
 }
 
 #login-form h3 {
-    color: #000;
+  color: #000;
 }
 
 @media only screen and (max-width: 768px) {
