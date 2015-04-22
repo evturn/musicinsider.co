@@ -60,6 +60,10 @@ ul.admin-tools-list li a {
   text-transform: uppercase;
 }
 
+.fa.fa-dashboard {
+  font-size: 11em;
+}
+
 .btn-admin-site {
   color: #fff;
   float: left;

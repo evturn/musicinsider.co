@@ -3,9 +3,10 @@ var app = app || {};
 app.Dashboard = Backbone.View.extend({
 	el: '.admin-dashboard',
 	dashboardTemplate : _.template($('#dashboard-template').html()),
+	welcomeTemplate 	: _.template($('#welcome-template').html()),
 	formNewTemplate   : _.template($('#form-new-template').html()),
 	formEditTemplate  : _.template($('#form-edit-template').html()),
-	formLoginTemplate  : _.template($('#form-login-template').html()),
+	formLoginTemplate : _.template($('#form-login-template').html()),
 	events: {
 		'click .btn-admin-create' 		 : 'newForm',
 		'click .btn-form-admin-create' : 'create',
@@ -19,6 +20,12 @@ app.Dashboard = Backbone.View.extend({
 	},
 	render: function() {
 		this.$el.html(this.dashboardTemplate());
+		this.welcome();
+		return this;
+	},
+	welcome: function() {
+		$('.admin-form-container').html(this.welcomeTemplate());
+		this.$el.show();
 		return this;
 	},
 	loginForm: function() {
