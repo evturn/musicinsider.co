@@ -6,7 +6,7 @@
     color: #000;
 }
 
-.menufix #home {
+.menufix .header-nav {
   background: #fff;
   border-bottom: 2px solid #ddd;
 }

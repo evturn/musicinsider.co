@@ -229,14 +229,14 @@ blockquote:after {
   HEADER
 ------------------------------------------------------- */
 
-.menufix #home {
+.menufix .header-nav {
   position: relative;
   padding:0;
   margin:0;
   background: #0b0b0b;
 }
 
-.transparentmenu #home {
+.transparentmenu .header-nav {
     position: absolute;
     padding:0;
     margin:0;
@@ -248,21 +248,21 @@ blockquote:after {
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 }
 
-.transparentmenu #home .navbar-default {
+.transparentmenu .header-nav .navbar-default {
     padding:10px 30px 20px;
 }
 
-.transparentmenu #home .navbar-nav > li > .dropdown-menu {
+.transparentmenu .header-nav .navbar-nav > li > .dropdown-menu {
     margin-top: 20px;
 }
 
-.transparentmenu #home .navbar-nav > li > a:hover,
-.transparentmenu #home .navbar-nav > li > a:focus {
+.transparentmenu .header-nav .navbar-nav > li > a:hover,
+.transparentmenu .header-nav .navbar-nav > li > a:focus {
     color:#fff !important;
 }
 
-.darkcolormenu #home .social-icons a,
-.darkcolormenu #home .navbar-nav > li > a {
+.darkcolormenu .header-nav .social-icons a,
+.darkcolormenu .header-nav .navbar-nav > li > a {
     color:#0b0b0b !important;
 }
 
@@ -270,7 +270,7 @@ blockquote:after {
     background: #fff !important;
 }
 
-#home {
+.header-nav {
     position: absolute;
     left: 0;
     right: 0;
@@ -4076,7 +4076,7 @@ div.thumbnails .magnifier .buttons {
     h4 .borderright,
     #deeplinking .details #count,
     #vertical-slider .btn,
-    #home .social-icons {
+    .header-nav .social-icons {
     display:none;
     }
     
@@ -4099,7 +4099,7 @@ div.thumbnails .magnifier .buttons {
     background: #fff !important;
     }
     
-    .navbar-nav .dropdown-menu ul li h3,#home {
+    .navbar-nav .dropdown-menu ul li h3,.header-nav {
     margin:0;
     }
     .menu-wrapper {
@@ -4308,7 +4308,7 @@ h1, h2, h3, h4, h5, h6 {
     color:#444;
 }
 
-.transparentmenu #home {
+.transparentmenu .header-nav {
     background: rgb(0, 0, 0) transparent !important;
     background: rgba(0, 0, 0, 0.1) !important;
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
@@ -4329,7 +4329,7 @@ h1, h2, h3, h4, h5, h6 {
     .agencystyle .menu-wrapper {
       background: #0b0b0b !important;
     }
-    .transparentmenu #home,
+    .transparentmenu .header-nav,
     #multimenu.menu-wrapper {
     background:#0b0b0b !important;
     }
