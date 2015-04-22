@@ -44,7 +44,8 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Dosis",sans-serif;
+    /*font-family: "Dosis",sans-serif;*/
+    font-family: 'Raleway', sans-serif;
     color: #353535;
     font-weight: 500;
     line-height: 1.6;

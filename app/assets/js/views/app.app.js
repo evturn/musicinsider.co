@@ -31,7 +31,7 @@ app.App = Backbone.View.extend({
   		} else {
     		dashboard.loginForm();
     		$('.admin-tools-list').hide();
-    		$('.admin-dashboard .container-fluid').css({paddingTop: '100px'})
+    		$('.admin-dashboard .container-fluid').css({paddingTop: '125px'})
   		}
 		});
 	},

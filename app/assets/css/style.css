@@ -55,15 +55,18 @@ ul.admin-tools-list li a {
   background: #00BBB2;
   color: #fff;
   border: 1px solid #fff;
-}
-
-.admin-form-container {
   text-shadow: 0 2px 0 #00A8A0;
   text-transform: uppercase;
 }
 
+.admin-form-container h1 {
+  font-family: 'Raleway', sans-serif;
+  color: #fff;
+  font-weight: 500;
+}
+
 .fa.fa-dashboard {
-  font-size: 11em;
+  font-size: 13em;
 }
 
 .btn-admin-site {
