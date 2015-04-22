@@ -1,4 +1,9 @@
-var app = new AppView();
+var app = app || {};
+
+var view = new AppView();
+var dashboard = new app.Dashboard();
+
+
 
 clientState = function() { 
   var authData = firebaseUsers.getAuth();

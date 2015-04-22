@@ -1,6 +1,6 @@
 var EditForm = Backbone.View.extend({
 	el: '.admin-dashboard',
-	template: _.template($('#edit-form-template').html()),
+	template: _.template($('#form-edit-template').html()),
 	initialize: function() {
 		self = this;
 		this.listenTo(this.collection);

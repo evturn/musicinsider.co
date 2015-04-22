@@ -2,7 +2,7 @@ var app = app || {};
 
 app.Dashboard = Backbone.View.extend({
 	el: '.admin-dashboard',
-	dashboardTemplate: _.template($('#dashboard-template').html());
+	dashboardTemplate: _.template($('#dashboard-template').html()),
 	initialize: function() {
 		this.render();
 	},

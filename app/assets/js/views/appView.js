@@ -2,7 +2,7 @@ var AppView = Backbone.View.extend({
 	initialize: function() {
 		this.firebaseInit();
 		this.blogInit();
-		this.adminInit();
+		// this.adminInit();
 	},
 	readFirebasePosts: function() {
 		firebasePosts.on("value", function(snapshot) {
