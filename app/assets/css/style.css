@@ -1,7 +1,11 @@
 
-/* ----------------------------------------------------
-  ADD YOUR CUSTOM STYLES HERE
-------------------------------------------------------- */
+
+.btn-admin-site {
+  color: #fff;
+  float: left;
+  cursor: pointer;
+}
+
 .slider_01, .tp-caption.slider_01, .slider_02, .tp-caption.slider_02 {
   color: #fff;
 }
