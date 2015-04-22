@@ -48,6 +48,7 @@
   border-bottom: 2px solid #ddd;
   padding-top: 20px;
   padding-bottom: 20px;
+  padding-left: 0;
 }
 
 ul.admin-tools-list li {
@@ -88,6 +89,17 @@ ul.admin-tools-list li a {
   color: #fff;
 }
 
+.admin-form-container {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 4%;
+  padding-bottom: 2%;
+  margin-bottom: 25px;
+  background: #00BBB2;
+  color: #fff;
+}
+
+
 .btn-admin-site {
   color: #fff;
   float: left;
@@ -98,7 +110,7 @@ ul.admin-tools-list li a {
   z-index: 1000;
 }
 
-.form-control.admin-input {
+input.form-control.admin-input, textarea.form-control.admin-input {
   border: 1px solid #ddd;
   border-radius: 2px;
   background: #00A8A0;
@@ -112,7 +124,7 @@ input.form-control {
 textarea.form-control {
   font-size: 20px;
   font-weight: 500;
-  height: 100%;
+  height: 80%;
   resize: vertical;
   border: 2px solid #ddd;
   border-radius: 2px;
@@ -160,14 +172,6 @@ textarea.form-control {
 a.navbar-brand {
   padding: 15px 0;
   width: 40px;
-}
-
-.post-label, h3.section-title, .blog-item h3 a {
-  text-transform: uppercase;
-  margin-top: 5px;
-  margin-left: 5px;
-  border-radius: 3%;
-  color: #000;
 }
 
 .blog-item h3 a:hover {
