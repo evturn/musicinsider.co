@@ -106,7 +106,7 @@ textarea.form-control {
 	opacity: 1;
 }
 
-#admin-workbench {
+.admin-dashboard {
 	background: #fff;
 	color: #000;
 }
@@ -117,7 +117,7 @@ textarea.form-control {
 	border: 2px solid #ddd;
 }
 
-#login-form h3 {
+.login-form h3 {
 	color: #000;
 }
 

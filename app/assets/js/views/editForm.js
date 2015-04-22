@@ -1,5 +1,5 @@
 var EditForm = Backbone.View.extend({
-	el: '#admin-workbench',
+	el: '.admin-dashboard',
 	template: _.template($('#edit-form-template').html()),
 	initialize: function() {
 		self = this;
@@ -7,9 +7,9 @@ var EditForm = Backbone.View.extend({
 		this.render();
 	},
 	events: {
-		'click .close' 	 	: 'exit',
-		'click #update'  	: 'update',
-		'click #destroy'  : 'clear'
+		'click .close' 	 : 'exit',
+		'click #update'  : 'update',
+		'click #destroy' : 'clear'
 	},
 	render: function() {
 		this.$el.prepend(this.template(selectedPost));

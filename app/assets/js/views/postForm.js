@@ -1,5 +1,5 @@
 var PostForm = Backbone.View.extend({
-	el: '#admin-workbench',
+	el: '.admin-dashboard',
 	template: _.template($('#post-form-template').html()),
 	initialize: function() {
 		this.listenTo(this.collection);

@@ -1,5 +1,5 @@
 var LoginForm = Backbone.View.extend({
-	el: '#admin-workbench',
+	el: '.admin-dashboard',
 	template: _.template($('#login-template').html()),
 	initialize: function() {
 		this.render();
