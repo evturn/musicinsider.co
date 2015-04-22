@@ -121,3 +121,13 @@ textarea.form-control {
 	color: #000;
 }
 
+@media only screen and (max-width: 768px) {
+	.menu-wrapper {
+	  background: #fff;
+	  color: #000;
+	}
+	.navbar-default .navbar-toggle {
+		border: none;
+	}
+}
+
