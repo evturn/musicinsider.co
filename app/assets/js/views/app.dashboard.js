@@ -74,11 +74,10 @@ app.Dashboard = Backbone.View.extend({
     	}.bind(this));
 	},
 	editForm: function(model) {
-		console.log(model)
 		$('.admin-form-container').html(this.formEditTemplate(model));
 		return this;
 	},
-	edit: function(model) {
+	update: function(model) {
 		var title = $('#post-title').val();
 		var body  = $('#post-body').val();
 		var firebasePost = new Firebase(FIREBASE_URL + 'posts/' + model.id);
@@ -89,14 +88,10 @@ app.Dashboard = Backbone.View.extend({
     	console.log('Synchronization failed');
   	} else {
     	console.log('Synchronization succeeded');
-    	allPosts.fetch();
-    	this.conceal();
   	}
 	},
-	clear: function(e) {
-		e.preventDefault();
-		var deleteRef 	 = new Firebase(FIREBASE_URL + 'posts/' + selectedPost.id);
-		console.log(deleteRef);
-		deleteRef.remove(this.onComplete);
+	clear: function(model) {
+		var postToDelete = new Firebase(FIREBASE_URL + 'posts/' + model.id);
+		postToDelete.remove(this.onComplete);
 	},
 });

@@ -1,4 +1,6 @@
-var BlogPost = Backbone.View.extend({
+var app = app || {};
+
+app.BlogPost = Backbone.View.extend({
 	postTemplate: _.template($('#blog-post-template').html()),
 	initialize: function() {
 		this.render();

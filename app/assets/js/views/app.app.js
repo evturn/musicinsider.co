@@ -43,8 +43,8 @@ app.App = Backbone.View.extend({
 		this.users();
 	},
 	blog: function() {
-		allPosts      = new AllPosts();
-		allPosts.fetch();
-		allBlogPosts  = new AllBlogPosts({collection: allPosts});
+		var posts = new app.Posts();
+		posts.fetch();
+		blog = new app.Blog({collection: posts});
 	},
 });
