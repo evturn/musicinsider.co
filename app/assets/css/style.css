@@ -16,6 +16,36 @@
   cursor: pointer;
 }
 
+.form-control.admin-input {
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  background: #00A8A0;
+}
+
+input.form-control {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+textarea.form-control {
+  font-size: 20px;
+  font-weight: 500;
+  height: 100%;
+  resize: vertical;
+  border: 2px solid #ddd;
+  border-radius: 2px;
+}
+
+.form-col {
+  padding-right: 10px;
+  padding-left: 10px;
+  border: 2px solid #ddd;
+}
+
+#login-form h3 {
+  color: #fff;
+}
+
 ul.admin-tools-list li {
   display: inline-block;
   cursor: pointer;
@@ -32,14 +62,6 @@ ul.admin-tools-list li {
 .section-g, .section-w {
   background: #00BBB2;
   color: #fff;
-}
-
-.btn-stream-now {
-  background: #FF8800;
-  color: #000;
-  border: 2px solid #00D6CC;
-  border-radius: 5%;
-  font-weight: 600;
 }
 
 .menufix .header-nav {
@@ -98,32 +120,6 @@ a.close:hover, a.close:after {
   opacity: 1;
 }
 
-.btn {
-  border-radius: 8%;
-  text-transform: uppercase;
-  font-size: 13px;
-  font-weight: 500;
-}
-
-input.form-control {
-  font-size: 20px;
-  font-weight: 500;
-}
-
-textarea.form-control {
-  font-size: 20px;
-  font-weight: 500;
-  height: 100%;
-  resize: vertical;
-  border: 2px solid #ddd;
-  border-radius: 2px;
-}
-
-.form-control.admin-input {
-  border: 2px solid #ddd;
-  border-radius: 2px;
-}
-
 .section-p {
   padding-top: 40px;
 }
@@ -133,15 +129,18 @@ textarea.form-control {
   opacity: 1;
 }
 
-.form-col {
-  padding-right: 10px;
-  padding-left: 10px;
-  border: 2px solid #ddd;
+.btn.btn-default.btn-lg.btn-general {
+  background: #FF8800;
+  color: #fff;
+  border: 2px solid #00D6CC;
+  border-radius: 4%;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 17px 40px;
+  letter-spacing: 0px;
+  font-size: 17px;
 }
 
-#login-form h3 {
-  color: #000;
-}
 
 @media only screen and (max-width: 768px) {
   .menu-wrapper {
