@@ -182,6 +182,9 @@ a.close:hover, a.close:after {
   font-size: 17px;
 }
 
+#post-content .meta .admin-tools .pull-right a.btn.btn-default.btn-lg.btn-general, #post-content .meta .pull-left p {
+  color: #fff !important;
+}
 
 @media only screen and (max-width: 768px) {
   .menu-wrapper {
