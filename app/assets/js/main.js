@@ -4,7 +4,6 @@ var view = new AppView();
 var dashboard = new app.Dashboard();
 
 
-
 clientState = function() { 
   var authData = firebaseUsers.getAuth();
     if (authData === null) {
@@ -17,6 +16,11 @@ clientState = function() {
     
 
 $(function() {
+
+
+  $('.btn-admin-site').on('click', function() {
+    dashboard.loginForm();
+  });
 
   $("#second").bootFolio({
     bfLayout: "bflayhover",
