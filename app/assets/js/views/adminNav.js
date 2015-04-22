@@ -1,5 +1,5 @@
 var AdminNav = Backbone.View.extend({
-	el: '#admin-list',
+	el: '.admin-nav',
 	tagName: 'li',
 	template: _.template($('#admin-nav-template').html()),
 	initialize: function() {
