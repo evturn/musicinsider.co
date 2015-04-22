@@ -14,19 +14,6 @@ var AdminNav = Backbone.View.extend({
 			this.logout();
 		}
 	},
-	postForm: function(e) {
-		e.preventDefault();
-		$('#post-form').remove();
-		var postForm = new PostForm({collection: allPosts});
-		$('#post-form').hide();
-		$('#post-form').slideToggle();
-	},
-	showLoginForm: function() {	
-		$('#login-form').remove();	
-		loginForm = new LoginForm();
-		$('#login-form').hide();
-		$('#login-form').slideToggle();
-	},
 	logout: function() {
 		FIREBASE_URL.unauth();
 		var refUsers 			= new Firebase(FIREBASE_URL + 'users');

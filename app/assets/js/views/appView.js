@@ -16,10 +16,11 @@ app.App = Backbone.View.extend({
 		firebaseUsers.onAuth(function(authData) {
   		if (authData) {
     		console.log("Authenticated with uid:", authData.uid);
-    		$('.fa.fa-power-off').css({color: 'yellow'});
+    		$('.fa.fa-gear').css({color: 'yellow'});
+    		$('.admin-dashboard .container-fluid').css({paddingTop: '0'})
   		} else {
     		console.log("Client unauthenticated.");
-    		$('.fa.fa-power-off').css({color: '#ddd'});
+    		$('.fa.fa-gear').css({color: '#ddd'});
   		}
 		});
 	},
@@ -29,6 +30,8 @@ app.App = Backbone.View.extend({
     		dashboard.render();
   		} else {
     		dashboard.loginForm();
+    		$('.admin-tools-list').hide();
+    		$('.admin-dashboard .container-fluid').css({paddingTop: '100px'})
   		}
 		});
 	},

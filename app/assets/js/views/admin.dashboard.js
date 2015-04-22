@@ -9,10 +9,11 @@ app.Dashboard = Backbone.View.extend({
 	formLoginTemplate : _.template($('#form-login-template').html()),
 	events: {
 		'click .btn-admin-create' 		 : 'newForm',
+		'click .btn-admin-logout' 		 : 'logout',
+		'click .btn-form-admin-login'  : 'login',
 		'click .btn-form-admin-create' : 'create',
 		'click .btn-form-admin-update' : 'update',
-		'click .btn-form-admin-delete' : 'delete',
-		'click .btn-form-admin-login'  : 'login'
+		'click .btn-form-admin-delete' : 'delete'
 	},
 	initialize: function() {
 		this.render();
@@ -61,5 +62,8 @@ app.Dashboard = Backbone.View.extend({
 				$('.admin-tools-list').show();
 			}
 		}.bind(this));
+	},
+	logout: function() {
+		FIREBASE_URL.unauth();
 	},
 });
