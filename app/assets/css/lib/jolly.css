@@ -2385,7 +2385,8 @@ a.plus-x:hover{
 }
 
 .blog-list .blog-item {
-    margin-bottom: 90px
+    /*margin-bottom: 90px*/
+    margin-bottom: 15px
 }
 
 .blog-list .entry img {

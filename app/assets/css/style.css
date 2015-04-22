@@ -162,6 +162,10 @@ p.lead {
   opacity: 1;
 }
 
+button.navbar-toggle.collapsed {
+  background: none;
+}
+
 .navbar-brand {
   padding: 10px;
 }
