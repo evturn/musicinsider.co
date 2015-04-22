@@ -1,8 +1,7 @@
 var app = app || {};
 
-var view = new AppView();
+var website = new app.App();
 var dashboard = new app.Dashboard();
-
 
 new WOW().init();
 
@@ -21,7 +20,7 @@ $(function() {
 
 
   $('.btn-admin-site').on('click', function() {
-    dashboard.loginForm();
+    website.dashboard();
   });
 
   $("#second").bootFolio({

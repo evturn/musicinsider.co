@@ -19,7 +19,6 @@ app.Dashboard = Backbone.View.extend({
 	},
 	render: function() {
 		this.$el.html(this.dashboardTemplate());
-		this.newForm();
 		return this;
 	},
 	loginForm: function() {
@@ -47,11 +46,12 @@ app.Dashboard = Backbone.View.extend({
 			
 			if (error) {
     		console.log("Login Failed!", error);
-				$('.admin-form-container').addClass('wow shake');
+				$('.admin-form-container').addClass('shake');
     		$('.error').text(error.message);
   		} else {
 	    	console.log("Authenticated successfully with payload:", authData);
 				dashboard.newForm();
+				$('.admin-tools-list').show();
 			}
 		}.bind(this));
 	},
