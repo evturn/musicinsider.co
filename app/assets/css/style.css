@@ -37,7 +37,6 @@
   border: 1px solid rgba(100, 100, 100, .4);
   overflow: visible;
   position: absolute;
-  /*height: 70vh;*/
   width: 96%;
   margin-left: 3%;
   margin-top: 2%;
@@ -92,11 +91,16 @@ ul.admin-tools-list li a {
 .admin-form-container {
   padding-left: 5%;
   padding-right: 5%;
-  padding-top: 4%;
+  padding-top: 3%;
   padding-bottom: 2%;
   margin-bottom: 25px;
   background: #00BBB2;
   color: #fff;
+}
+
+.admin-form-container {
+  text-shadow: 0 2px 0 #00A8A0;
+  text-transform: uppercase;
 }
 
 
