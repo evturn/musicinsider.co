@@ -118,7 +118,10 @@ p.lead {
 }
 
 .menufix .header-nav {
+  position: relative;
   background: #000;
+  padding:0;
+  margin:0;
 }
 
 .navbar-default {
@@ -132,6 +135,19 @@ p.lead {
   font-size: 19px;
 }
 
+.navbar-nav {
+  margin: 15px 10px -10px 10px;
+}
+
+.navbar-nav > li > a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  outline: none;
+  padding: 0px 21px;
+  text-transform: uppercase;
+}
 
 .navbar-nav > li > a {
   font-family: 'Raleway', sans-serif;
@@ -157,22 +173,18 @@ p.lead {
   transition: all 0.8s;
 }
 
-.navbar-nav > li > a.admin-nav {
-  background-color: #000;
-  opacity: 1;
-}
-
 button.navbar-toggle.collapsed {
   background: none;
 }
 
-.navbar-brand {
-  padding: 10px;
-}
-
 .btn-admin-site {
   color: #fff;
-  float: left;
+  cursor: pointer;
+}
+
+.btn-admin-site i {
+  font-size: 1.5em;
+  margin-top: -4px;
 }
 
 .blog-item h3 {
@@ -186,6 +198,10 @@ button.navbar-toggle.collapsed {
 .blog-item h3 a:hover {
   color: #000;
   font-family: 'Raleway', sans-serif;
+}
+
+.blog-item-body {
+  color: fff;
 }
 
 .btn.btn-default.btn-lg.btn-general {
