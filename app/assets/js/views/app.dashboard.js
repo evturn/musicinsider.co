@@ -80,7 +80,7 @@ app.Dashboard = Backbone.View.extend({
 	update: function(model) {
 		var title = $('#post-title').val();
 		var body  = $('#post-body').val();
-		var firebasePost = new Firebase(FIREBASE_URL + 'posts/' + model.id);
+		firebasePost = new Firebase(FIREBASE_URL + 'posts/' + model.id);
 		firebasePost.update({title: title, body: body}, this.onComplete);
 	},
 	onComplete: function(error) {
@@ -91,9 +91,8 @@ app.Dashboard = Backbone.View.extend({
   	}
 	},
 	clear: function(model) {
-		var postToDelete = new Firebase(FIREBASE_URL + 'posts/' + model.id);
-		console.log(postToDelete);
-		postToDelete.remove(this.onComplete);
+		var firebasePost = new Firebase(FIREBASE_URL + 'posts/' + model.id);
+		firebasePost.remove();
 	},
 	create: function(e) {
 		e.preventDefault();

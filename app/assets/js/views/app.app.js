@@ -59,6 +59,6 @@ app.App = Backbone.View.extend({
 		var posts = new app.Posts();
 		posts.fetch();
 		blog = new app.Blog({collection: posts});
-		dashboard = new app.Dashboard({collection: posts});
+		dashboard = new app.Dashboard();
 	},
 });

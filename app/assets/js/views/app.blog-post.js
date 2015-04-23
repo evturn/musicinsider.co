@@ -9,7 +9,7 @@ app.BlogPost = Backbone.View.extend({
 		'click .btn-admin-edit' : 'edit'
 	},
 	edit: function() {
-		dashboard.editForm(this.model.attributes);
+		dashboard.editForm(this.model.toJSON());
 		return this;
 	},	
 	render: function() {

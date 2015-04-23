@@ -1,5 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:700,400);
 
+
+
 .menu-wrapper.affix-top {
   max-height: 50px;
 }
@@ -60,7 +62,7 @@ ul.admin-tools-list li a {
   padding-top: 3%;
   padding-bottom: 2%;
   margin-bottom: 25px;
-  background: #00BBB2;
+  background:  #cfe7f0;
   color: #fff;
   border: 1px solid #fff;
   text-shadow: 0 2px 0 #00A8A0;
@@ -182,6 +184,16 @@ p.lead {
   transition: all 0.8s;
 }
 
+.yamm .container-fluid {
+  position: relative;
+  background: black;
+  float: right;
+}
+
+.navbar-default {
+  padding: 0;
+}
+
 button.navbar-toggle.collapsed:hover {
   background: none;
 }
@@ -273,11 +285,4 @@ button.navbar-toggle.collapsed:hover {
     margin-top: -3px;
     margin-right: -15px
   }
-}
-
-@media only screen and (max-width: 768px) {
-  button span {
-    margin-right: -30px;
-  }
-
 }
