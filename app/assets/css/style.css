@@ -198,6 +198,7 @@ button.navbar-toggle.collapsed:hover {
 
 .blog-item h3 {
   text-align: center;
+  text-transform: uppercase;
 }
 
 .blog-item h3 a {
@@ -216,9 +217,6 @@ button.navbar-toggle.collapsed:hover {
 .desc p {
   color: #fff;
   font-family: 'Raleway', sans-serif;
-}
-
-h3.section-title a:hover {
 }
 
 .btn.btn-default.btn-lg.btn-general {
@@ -250,6 +248,10 @@ h3.section-title a:hover {
   margin-right: 10px;
 }
 
+.about-widget, .contact-widget {
+  font-family: 'Raleway', sans-serif;
+}
+
 @media only screen and (max-width: 768px) {
   .menu-wrapper {
     background: #000;
@@ -273,3 +275,9 @@ h3.section-title a:hover {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  button span {
+    margin-right: -30px;
+  }
+
+}
