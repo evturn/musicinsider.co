@@ -30,7 +30,7 @@ ul.admin-tools-list li a {
 }
 
 .admin-tools-list i {
-  background: #FF8800;
+  background: #dd4438;
   border-bottom: 2px solid #b94721;
   border-radius: 2px;
   border-top: none;
@@ -43,15 +43,15 @@ ul.admin-tools-list li a {
 }
 
 .admin-tools-list i:hover {
-  background: #FF8800;
-  border-bottom: 2px solid #FF8800;
+  background: #dd4438;
+  border-bottom: 2px solid #b94721;
   border-radius: 4px;
   color: #fff;
   margin-bottom: -2px;
 }
 
 .admin-tools-list i:focus {
-  background: #FF8800;
+  background: #dd4438;
   border-bottom: 2px solid #b94721;
   color: #fff;
 }
@@ -65,7 +65,7 @@ ul.admin-tools-list li a {
   background:  #cfe7f0;
   color: #fff;
   border: 1px solid #fff;
-  text-shadow: 0 2px 0 #00A8A0;
+  text-shadow: 0 2px 0  #cfe7f0;
   text-transform: uppercase;
 }
 
@@ -92,7 +92,7 @@ ul.admin-tools-list li a {
 input.form-control.admin-input, textarea.form-control.admin-input {
   border: 1px solid #ddd;
   border-radius: 2px;
-  background: #00A8A0;
+  background:  #dd4438;
   color: #fff;
   font-size: 20px;
   font-weight: 500;
@@ -111,20 +111,24 @@ textarea.form-control.admin-input {
 
 p.lead {
   font-family: 'Raleway', sans-serif;
-  color: #fff;
+  color: #88B6C8;
 }
 
-.slider_01, .tp-caption.slider_01, .slider_02, .tp-caption.slider_02 {
-  color: #fff;
+.tp-caption.slider_01 {
+  color: #000;
+}
+
+.slider_01, .slider_02, .tp-caption.slider_02 {
+  color: #88B6C8;
 }
 
 .menufix {
-  background: #00BBB2;
+  background: #cfe7f0;
 }
 
 .section-g, .section-w {
-  background: #00BBB2;
-  color: #fff;
+  background: #cfe7f0;
+  color: #88B6C8;
 }
 
 .menufix .header-nav {
@@ -185,7 +189,7 @@ p.lead {
 
 .yamm .container-fluid {
   position: relative;
-  background: black;
+  background: #000;
   float: right;
 }
 
@@ -232,8 +236,8 @@ button.navbar-toggle.collapsed:hover {
 
 .btn.btn-default.btn-lg.btn-general {
   color: #fff !important;
-  background: #FF8800;
-  border: 2px solid #00D6CC;
+  background: #dd4438;
+  border: 2px solid #88B6C8;
   border-radius: 4%;
   font-weight: 600;
   text-transform: uppercase;
