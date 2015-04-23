@@ -73,6 +73,7 @@ app.Dashboard = Backbone.View.extend({
     	}.bind(this));
 	},
 	editForm: function(model) {
+		this.$el.show();
 		$('.admin-form-container').html(this.formEditTemplate(model));
 		return this;
 	},
@@ -87,11 +88,11 @@ app.Dashboard = Backbone.View.extend({
     	console.log('Synchronization failed');
   	} else {
     	console.log('Synchronization succeeded');
-    	this.conceal();
   	}
 	},
 	clear: function(model) {
 		var postToDelete = new Firebase(FIREBASE_URL + 'posts/' + model.id);
+		console.log(postToDelete);
 		postToDelete.remove(this.onComplete);
 	},
 	create: function(e) {
