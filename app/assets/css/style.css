@@ -1,5 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:700,400);
 
+.menu-wrapper.affix-top {
+  max-height: 50px;
+}
+
+.menu-wrapper.affix {
+  max-height: 50px;
+}
+
 .admin-tools-list {
   border-bottom: 1px solid #ddd;
   padding-top: 20px;
@@ -102,6 +110,7 @@ textarea.form-control.admin-input {
 
 p.lead {
   font-family: 'Raleway', sans-serif;
+  color: #fff;
 }
 
 .slider_01, .tp-caption.slider_01, .slider_02, .tp-caption.slider_02 {
@@ -193,15 +202,23 @@ button.navbar-toggle.collapsed:hover {
 
 .blog-item h3 a {
   color: #fff;
-}
-
-.blog-item h3 a:hover {
-  color: #000;
   font-family: 'Raleway', sans-serif;
 }
 
+.blog-item h3 a:hover {
+  text-decoration: none;
+}
+
 .blog-item-body {
-  color: fff;
+  color: #fff;
+}
+
+.desc p {
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+}
+
+h3.section-title a:hover {
 }
 
 .btn.btn-default.btn-lg.btn-general {
@@ -229,6 +246,10 @@ button.navbar-toggle.collapsed:hover {
   color: #fff !important;
 }
 
+.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
+  margin-right: 10px;
+}
+
 @media only screen and (max-width: 768px) {
   .menu-wrapper {
     background: #000;
@@ -242,5 +263,13 @@ button.navbar-toggle.collapsed:hover {
     margin-top: 0;
   }
 
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar-toggle {
+    padding: 0;
+    margin-top: -3px;
+    margin-right: -15px
+  }
 }
 
