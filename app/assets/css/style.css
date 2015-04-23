@@ -99,7 +99,6 @@ input.form-control.admin-input, textarea.form-control.admin-input {
 }
 
 textarea.form-control.admin-input {
-
   height: 80%;
   resize: vertical;
 }
