@@ -1,7 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:700,400);
 
-
-
 .menu-wrapper.affix-top {
   max-height: 50px;
 }
@@ -21,7 +19,7 @@
 ul.admin-tools-list li {
   display: inline-block;
   padding-right: 15px;
-  color: #fff;
+  color: #000;
   position: relative;
 }
 
@@ -77,6 +75,7 @@ ul.admin-tools-list li a {
 
 .fa.fa-dashboard {
   font-size: 13em;
+  color: #88B6C8;
 }
 
 .btn-admin-site {
@@ -111,7 +110,7 @@ textarea.form-control.admin-input {
 
 p.lead {
   font-family: 'Raleway', sans-serif;
-  color: #88B6C8;
+  color: #000;
 }
 
 .tp-caption.slider_01 {
@@ -122,13 +121,25 @@ p.lead {
   color: #88B6C8;
 }
 
+label {
+  color: #000;
+}
+
 .menufix {
   background: #cfe7f0;
 }
 
 .section-g, .section-w {
   background: #cfe7f0;
+  color: #000;
+}
+
+.section-title h3 {
   color: #88B6C8;
+}
+
+.section-title h3 span {
+  color: #fff;
 }
 
 .menufix .header-nav {
@@ -217,7 +228,7 @@ button.navbar-toggle.collapsed:hover {
 }
 
 .blog-item h3 a {
-  color: #fff;
+  color: #000;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -226,11 +237,11 @@ button.navbar-toggle.collapsed:hover {
 }
 
 .blog-item-body {
-  color: #fff;
+  color: #000;
 }
 
 .desc p {
-  color: #fff;
+  color: #000;
   font-family: 'Raleway', sans-serif;
 }
 
