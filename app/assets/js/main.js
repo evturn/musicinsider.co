@@ -1,7 +1,6 @@
 var app = app || {};
 
 var website = new app.App();
-var dashboard = new app.Dashboard();
 
 new WOW().init();
 

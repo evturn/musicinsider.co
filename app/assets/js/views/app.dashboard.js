@@ -87,10 +87,20 @@ app.Dashboard = Backbone.View.extend({
     	console.log('Synchronization failed');
   	} else {
     	console.log('Synchronization succeeded');
+    	this.conceal();
   	}
 	},
 	clear: function(model) {
 		var postToDelete = new Firebase(FIREBASE_URL + 'posts/' + model.id);
 		postToDelete.remove(this.onComplete);
+	},
+	create: function(e) {
+		e.preventDefault();
+		var title = $('#post-title').val();
+		var body  = $('#post-body').val();
+    this.collection.create({
+    	title: title,
+    	body: body
+    }, this.onComplete());
 	},
 });

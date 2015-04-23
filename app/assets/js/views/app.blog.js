@@ -15,6 +15,5 @@ app.Blog = Backbone.View.extend({
 		this.collection.each(function(model) {
 			this.addOne(model);
 		}.bind(this));
-		$('.admin-tool').addClass('concealed');
 	},
 });
