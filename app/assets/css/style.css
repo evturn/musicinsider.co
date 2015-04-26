@@ -144,7 +144,7 @@ label {
 
 .menufix .header-nav {
   position: relative;
-  background: #000;
+  background: #fff;
   padding:0;
   margin:0;
 }
@@ -186,7 +186,7 @@ label {
   -webkit-backface-visibility: hidden;
   -webkit-transform: translateZ(0);
   top: 0;
-  background: #0b0b0b;
+  background: #fff;
   right: 0;
   margin-top: 0;
   margin: 0;
@@ -199,7 +199,6 @@ label {
 
 .yamm .container-fluid {
   position: relative;
-  background: #000;
   float: right;
 }
 
@@ -279,7 +278,7 @@ button.navbar-toggle.collapsed:hover {
 
 @media only screen and (max-width: 768px) {
   .menu-wrapper {
-    background: #000;
+    background: #fff;
     color: #fff;
   }
   .navbar-default .navbar-toggle {
