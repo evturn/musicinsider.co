@@ -98,11 +98,11 @@ a {
     /*background:#0b0b0b;*/
 }
 
-::selection {
+/*::selection {
     color: #fff;
-    text-shadow:none;
+    text-shadow:none;*/
     /*background:#0b0b0b;*/
-}
+/*}*/
 
 /*.lead {
     font-family: "Lato",sans-serif;

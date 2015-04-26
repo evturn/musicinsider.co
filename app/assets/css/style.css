@@ -75,7 +75,7 @@ ul.admin-tools-list li a {
 
 .fa.fa-dashboard {
   font-size: 13em;
-  color: #88B6C8;
+  color: #40768c;
 }
 
 .btn-admin-site {
@@ -118,7 +118,7 @@ p.lead {
 }
 
 .slider_01, .slider_02, .tp-caption.slider_02 {
-  color: #88B6C8;
+  color: #40768c;
 }
 
 label {
@@ -135,7 +135,7 @@ label {
 }
 
 .section-title h3 {
-  color: #88B6C8;
+  color: #40768c;
 }
 
 .section-title h3 span {
@@ -155,7 +155,7 @@ label {
 }
 
 .navbar-default .navbar-nav > li > a {
-  color: #fff !important;
+  color: #40768c !important;
   font-size: 19px;
 }
 
@@ -247,7 +247,7 @@ button.navbar-toggle.collapsed:hover {
 .btn.btn-default.btn-lg.btn-general {
   color: #fff !important;
   background: #dd4438;
-  border: 2px solid #88B6C8;
+  border: 2px solid #40768c;
   border-radius: 4%;
   font-weight: 600;
   text-transform: uppercase;
