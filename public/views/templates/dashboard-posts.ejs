@@ -1,0 +1,32 @@
+<script type="text/template" id="form-new-template">
+  <form class="form-horizontal wow fadeInUp">
+    <div class="form-group">
+      <label>Title</label>
+      <input id="post-title" type="text" class="form-control admin-input">  
+    </div>
+    <div class="form-group">
+      <textarea id="post-body" class="form-control admin-input" rows="10"></textarea> 
+    </div>
+    <div class="form-group">
+      <a class="btn btn-default btn-lg btn-general btn-form-admin-create">Publish</a>
+    </div>
+  </form>
+</script>
+
+<script type="text/template" id="form-edit-template">
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label>Title</label>
+      <input id="post-title" type="text" class="form-control admin-input" value="<%%= title %>">  
+    </div>
+    <div class="form-group">
+      <textarea id="post-body" class="form-control admin-input" rows="10" ><%%= body %></textarea> 
+    </div>
+    <div class="form-group">
+      <a class="btn btn-default btn-lg btn-general btn-form-admin-update">Update</a>
+    </div>            
+    <div class="form-group">
+      <a class="btn btn-default btn-lg btn-general btn-form-admin-delete">Delete</a>
+    </div>
+  </form>
+</script>
