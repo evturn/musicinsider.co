@@ -17,27 +17,24 @@ refPosts.on("value", function(snapshot) {
 refUsers.onAuth(function(authData) {
   if (authData) {
     console.log("Authenticated with uid:", authData.uid);
-    authenticated();
     admin = true;
+    $('.fa-user-secret').css({color: 'yellow'});
+    $('.admin-tools-list').css({visibility: 'visible'});
+    $('.admin-tool').css({visibility: 'visible'});
   } else {
     console.log("Client unauthenticated.");
-    unauthenticated();
     admin = false;
+    $('.admin-tools-list').css({visibility: 'hidden'});
+    $('.admin-tool').css({visibility: 'hidden'});
   }
 });
 
 function authenticated() {
-  $('.fa-user-secret').css({color: 'yellow'});
-  $('.admin-tools-list').removeClass('concealed');
-  $('.admin-dashboard .container-fluid').css({paddingTop: '0'});
-  $('.admin-tool').removeClass('concealed');
+
   
 }
 function unauthenticated() {
-  $('.fa-user-secret').css({color: '#ddd'});
-  $('.admin-tools-list').addClass('concealed');
-  $('.admin-tool').addClass('concealed');
-  $('.admin-dashboard .container-fluid').css({paddingTop: '125px'});
+
 }
 
 
@@ -47,11 +44,12 @@ new WOW().init();
 $(function() {
 
   $('.btn-admin-site').on('click', function() {
-    app.dashboard = new app.Dashboard();
     if (admin === true) {
-      app.dashboard.welcome();
+      var dashboard = new app.Dashboard();
+      dashboard.welcome();
     } else {
-      app.dashboard.loginForm();
+      var dashboard = new app.Dashboard();
+      dashboard.loginForm();
     }
   });
 
