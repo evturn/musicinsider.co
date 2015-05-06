@@ -72,16 +72,15 @@ app.Dashboard = Backbone.View.extend({
   	}.bind(this));
 	},
 	editForm: function(model) {
-		console.log(model);
-		this.$el.show();
-		$('.admin-form-container').html(this.formEditTemplate(model));
+		this.reveal();
+		refUpdate = new Firebase(ref + 'posts/' + model.id);
+		$('.admin-form-container').html(this.formEditTemplate(model.toJSON()));
 		return this;
 	},
-	update: function(model) {
+	update: function() {
 		var title = $('#post-title').val();
 		var body  = $('#post-body').val();
-		var refPost = new Firebase(ref + 'posts/' + title);
-		refPost.update({title: title, body: body}, this.onComplete);
+		refUpdate.update({title: title, body: body}, this.onComplete);
 	},
 	onComplete: function(error) {
 		if (error) {
@@ -94,8 +93,8 @@ app.Dashboard = Backbone.View.extend({
 		e.preventDefault();
 		var title = $('#post-title').val();
 		var body  = $('#post-body').val();
-		var refPosts = new Firebase(ref + 'posts/' + title);
-    refPosts.set({
+		var refPosts = new Firebase(ref + 'posts/');
+    refPosts.push({
     	title: title,
     	body: body
     }, this.onComplete());

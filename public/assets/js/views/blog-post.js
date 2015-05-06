@@ -10,8 +10,8 @@ app.BlogPost = Backbone.View.extend({
 		'click .btn-admin-delete' : 'clear'
 	},
 	edit: function() {
-		var dashboard = new app.Dashboard();
-		dashboard.editForm(this.model.toJSON());
+		var dashboard = new app.Dashboard({model: this.model});
+		dashboard.editForm(this.model);
 		return this;
 	},
 	clear: function() {

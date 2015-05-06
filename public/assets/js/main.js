@@ -4,7 +4,7 @@ var ref           = new Firebase('https://musicinsider.firebaseio.com/');
 var refPosts      = new Firebase(ref + 'posts');
 var refUsers      = new Firebase(ref + 'users');
 app.posts     = new app.Posts();
-app.posts.fetch();
+app.posts.fetch({autoSync: true});
 app.blog = new app.Blog({collection: app.posts});
 app.dashboard = new app.Dashboard();
 // async
