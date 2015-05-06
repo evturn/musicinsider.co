@@ -7,47 +7,10 @@
 
 	<!-- UNDERSCORE TEMPLATES -->
 
-  <script type="text/template" id="dashboard-template">
-    <ul class="admin-tools-list text-center wow fadeInUp">
-      <li><a class="btn-admin-create"><i class="fa fa-plus fa-2x"></i></a><p>New</p></li>
-      <li><a class="btn-admin-edit"><i class="fa fa-pencil fa-2x"></i></a><p>Edit</p></li>
-      <li><a class="btn-admin-all"><i class="fa fa-list fa-2x"></i></a><p>All</p></li>
-      <li><a class="btn-admin-upload"><i class="fa fa-cloud-upload fa-2x"></i></a><p>Upload</p></li>
-      <li><a class="btn-admin-logout"><i class="fa fa-power-off fa-2x"></i></a><p>Logout</p></li>
-      <li><a class="btn-admin-hide"><i class="fa fa-toggle-up fa-2x"></i></a><p>Close</p></li>
-    </ul>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 admin-form-container wow">
-          
-        </div>
-      </div>
-    </div>
-  </script>
+  <% include ./templates/dashboard %>
+  <% include ./templates/login %>
 
-  <script type="text/template" id="welcome-template">
-    <div class="text-center">
-      <h1>DASHBOARD</h1>
-      <span><i class="fa fa-dashboard fa-5x"></i></span>
-    </div>
-  </script>
-
-	<script type="text/template" id="form-login-template">
-    <form class="form-horizontal wow fadeInDown">  
-      <div class="form-group">
-        <label>Email</label>
-        <input class="form-control admin-input" type="email" id="email">
-      </div>
-      <div class="form-group">
-        <label>Password</label>
-        <input class="form-control admin-input" type="password" id="password">
-      </div>
-      <div class="form-group">
-        <a class="btn btn-default btn-lg btn-general btn-form-admin-login">Login</a>
-      </div>
-      <div class="text-center error"></div>
-    </form>
-	</script>
+	
 
   <script type="text/template" id="form-new-template">
     <form class="form-horizontal wow fadeInUp">
