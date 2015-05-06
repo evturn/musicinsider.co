@@ -1,13 +1,65 @@
 var app = app || {};
 
-var website = new app.App();
+var ref           = new Firebase('https://musicinsider.firebaseio.com/');
+var refPosts      = new Firebase(ref + 'posts');
+var refUsers      = new Firebase(ref + 'users');
+app.posts     = new app.Posts();
+app.posts.fetch();
+app.blog = new app.Blog({collection: app.posts});
+app.dashboard = new app.Dashboard();
+// async
+
+refPosts.on("value", function(snapshot) {
+  console.log(snapshot.val());
+}, function (errorObject) {
+    console.log("The read failed: " + errorObject.code);
+});
+
+refUsers.onAuth(function(authData) {
+  if (authData) {
+    console.log("Authenticated with uid:", authData.uid);
+    authenticated();
+    app.dashboard.render();
+    
+  } else {
+    console.log("Client unauthenticated.");
+    unauthenticated();
+    app.dashboard.loginForm();
+  }
+});
+
+function authenticated() {
+  $('.fa-user-secret').css({color: 'yellow'});
+  $('.admin-tools-list').removeClass('concealed');
+  $('.admin-dashboard .container-fluid').css({paddingTop: '0'})
+  $('.admin-tool').removeClass('concealed');
+}
+function unauthenticated() {
+  $('.fa-user-secret').css({color: '#ddd'});
+  $('.admin-tools-list').addClass('concealed');
+  $('.admin-tool').addClass('concealed');
+  $('.admin-dashboard .container-fluid').css({paddingTop: '125px'})
+}
+
+
+
+
 
 new WOW().init();
 
+
+
+
+
+
+
+
+
+
 $(function() {
 
-  $('.btn-admin-site').on('click', function() {
-    website.dashboard();
+    $('.btn-admin-site').on('click', function() {
+    app.dashboard.reveal();
   });
 
   $("#second").bootFolio({

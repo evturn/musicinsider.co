@@ -13,8 +13,7 @@ app.Dashboard = Backbone.View.extend({
 		'click .btn-admin-logout' 		 : 'logout',
 		'click .btn-form-admin-login'  : 'login',
 		'click .btn-form-admin-create' : 'create',
-		'click .btn-form-admin-update' : 'update',
-		'click .btn-form-admin-delete' : 'clear',
+		'click .btn-form-admin-update' : 'update'
 	},
 	initialize: function() {
 		this.render();
@@ -41,30 +40,25 @@ app.Dashboard = Backbone.View.extend({
 	},
 	login: function(e) {
 		e.preventDefault();
-
 		var email 	 = $('#email').val();
 		var password = $('#password').val();
-		var ref      = new Firebase(FIREBASE_URL + 'users');
-
-		ref.authWithPassword({
-
+		var refUsers = new Firebase(ref + 'users');
+		refUsers.authWithPassword({
 			email    : email,
 			password : password
-
-		}, function(error, authData) {
-			
+		}, function(error, authData) {			
 			if (error) {
     		console.log("Login Failed!", error);
 				$('.admin-form-container').addClass('shake');
     		$('.error').text(error.message);
   		} else {
 	    	console.log("Authenticated successfully with payload:", authData);
-				dashboard.welcome();
+				app.dashboard.welcome();
 			}
 		}.bind(this));
 	},
 	logout: function() {
-		FIREBASE_URL.unauth();
+		ref.unauth();
 		this.conceal();
 	},
 	conceal: function() {
@@ -72,7 +66,13 @@ app.Dashboard = Backbone.View.extend({
     		this.$el.hide();
     	}.bind(this));
 	},
+	reveal: function() {
+		this.$el.fadeIn('fast', function() {
+  		this.$el.show();
+  	}.bind(this));
+	},
 	editForm: function(model) {
+		console.log(model);
 		this.$el.show();
 		$('.admin-form-container').html(this.formEditTemplate(model));
 		return this;
@@ -80,8 +80,8 @@ app.Dashboard = Backbone.View.extend({
 	update: function(model) {
 		var title = $('#post-title').val();
 		var body  = $('#post-body').val();
-		firebasePost = new Firebase(FIREBASE_URL + 'posts/' + model.id);
-		firebasePost.update({title: title, body: body}, this.onComplete);
+		var refPost = new Firebase(ref + 'posts/' + title);
+		refPost.update({title: title, body: body}, this.onComplete);
 	},
 	onComplete: function(error) {
 		if (error) {
@@ -90,16 +90,12 @@ app.Dashboard = Backbone.View.extend({
     	console.log('Synchronization succeeded');
   	}
 	},
-	clear: function(model) {
-		var firebasePost = new Firebase(FIREBASE_URL + 'posts/' + model.id);
-		firebasePost.remove();
-	},
 	create: function(e) {
 		e.preventDefault();
 		var title = $('#post-title').val();
 		var body  = $('#post-body').val();
-		var ref = new Firebase(FIREBASE_URL + 'posts/')
-    ref.push({
+		var refPosts = new Firebase(ref + 'posts/' + title);
+    refPosts.set({
     	title: title,
     	body: body
     }, this.onComplete());
