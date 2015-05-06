@@ -98,7 +98,8 @@ app.Dashboard = Backbone.View.extend({
 		e.preventDefault();
 		var title = $('#post-title').val();
 		var body  = $('#post-body').val();
-    this.collection.create({
+		var ref = new Firebase(FIREBASE_URL + 'posts/')
+    ref.push({
     	title: title,
     	body: body
     }, this.onComplete());

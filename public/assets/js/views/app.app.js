@@ -39,14 +39,14 @@ app.App = Backbone.View.extend({
     $('.admin-tools-list').removeClass('concealed');
     $('.admin-dashboard .container-fluid').css({paddingTop: '0'})
     $('.admin-tool').removeClass('concealed');
-    console.log('HELLS YES WE ARE GOING TO BE SESSIONING!');
+    console.log('authenticated');
 	},
 	unauthenticated: function() {
     $('.fa-user-secret').css({color: '#ddd'});
     $('.admin-tools-list').addClass('concealed');
     $('.admin-tool').addClass('concealed');
     $('.admin-dashboard .container-fluid').css({paddingTop: '125px'})
-    console.log('YOU AIN\'T ALLOWED TO DO ANYTHING');
+    console.log('unauthenticated');
 	},
 	firebaseInit: function() {
 		FIREBASE_URL 	= new Firebase('https://musicinsider.firebaseio.com/');
