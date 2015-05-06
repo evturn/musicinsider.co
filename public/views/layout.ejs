@@ -1,41 +1,5 @@
-<!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>Music Insider</title>
-	<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<% include ./dependencies/head %>
 
-  <!-- lib -->
-  <link rel="stylesheet" href="assets/css/lib/bootstrap.css">
-  <link rel="stylesheet" href="assets/css/lib/extralayers.css">
-  <link rel="stylesheet" href="assets/css/lib/animate.css">
-  <link rel="stylesheet" href="assets/css/lib/carousel.css">
-  <link rel="stylesheet" href="assets/css/lib/et-line.css">
-  <link rel="stylesheet" href="assets/css/lib/jolly.css">
-
-  <!-- site -->
-  <link rel="stylesheet" href="assets/css/style.css">
-
-  <!-- PORTFOLIO AND LIGHTBOX SETTINGS -->
-  <link rel="stylesheet" href="assets/plugins/bfassets/css/bootFolio.css">
-  <link rel="stylesheet" href="assets/plugins/bfassets/css/prettyPhoto.css">
-
-  <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
-  <link rel="stylesheet" type="text/css" href="assets/css/lib/extralayers.css" media="screen" /> 
-  <link rel="stylesheet" type="text/css" href="assets//plugins/rs-plugin/css/settings.css" media="screen" />
-
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
-</head>
 <body class="menufix">
   
   <div id="preloader">
@@ -324,10 +288,10 @@
     <form class="form-horizontal">
       <div class="form-group">
         <label>Title</label>
-        <input id="post-title" type="text" class="form-control admin-input" value="<%= title %>">  
+        <input id="post-title" type="text" class="form-control admin-input" value="<%%= title %>">  
       </div>
       <div class="form-group">
-        <textarea id="post-body" class="form-control admin-input" rows="10" ><%= body %></textarea> 
+        <textarea id="post-body" class="form-control admin-input" rows="10" ><%%= body %></textarea> 
       </div>
       <div class="form-group">
         <a class="btn btn-default btn-lg btn-general btn-form-admin-update">Update</a>
@@ -352,54 +316,13 @@
         </div>
       </div><!-- end entry -->
       <div class="desc">
-        <h3 class="section-title"><a href="#"><%= title %></a></h3>
-        <p><%= body %></p>
+        <h3 class="section-title"><a href="#"><%%= title %></a></h3>
+        <p><%%= body %></p>
       </div><!-- end desc -->
     </div><!-- end blog --> 
   </script>
 
-    <!-- jQuery -->
-    <script src="assets/js/lib/jquery.js"></script>
-    <!-- Underscore -->
-    <script src="assets/js/lib/underscore.js"></script>
-    <!-- Backbone -->
-    <script src="assets/js/lib/backbone.js"></script>
-    <!-- Firebase -->
-    <script src="https://cdn.firebase.com/js/client/2.2.2/firebase.js"></script>
-    <!-- BackboneFire -->
-    <script src="https://cdn.firebase.com/libs/backbonefire/0.5.1/backbonefire.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="assets/js/lib/bootstrap.min.js"></script>    
-    <!-- Menu Display -->
-    <script src="assets/js/lib/menu.js"></script>
-    <!-- Retina Display -->
-    <script src="assets/js/lib/retina.js"></script>
-    <!-- CSS3 Animations -->
-    <script src="assets/js/lib/wow.js"></script>
-    <!-- Parallax -->
-    <script src="assets/js/lib/jquery.stellar.js"></script>
-    <!-- Contact Form -->
-    <script src="assets/js/lib/jquery.jigowatt.js"></script>
-    <!-- Parallax -->
-    <script src="assets/js/lib/smooth-scroll.js"></script>
-     <!-- Carousel -->
-    <script src="assets/js/lib/owl.carousel.js"></script>
-    <script src="assets/js/lib/owl-scripts.js"></script>
-    <!-- Verttical Carousel -->
-    <script src="assets/js/lib/jquery.bxslider.js"></script>
-    <!-- Lightbox Scripts -->
-    <script src="assets/plugins/bfassets/js/jquery.prettyPhoto.js"></script>
-    <!-- Onepage Scripts -->
-    <script src="assets/js/lib/onepage-scripts.js"></script>
-    <!-- Bfassets Portfolio and Lightbox -->
-    <script src="assets/plugins/bfassets/js/jquery.bootFolio.js"></script>
-    <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
-    <script type="text/javascript" src="assets/plugins/rs-plugin/js/jquery.themepunch.tools.min.js"></script>   
-    <script type="text/javascript" src="assets/plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-    <script type="text/javascript" src="assets/js/models/app.post.js"></script>
-  	<script type="text/javascript" src="assets/js/collections/app.posts.js"></script>
-    <script type="text/javascript" src="assets/js/views/app.app.js"></script>
-  	<script type="text/javascript" src="assets/js/views/app.blog-post.js"></script>
-  	<script type="text/javascript" src="assets/js/views/app.blog.js"></script>
-    <script type="text/javascript" src="assets/js/views/app.dashboard.js"></script>
-    <script type="text/javascript" src="assets/js/main.js"></script>
+<% include ./dependencies/scripts %>
+
+</body>
+</html>
