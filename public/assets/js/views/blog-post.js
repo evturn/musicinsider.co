@@ -6,7 +6,7 @@ app.BlogPost = Backbone.View.extend({
 		this.render();
 	},
 	events: {
-		'click .btn-admin-edit' : 'edit',
+		'click .btn-admin-edit' 	: 'edit',
 		'click .btn-admin-delete' : 'clear'
 	},
 	edit: function() {
