@@ -16,22 +16,21 @@ app.Dashboard = Backbone.View.extend({
 		'click .btn-form-admin-update' : 'update'
 	},
 	initialize: function() {
+		self = this;
 		this.render();
-		this.conceal();
 	},
 	render: function() {
 		this.$el.html(this.dashboardTemplate());
-		this.welcome();
 		return this;
 	},
 	welcome: function() {
 		$('.admin-form-container').html(this.welcomeTemplate());
-		this.$el.show();
+		this.reveal();
 		return this;
 	},
 	loginForm: function() {
 		$('.admin-form-container').html(this.formLoginTemplate());
-		this.$el.show();
+		this.reveal();
 		return this;
 	},
 	newForm: function() {
@@ -59,12 +58,17 @@ app.Dashboard = Backbone.View.extend({
 	},
 	logout: function() {
 		ref.unauth();
-		this.conceal();
+		this.emptyOut();
 	},
 	conceal: function() {
 		this.$el.fadeOut('fast', function() {
-    		this.$el.hide();
-    	}.bind(this));
+  		this.$el.hide();
+  	}.bind(this));
+	},
+	emptyOut: function() {
+		this.$el.fadeOut('fast', function() {
+  		this.$el.empty();
+  	}.bind(this));
 	},
 	reveal: function() {
 		this.$el.fadeIn('fast', function() {
@@ -87,6 +91,7 @@ app.Dashboard = Backbone.View.extend({
     	console.log('Synchronization failed');
   	} else {
     	console.log('Synchronization succeeded');
+    	self.emptyOut();
   	}
 	},
 	create: function(e) {
