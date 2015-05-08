@@ -270,9 +270,9 @@ button.navbar-toggle.collapsed:hover {
   font-size: 17px;
 }
 
-.btn.btn-default.btn-lg.btn-general.btn-admin-edit {
-  padding: 1px 15px;
-  border: none;
+.btn.btn-default.btn-lg.btn-general.btn-admin-edit, .btn.btn-default.btn-lg.btn-general.btn-admin-delete {
+  width: 140px;
+  padding: 4% 10%;
 }
 
 #post-content .meta .admin-tools .pull-right a.btn.btn-default.btn-lg.btn-general, #post-content .meta .pull-left p {
