@@ -22,6 +22,13 @@ app.Dashboard = Backbone.View.extend({
 	},
 	render: function() {
 		this.$el.html(this.dashboardTemplate());
+		if (authState) {
+			self.welcome();
+			authenticated();
+		} else {
+			self.loginForm();
+			unauthenticated();
+		}
 		return this;
 	},
 	welcome: function() {
