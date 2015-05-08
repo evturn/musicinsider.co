@@ -19,16 +19,16 @@ app.Dashboard = Backbone.View.extend({
 	initialize: function() {
 		self = this;
 		this.render();
+		var authState = ref.getAuth();
+		if (authState) {
+			self.welcome();
+		} else {
+			self.loginForm();
+		}
+		return this;
 	},
 	render: function() {
 		this.$el.html(this.dashboardTemplate());
-		if (authState) {
-			self.welcome();
-			authenticated();
-		} else {
-			self.loginForm();
-			unauthenticated();
-		}
 		return this;
 	},
 	welcome: function() {
@@ -37,6 +37,7 @@ app.Dashboard = Backbone.View.extend({
 	},
 	loginForm: function() {
 		$('.admin-form-container').html(this.formLoginTemplate());
+		unauthenticated();
 		return this;
 	},
 	newForm: function() {
