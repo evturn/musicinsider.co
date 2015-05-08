@@ -12,6 +12,18 @@ span.tagline {
   line-height: 1.3em;
 }
 
+span.dashboard-close i {
+  color: #000;
+  margin-top: 5px;
+  float: right;
+  cursor: pointer;
+}
+
+p.dashboard-thanks {
+  margin-top: 35px;
+  font-size: 30px;
+}
+
 .admin-tools-list {
   border-bottom: 1px solid #ddd;
   padding-top: 20px;

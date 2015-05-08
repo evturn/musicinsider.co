@@ -10,6 +10,7 @@ app.Dashboard = Backbone.View.extend({
 	events: {
 		'click .btn-admin-create' 		 : 'newForm',
 		'click .btn-admin-hide' 		 	 : 'emptyOut',
+		'click .dashboard-close' 		 	 : 'emptyOut',
 		'click .btn-admin-logout' 		 : 'logout',
 		'click .btn-form-admin-login'  : 'login',
 		'click .btn-form-admin-create' : 'create',
@@ -56,8 +57,8 @@ app.Dashboard = Backbone.View.extend({
 	},
 	logout: function() {
 		ref.unauth();
-		$('.admin-form-container').html('<i style="float: right" class="fa fa-times fa-3x"></i>');
-		$('.admin-form-container').append('<p class="lead">Thanks</p>');
+		$('.admin-form-container').html('<span class="dashboard-close"><i class="fa fa-times fa-3x"></i></span>');
+		$('.admin-form-container').append('<p class="lead dashboard-thanks text-center">Thanks</p>');
 	},
 	emptyOut: function() {
   	this.$el.empty();
