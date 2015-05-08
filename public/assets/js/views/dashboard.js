@@ -9,7 +9,7 @@ app.Dashboard = Backbone.View.extend({
 	formLoginTemplate : _.template($('#form-login-template').html()),
 	events: {
 		'click .btn-admin-create' 		 : 'newForm',
-		'click .btn-admin-hide' 		 	 : 'conceal',
+		'click .btn-admin-hide' 		 	 : 'emptyOut',
 		'click .btn-admin-logout' 		 : 'logout',
 		'click .btn-form-admin-login'  : 'login',
 		'click .btn-form-admin-create' : 'create',
@@ -25,12 +25,10 @@ app.Dashboard = Backbone.View.extend({
 	},
 	welcome: function() {
 		$('.admin-form-container').html(this.welcomeTemplate());
-		this.reveal();
 		return this;
 	},
 	loginForm: function() {
 		$('.admin-form-container').html(this.formLoginTemplate());
-		this.reveal();
 		return this;
 	},
 	newForm: function() {
@@ -52,31 +50,19 @@ app.Dashboard = Backbone.View.extend({
     		$('.error').text(error.message);
   		} else {
 	    	console.log("Authenticated successfully with payload:", authData);
-				app.dashboard.welcome();
+				self.welcome();
 			}
-		}.bind(this));
+		});
 	},
 	logout: function() {
 		ref.unauth();
-		this.emptyOut();
-	},
-	conceal: function() {
-		this.$el.fadeOut('fast', function() {
-  		this.$el.hide();
-  	}.bind(this));
+		$('.admin-form-container').html('<i style="float: right" class="fa fa-times fa-3x"></i>');
+		$('.admin-form-container').append('<p class="lead">Thanks</p>');
 	},
 	emptyOut: function() {
-		this.$el.fadeOut('fast', function() {
-  		this.$el.empty();
-  	}.bind(this));
-	},
-	reveal: function() {
-		this.$el.fadeIn('fast', function() {
-  		this.$el.show();
-  	}.bind(this));
+  	this.$el.empty();
 	},
 	editForm: function(model) {
-		this.reveal();
 		refUpdate = new Firebase(ref + 'posts/' + model.id);
 		$('.admin-form-container').html(this.formEditTemplate(model.toJSON()));
 		return this;
@@ -89,6 +75,7 @@ app.Dashboard = Backbone.View.extend({
 	onComplete: function(error) {
 		if (error) {
     	console.log('Synchronization failed');
+    	$('.admin-form-container').addClass('shake');
   	} else {
     	console.log('Synchronization succeeded');
     	self.emptyOut();

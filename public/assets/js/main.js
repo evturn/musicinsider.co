@@ -17,40 +17,35 @@ refPosts.on("value", function(snapshot) {
 refUsers.onAuth(function(authData) {
   if (authData) {
     console.log("Authenticated with uid:", authData.uid);
-    admin = true;
     $('.fa-user-secret').css({color: 'yellow'});
-    $('.admin-tools-list').css({visibility: 'visible'});
-    $('.admin-tool').css({visibility: 'visible'});
+    $('ul.admin-tools-list li').css({visibility: 'visible'});
   } else {
     console.log("Client unauthenticated.");
-    admin = false;
-    $('.admin-tools-list').css({visibility: 'hidden'});
-    $('.admin-tool').css({visibility: 'hidden'});
+    $('.fa-user-secret').css({color: 'grey'});
+    $('ul.admin-tools-list li').css({visibility: 'hidden'});
   }
 });
 
-function authenticated() {
-
-  
-}
-function unauthenticated() {
-
-}
-
-
 new WOW().init();
+
+
+function authenticate() {
+  var auth = ref.getAuth();
+  var dashboard = new app.Dashboard();
+  if (auth !== null) {
+    dashboard.welcome();
+    $('ul.admin-tools-list li').css({visibility: 'visible'});
+  } else {
+    dashboard.loginForm();
+    $('ul.admin-tools-list li').css({visibility: 'hidden'});
+  } 
+}
 
 
 $(function() {
 
   $('.btn-admin-site').on('click', function() {
-    if (admin === true) {
-      var dashboard = new app.Dashboard();
-      dashboard.welcome();
-    } else {
-      var dashboard = new app.Dashboard();
-      dashboard.loginForm();
-    }
+    authenticate();
   });
 
   $("#second").bootFolio({
