@@ -1,6 +1,8 @@
 var app = app || {};
 
 app.BlogPost = Backbone.View.extend({
+	tagName: 'div',
+	className: 'col-md-6 col-sm-6 col-xs-12 blog-item ',
 	postTemplate: _.template($('#blog-post-template').html()),
 	initialize: function() {
 		this.render();

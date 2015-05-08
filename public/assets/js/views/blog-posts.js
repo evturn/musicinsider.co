@@ -1,7 +1,7 @@
 var app = app || {};
 
 app.Blog = Backbone.View.extend({
-	el: '#podcast-episode',
+	el: '.episodes-blog-posts',
 	initialize: function() {
 		this.listenTo(this.collection, 'sync', this.addAll);
 		this.listenTo(this.collection, 'add', this.addAll);
