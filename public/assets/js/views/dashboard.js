@@ -45,12 +45,11 @@ app.Dashboard = Backbone.View.extend({
 	},
 	login: function(e) {
 		e.preventDefault();
-		var email 	 = $('#email').val();
-		var password = $('#password').val();
-		var refUsers = new Firebase(ref + 'users');
+		var $email 	  = $('#email').val();
+		var $password = $('#password').val();
 		refUsers.authWithPassword({
-			email    : email,
-			password : password
+			email    : $email,
+			password : $password
 		}, function(error, authData) {			
 			if (error) {
     		console.log("Login Failed!", error);
@@ -93,7 +92,6 @@ app.Dashboard = Backbone.View.extend({
 		e.preventDefault();
 		var title = $('#post-title').val();
 		var body  = $('#post-body').val();
-		var refPosts = new Firebase(ref + 'posts/');
     refPosts.push({
     	title: title,
     	body: body
