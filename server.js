@@ -1,21 +1,20 @@
 var express = require('express');
 var logger 	= require('morgan');
-var ejs 		= require('ejs');
-
+var hbs = require('./config/handlebars');
 var app = express();
 
-app.set('views', __dirname + '/public/views');
-
-app.set('view engine', 'ejs');
-app.set('port', process.env.PORT || 3000);
-app.use(logger('dev'));
+app.set('view engine', 'hbs');
+app.set('views', 'views');
+app.engine('hbs', hbs.engine);
 
 app.use(express.static(__dirname + '/public'));
+app.use(logger('dev'));
 
-app.get('/', function(req, res) {
-	res.render('layout');
-});
+var appRoutes = require('./routes/app-routes');
+app.use('/', appRoutes);
 
+
+app.set('port', process.env.PORT || 3000);
 app.listen(app.get('port'), function() {
 	console.log('Listening on port ' + app.get('port'));
 });

@@ -4,19 +4,14 @@
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
-
-	<% include ./dependencies/head %>
-
+	{{>head}}
 </head>
 <body class="menufix">
-  
-  <% include ./pages/index %>
+	{{>navbar}}
 
-  <% include ./templates/dashboard %>
-  <% include ./templates/login %>
-  <% include ./templates/dashboard-posts %>
-  <% include ./templates/posts %>
+  {{{body}}}
 
-  <% include ./dependencies/scripts %>
+	{{>footer}}
+  {{>scripts}}
 </body>
 </html>
