@@ -2,7 +2,8 @@ var handlebars = require('express-handlebars');
 
 var viewDirectories = [
 	'views/partials',
-	'views/blog'
+	'views/blog',
+	'views/welcome'
 ];
 
 var hbs = handlebars.create({
