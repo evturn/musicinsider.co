@@ -287,6 +287,10 @@ button.navbar-toggle.collapsed:hover {
   font-family: 'Raleway', sans-serif;
 }
 
+.section-about .section-title {
+  padding-bottom: 50px;
+}
+
 .section-about p.lead {
   text-align: left;
 }
