@@ -287,6 +287,10 @@ button.navbar-toggle.collapsed:hover {
   font-family: 'Raleway', sans-serif;
 }
 
+.section-about p.lead {
+  text-align: left;
+}
+
 @media only screen and (max-width: 768px) {
   .menu-wrapper {
     background: #fff;
