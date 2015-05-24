@@ -1,6 +1,10 @@
 var express = require('express');
 var logger 	= require('morgan');
 var hbs = require('./config/handlebars');
+var appRouter = require('./routes/app-router');
+var adminRouter = require('./routes/admin-router');
+var blogRouter = require('./routes/blog-router');
+
 var app = express();
 
 app.set('view engine', 'hbs');
@@ -10,8 +14,10 @@ app.engine('hbs', hbs.engine);
 app.use(express.static(__dirname + '/public'));
 app.use(logger('dev'));
 
-var appRoutes = require('./routes/app-routes');
-app.use('/', appRoutes);
+
+app.use('/', appRouter);
+app.use('/admin', adminRouter);
+app.use('/blog', blogRouter);
 
 
 app.set('port', process.env.PORT || 3000);
