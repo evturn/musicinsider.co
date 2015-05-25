@@ -212,52 +212,28 @@ h6 {
 .episodes {
   padding-bottom: 100px;
 }
-/* line 3, scss/app/_episodes.scss */
-.episodes .episode-info {
-  color: black;
-}
-/* line 5, scss/app/_episodes.scss */
-.episodes .episode-info a {
-  text-decoration: none;
-}
-/* line 8, scss/app/_episodes.scss */
-.episodes .episode-info .episode-title {
-  cursor: pointer;
-  text-align: center;
-}
-/* line 11, scss/app/_episodes.scss */
-.episodes .episode-info .episode-title:hover {
-  color: #40768c;
-}
-/* line 15, scss/app/_episodes.scss */
-.episodes .episode-info .episode-caption {
-  padding: 0 5em 1em 5em;
-  text-align: left;
-  color: black;
-}
-
-/* line 23, scss/app/_episodes.scss */
-.img-episode {
+/* line 4, scss/app/_episodes.scss */
+.episodes .episode-post .img-episode {
   margin-bottom: 20px;
   display: inline-block;
   overflow: hidden;
   position: relative;
 }
-/* line 29, scss/app/_episodes.scss */
-.img-episode:hover .magnifier {
+/* line 10, scss/app/_episodes.scss */
+.episodes .episode-post .img-episode:hover .magnifier {
   opacity: 1;
   visibility: visible;
 }
-/* line 33, scss/app/_episodes.scss */
-.img-episode:hover img {
+/* line 14, scss/app/_episodes.scss */
+.episodes .episode-post .img-episode:hover img {
   zoom: 1;
   filter: alpha(opacity=50);
   opacity: 0.5;
 }
-/* line 39, scss/app/_episodes.scss */
-.img-episode .magnifier {
+/* line 20, scss/app/_episodes.scss */
+.episodes .episode-post .img-episode .magnifier {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #40768c;
   text-align: center;
   top: 0;
   left: 0;
@@ -271,8 +247,23 @@ h6 {
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
-/* line 55, scss/app/_episodes.scss */
-.img-episode img {
+/* line 35, scss/app/_episodes.scss */
+.episodes .episode-post .img-episode .magnifier h3 {
+  margin-top: 20%;
+  color: #cfe7f0;
+}
+/* line 38, scss/app/_episodes.scss */
+.episodes .episode-post .img-episode .magnifier h3:hover {
+  color: #dd4438;
+}
+/* line 42, scss/app/_episodes.scss */
+.episodes .episode-post .img-episode .magnifier a {
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* line 48, scss/app/_episodes.scss */
+.episodes .episode-post .img-episode img {
   zoom: 1;
   filter: alpha(opacity=100);
   opacity: 1;
@@ -281,6 +272,29 @@ h6 {
   -ms-transition: all 0.9s ease 0s;
   -o-transition: all 0.9s ease 0s;
   transition: all 0.9s ease 0s;
+}
+/* line 60, scss/app/_episodes.scss */
+.episodes .episode-info {
+  color: black;
+}
+/* line 62, scss/app/_episodes.scss */
+.episodes .episode-info a {
+  text-decoration: none;
+}
+/* line 65, scss/app/_episodes.scss */
+.episodes .episode-info .episode-title {
+  cursor: pointer;
+  text-align: center;
+}
+/* line 68, scss/app/_episodes.scss */
+.episodes .episode-info .episode-title:hover {
+  color: #40768c;
+}
+/* line 72, scss/app/_episodes.scss */
+.episodes .episode-info .episode-caption {
+  padding: 0 5em 1em 5em;
+  text-align: left;
+  color: black;
 }
 
 /* line 3, scss/app/_landing.scss */
