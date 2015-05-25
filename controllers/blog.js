@@ -11,10 +11,10 @@ exports.getPosts = function(req, res) {
 };
 
 exports.postPosts = function(req, res) {
-  console.log(req.body);
   var post = new Post({
-    title : req.body.title,
-    body  : req.body.body
+    title      : req.body.title,
+    body       : req.body.body,
+    link       : req.body.link
   });
 
   post.save(function(err) {

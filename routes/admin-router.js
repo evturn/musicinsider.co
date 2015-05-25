@@ -1,17 +1,19 @@
 var express = require('express');
-var router = express.Router();
+var BlogCtrl = require('../controllers/blog');
+var AdminCtrl = require('../controllers/admin');
 var Post = require('../models/post');
 
-router.get('/', function(req, res) {
-	res.render('admin/index', {layout: 'admin'});
-});
+var admin = express.Router();
 
-router.get('/new', function(req, res) {
+admin.route('/')
+  .get(AdminCtrl.getPosts)
+
+admin.get('/new', function(req, res) {
   res.render('admin/new', {layout: 'admin'});
 });
 
-router.post('/login', function(req, res) {
+admin.post('/login', function(req, res) {
   res.redirect('/', {layout: 'admin'});
 });
 
-module.exports = router;
+module.exports = admin;
