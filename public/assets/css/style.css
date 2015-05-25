@@ -46,16 +46,17 @@
 }
 
 /* line 2, scss/admin/_form.scss */
-.admin input.form-control.admin-input, .admin textarea.form-control.admin-input {
-  border: 1px solid #ddd;
+.admin .form-control {
+  border: 1px solid #dd4438;
   border-radius: 2px;
-  background: #dd4438;
-  color: #fff;
+  background: #fff;
+  color: #000;
+  font-family: Raleway;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: bold;
 }
-/* line 11, scss/admin/_form.scss */
-.admin textarea.form-control.admin-input {
+/* line 12, scss/admin/_form.scss */
+.admin textarea {
   height: 80%;
   resize: vertical;
 }
