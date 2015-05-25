@@ -54,9 +54,8 @@
       }
       li {
         &:hover {
-          background: $primarydark;
           a { 
-            color: $white;
+            color: $secondarylight;
             outline: none;
           }
         }

@@ -1,39 +1,42 @@
 .admin {
-  ul.tools-list li {
-    display: inline-block;
-    padding-right: 15px;
-    color: $black;
-    position: relative;
-  }
-  .tools-list {
-    border-bottom: 1px solid #ddd;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-bottom: 35px;
-    padding-left: 0;
-    a { cursor: pointer; };
-    .fa {
-      background: $secondarylight;
-      border-bottom: 2px solid $secondarydark;
-      border-radius: 2px;
-      border-top: none;
-      color: $white;
-      outline: 0;
-      height: 50px;
-      line-height: 1.8em;
-      text-align: center;
-      width: 50px;
-      &:hover {
+  .admin-tools {
+    margin-top: -75px;
+    ul.tools-list li {
+      display: inline-block;
+      padding-right: 15px;
+      color: $black;
+      position: relative;
+    }
+    .tools-list {
+      border-bottom: 1px solid #ddd;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin-bottom: 35px;
+      padding-left: 0;
+      a { cursor: pointer; };
+      .fa {
         background: $secondarylight;
         border-bottom: 2px solid $secondarydark;
-        border-radius: 4px;
+        border-radius: 2px;
+        border-top: none;
         color: $white;
-        margin-bottom: -2px;
-      }
-      &:focus {
-        background: $secondarylight;
-        border-bottom: 2px solid $secondarydark;
-        color: $white;
+        outline: 0;
+        height: 50px;
+        line-height: 1.8em;
+        text-align: center;
+        width: 50px;
+        &:hover {
+          background: $secondarylight;
+          border-bottom: 2px solid $secondarydark;
+          border-radius: 4px;
+          color: $white;
+          margin-bottom: -2px;
+        }
+        &:focus {
+          background: $secondarylight;
+          border-bottom: 2px solid $secondarydark;
+          color: $white;
+        }
       }
     }
   }

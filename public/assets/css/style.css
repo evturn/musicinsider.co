@@ -204,13 +204,9 @@ h6 {
   margin: 0;
   text-align: right;
 }
-/* line 56, scss/app/_navbar.scss */
-.navbar-default .container-fluid .navbar-collapse li:hover {
-  background: #40768c;
-}
-/* line 58, scss/app/_navbar.scss */
+/* line 57, scss/app/_navbar.scss */
 .navbar-default .container-fluid .navbar-collapse li:hover a {
-  color: white;
+  color: #dd4438;
   outline: none;
 }
 
@@ -411,11 +407,14 @@ h6 {
 
 /* line 1, scss/app/_footer.scss */
 .footer {
+  bottom: 0;
+  left: 0;
+  margin: 0;
   padding-top: 20px;
   color: #40768c;
 }
 
-/* line 6, scss/app/_footer.scss */
+/* line 9, scss/app/_footer.scss */
 #preloader {
   width: 100%;
   height: 100%;
@@ -429,7 +428,7 @@ h6 {
   display: block;
 }
 
-/* line 19, scss/app/_footer.scss */
+/* line 22, scss/app/_footer.scss */
 .preloader {
   position: absolute;
   margin: 0 auto;
@@ -447,7 +446,7 @@ h6 {
   border-radius: 50%;
 }
 
-/* line 36, scss/app/_footer.scss */
+/* line 39, scss/app/_footer.scss */
 #spinner {
   position: relative;
   height: 95px;
@@ -462,7 +461,7 @@ h6 {
   animation: rotation 0.750s infinite linear;
 }
 
-/* line 50, scss/app/_footer.scss */
+/* line 53, scss/app/_footer.scss */
 #spinner:before {
   content: "";
   display: block;
@@ -479,54 +478,54 @@ h6 {
 }
 
 @-webkit-keyframes rotation {
-  /* line 66, scss/app/_footer.scss */
+  /* line 69, scss/app/_footer.scss */
   from {
     -webkit-transform: rotate(0deg);
   }
 
-  /* line 67, scss/app/_footer.scss */
+  /* line 70, scss/app/_footer.scss */
   to {
     -webkit-transform: rotate(359deg);
   }
 }
 
 @-moz-keyframes rotation {
-  /* line 70, scss/app/_footer.scss */
+  /* line 73, scss/app/_footer.scss */
   from {
     -moz-transform: rotate(0deg);
   }
 
-  /* line 71, scss/app/_footer.scss */
+  /* line 74, scss/app/_footer.scss */
   to {
     -moz-transform: rotate(359deg);
   }
 }
 
 @-o-keyframes rotation {
-  /* line 74, scss/app/_footer.scss */
+  /* line 77, scss/app/_footer.scss */
   from {
     -o-transform: rotate(0deg);
   }
 
-  /* line 75, scss/app/_footer.scss */
+  /* line 78, scss/app/_footer.scss */
   to {
     -o-transform: rotate(359deg);
   }
 }
 
 @keyframes rotation {
-  /* line 78, scss/app/_footer.scss */
+  /* line 81, scss/app/_footer.scss */
   from {
     transform: rotate(0deg);
   }
 
-  /* line 79, scss/app/_footer.scss */
+  /* line 82, scss/app/_footer.scss */
   to {
     transform: rotate(359deg);
   }
 }
 
-/* line 82, scss/app/_footer.scss */
+/* line 85, scss/app/_footer.scss */
 .dmtop {
   background-color: #dd4438;
   background-image: url(../img/arrow.png);
@@ -550,26 +549,30 @@ h6 {
 }
 
 /* line 2, scss/admin/_tools.scss */
-.admin ul.tools-list li {
+.admin .admin-tools {
+  margin-top: -75px;
+}
+/* line 4, scss/admin/_tools.scss */
+.admin .admin-tools ul.tools-list li {
   display: inline-block;
   padding-right: 15px;
   color: black;
   position: relative;
 }
-/* line 8, scss/admin/_tools.scss */
-.admin .tools-list {
+/* line 10, scss/admin/_tools.scss */
+.admin .admin-tools .tools-list {
   border-bottom: 1px solid #ddd;
   padding-top: 20px;
   padding-bottom: 20px;
   margin-bottom: 35px;
   padding-left: 0;
 }
-/* line 14, scss/admin/_tools.scss */
-.admin .tools-list a {
+/* line 16, scss/admin/_tools.scss */
+.admin .admin-tools .tools-list a {
   cursor: pointer;
 }
-/* line 15, scss/admin/_tools.scss */
-.admin .tools-list .fa {
+/* line 17, scss/admin/_tools.scss */
+.admin .admin-tools .tools-list .fa {
   background: #dd4438;
   border-bottom: 2px solid #b94721;
   border-radius: 2px;
@@ -581,16 +584,16 @@ h6 {
   text-align: center;
   width: 50px;
 }
-/* line 26, scss/admin/_tools.scss */
-.admin .tools-list .fa:hover {
+/* line 28, scss/admin/_tools.scss */
+.admin .admin-tools .tools-list .fa:hover {
   background: #dd4438;
   border-bottom: 2px solid #b94721;
   border-radius: 4px;
   color: white;
   margin-bottom: -2px;
 }
-/* line 33, scss/admin/_tools.scss */
-.admin .tools-list .fa:focus {
+/* line 35, scss/admin/_tools.scss */
+.admin .admin-tools .tools-list .fa:focus {
   background: #dd4438;
   border-bottom: 2px solid #b94721;
   color: white;
