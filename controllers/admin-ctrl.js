@@ -21,6 +21,10 @@ exports.getPost = function(req, res) {
   });
 };
 
+exports.createPost = function(req, res) { 
+  res.render('admin/new', {layout: 'admin'});
+};
+
 exports.getLogin = function(req, res) {
   res.render('welcome/login');
 };
