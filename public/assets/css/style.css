@@ -644,3 +644,7 @@ h6 {
 .admin .admin-posts .container-posts .post-items .post-item:hover p.lead {
   color: white;
 }
+/* line 27, scss/admin/_posts.scss */
+.admin .admin-posts .container-posts .post-items .post-item:hover .fa {
+  color: white;
+}
