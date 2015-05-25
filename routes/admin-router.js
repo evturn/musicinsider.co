@@ -9,8 +9,7 @@ admin.route('/')
   .get(AdminCtrl.getPosts);
 
 admin.route('/new')
-  .get(function(req, res) { res.render('admin/new', {layout: 'admin'});
- });
+  .get(AdminCtrl.createPost);
 
 admin.route('/:id')
   .get(AdminCtrl.getPost);

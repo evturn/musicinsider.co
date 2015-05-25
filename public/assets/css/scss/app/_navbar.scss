@@ -19,6 +19,10 @@
     background: $white;
     .navbar-header {
       height: 50px;
+      .img-nav {
+        padding-top: 5px;
+        width: 40px;
+      }
       .navbar-toggle {
         padding: 0;
         padding-right: 15px;
