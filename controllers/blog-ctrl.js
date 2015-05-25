@@ -24,7 +24,12 @@ exports.postPosts = function(req, res) {
 };
 
 exports.getPost = function(req, res) {
-  
+  Post.findById(req.params._id, function(err, post) {
+    if (err)
+      res.send(err);
+      console.log(post);
+      res.send({post: post});
+  });
 };
 
 exports.putPost = function(req, res) {

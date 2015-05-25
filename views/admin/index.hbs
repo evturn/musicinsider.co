@@ -7,8 +7,11 @@
       <ul class="post-items">
         {{#each posts}}
         <li class="post-item">
-          <a href="/admin/{{this.link}}"><p class="lead">{{this.title}}
-            <span class="pull-right"><i class="fa fa-pencil"></i></span></p></a>
+          <a href="/admin/{{this._id}}">
+            <p class="lead">{{this.title}}
+              <span class="pull-right"><i class="fa fa-pencil"></i></span>
+            </p>
+          </a>
         </li>
         {{/each}}
       </ul>
