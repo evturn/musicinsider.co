@@ -1,0 +1,20 @@
+.blog-posts {
+  .blog-item {
+    background-color: $white;
+    margin-bottom: 15px;
+    border-radius: 2px;
+    padding: 25px;
+    .blog-header {
+      text-transform: uppercase;
+    }
+    a {
+      text-decoration: none;
+    }
+    .blog-img {
+      img {
+        float: right;
+        max-width: 200px;
+      }
+    }
+  }
+}

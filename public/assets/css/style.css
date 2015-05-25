@@ -652,3 +652,24 @@ h6 {
 .admin .admin-posts .container-posts .post-items .post-item:hover .fa {
   color: white;
 }
+
+/* line 2, scss/blog/_posts.scss */
+.blog-posts .blog-item {
+  background-color: white;
+  margin-bottom: 15px;
+  border-radius: 2px;
+  padding: 25px;
+}
+/* line 7, scss/blog/_posts.scss */
+.blog-posts .blog-item .blog-header {
+  text-transform: uppercase;
+}
+/* line 10, scss/blog/_posts.scss */
+.blog-posts .blog-item a {
+  text-decoration: none;
+}
+/* line 14, scss/blog/_posts.scss */
+.blog-posts .blog-item .blog-img img {
+  float: right;
+  max-width: 200px;
+}
