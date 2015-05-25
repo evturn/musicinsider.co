@@ -13,8 +13,7 @@ exports.getPosts = function(req, res) {
 exports.postPosts = function(req, res) {
   var post = new Post({
     title      : req.body.title,
-    body       : req.body.body,
-    link       : req.body.link
+    body       : req.body.body
   });
 
   post.save(function(err) {
@@ -39,5 +38,8 @@ exports.putPost = function(req, res) {
 };
 
 exports.deletePost = function(req, res) {
-
+  Post.remove({_id: req.params.id}, function(err) {
+    if (err) res.send(err);
+    res.redirect('admin/index', {message: 'Post successfully deleted'});
+  });
 };

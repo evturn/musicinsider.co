@@ -1,5 +1,8 @@
 .admin {
   .admin-posts {
+    p.admin-info {
+      color: $secondarylight;
+    }
     .container-posts {
       background-color: $white;
       padding: 0;

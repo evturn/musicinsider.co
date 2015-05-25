@@ -610,41 +610,45 @@ h6 {
 }
 
 /* line 3, scss/admin/_posts.scss */
+.admin .admin-posts p.admin-info {
+  color: #dd4438;
+}
+/* line 6, scss/admin/_posts.scss */
 .admin .admin-posts .container-posts {
   background-color: white;
   padding: 0;
   border-radius: 2px;
 }
-/* line 7, scss/admin/_posts.scss */
+/* line 10, scss/admin/_posts.scss */
 .admin .admin-posts .container-posts .post-items {
   margin: 0;
   padding: 0;
   width: 100%;
   list-style-type: none;
 }
-/* line 12, scss/admin/_posts.scss */
+/* line 15, scss/admin/_posts.scss */
 .admin .admin-posts .container-posts .post-items .post-item {
   padding: 15px;
   border-bottom: 1px solid #cfe7f0;
 }
-/* line 15, scss/admin/_posts.scss */
+/* line 18, scss/admin/_posts.scss */
 .admin .admin-posts .container-posts .post-items .post-item a {
   text-decoration: none;
 }
-/* line 18, scss/admin/_posts.scss */
+/* line 21, scss/admin/_posts.scss */
 .admin .admin-posts .container-posts .post-items .post-item p.lead {
   line-height: 1.8em;
   margin-bottom: 0;
 }
-/* line 22, scss/admin/_posts.scss */
+/* line 25, scss/admin/_posts.scss */
 .admin .admin-posts .container-posts .post-items .post-item:hover {
   background-color: #40768c;
 }
-/* line 24, scss/admin/_posts.scss */
+/* line 27, scss/admin/_posts.scss */
 .admin .admin-posts .container-posts .post-items .post-item:hover p.lead {
   color: white;
 }
-/* line 27, scss/admin/_posts.scss */
+/* line 30, scss/admin/_posts.scss */
 .admin .admin-posts .container-posts .post-items .post-item:hover .fa {
   color: white;
 }
