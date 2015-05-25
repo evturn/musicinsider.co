@@ -1,4 +1,4 @@
-/* line 1, scss/admin/_dashboard.scss */
+/* line 1, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/admin/_dashboard.scss */
 span.dashboard-close i {
   color: #000;
   margin-top: 5px;
@@ -6,13 +6,13 @@ span.dashboard-close i {
   cursor: pointer;
 }
 
-/* line 8, scss/admin/_dashboard.scss */
+/* line 8, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/admin/_dashboard.scss */
 p.dashboard-thanks {
   margin-top: 35px;
   font-size: 30px;
 }
 
-/* line 13, scss/admin/_dashboard.scss */
+/* line 13, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/admin/_dashboard.scss */
 .admin-tools-list {
   border-bottom: 1px solid #ddd;
   padding-top: 20px;
@@ -21,7 +21,7 @@ p.dashboard-thanks {
   padding-left: 0;
 }
 
-/* line 21, scss/admin/_dashboard.scss */
+/* line 21, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/admin/_dashboard.scss */
 ul.admin-tools-list li {
   display: inline-block;
   padding-right: 15px;
@@ -29,12 +29,12 @@ ul.admin-tools-list li {
   position: relative;
 }
 
-/* line 28, scss/admin/_dashboard.scss */
+/* line 28, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/admin/_dashboard.scss */
 ul.admin-tools-list li a {
   cursor: pointer;
 }
 
-/* line 32, scss/admin/_dashboard.scss */
+/* line 32, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/admin/_dashboard.scss */
 .admin-tools-list i {
   background: #dd4438;
   border-bottom: 2px solid #b94721;
@@ -48,7 +48,7 @@ ul.admin-tools-list li a {
   width: 50px;
 }
 
-/* line 45, scss/admin/_dashboard.scss */
+/* line 45, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/admin/_dashboard.scss */
 .admin-tools-list i:hover {
   background: #dd4438;
   border-bottom: 2px solid #b94721;
@@ -57,14 +57,14 @@ ul.admin-tools-list li a {
   margin-bottom: -2px;
 }
 
-/* line 53, scss/admin/_dashboard.scss */
+/* line 53, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/admin/_dashboard.scss */
 .admin-tools-list i:focus {
   background: #dd4438;
   border-bottom: 2px solid #b94721;
   color: #fff;
 }
 
-/* line 59, scss/admin/_dashboard.scss */
+/* line 59, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/admin/_dashboard.scss */
 .admin-form-container {
   padding-left: 5%;
   padding-right: 5%;
@@ -77,32 +77,26 @@ ul.admin-tools-list li a {
   text-transform: uppercase;
 }
 
-/* line 71, scss/admin/_dashboard.scss */
+/* line 71, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/admin/_dashboard.scss */
 .admin-form-container h1 {
   font-family: 'Raleway', sans-serif;
   color: #fff;
   font-weight: 500;
 }
 
-/* line 77, scss/admin/_dashboard.scss */
-.fa.fa-dashboard {
-  font-size: 13em;
-  color: #40768c;
-}
-
-/* line 82, scss/admin/_dashboard.scss */
+/* line 77, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/admin/_dashboard.scss */
 .btn-admin-site {
   color: #fff;
   float: left;
   cursor: pointer;
 }
 
-/* line 88, scss/admin/_dashboard.scss */
+/* line 83, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/admin/_dashboard.scss */
 .admin-form-login {
   z-index: 1000;
 }
 
-/* line 92, scss/admin/_dashboard.scss */
+/* line 87, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/admin/_dashboard.scss */
 input.form-control.admin-input, textarea.form-control.admin-input {
   border: 1px solid #ddd;
   border-radius: 2px;
@@ -112,7 +106,7 @@ input.form-control.admin-input, textarea.form-control.admin-input {
   font-weight: 500;
 }
 
-/* line 101, scss/admin/_dashboard.scss */
+/* line 96, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/admin/_dashboard.scss */
 textarea.form-control.admin-input {
   height: 80%;
   resize: vertical;
