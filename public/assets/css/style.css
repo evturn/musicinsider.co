@@ -659,17 +659,30 @@ h6 {
   margin-bottom: 15px;
   border-radius: 2px;
   padding: 25px;
+  border-bottom: 1px solid #d0d2d3;
+  border-right: 1px solid #e6e7e8;
 }
-/* line 7, scss/blog/_posts.scss */
+/* line 9, scss/blog/_posts.scss */
 .blog-posts .blog-item .blog-header {
   text-transform: uppercase;
 }
-/* line 10, scss/blog/_posts.scss */
+/* line 12, scss/blog/_posts.scss */
 .blog-posts .blog-item a {
   text-decoration: none;
 }
-/* line 14, scss/blog/_posts.scss */
+/* line 16, scss/blog/_posts.scss */
 .blog-posts .blog-item .blog-img img {
   float: right;
   max-width: 200px;
+}
+
+/* line 2, scss/blog/_single.scss */
+.single-post .row.container-post {
+  border: 1px solid white;
+  padding: 25px;
+}
+/* line 5, scss/blog/_single.scss */
+.single-post .row.container-post .post-header {
+  text-transform: uppercase;
+  color: #40768c;
 }
