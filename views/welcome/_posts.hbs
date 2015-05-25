@@ -1,24 +1,14 @@
+{{#each posts}}
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center episode-post">
   <div class="img-episode">
     <img src="assets/img/blog_01.jpg" class="img-responsive">
     <div class="magnifier">
-      <a href="#"><h3>Listen</h3></a>
+      <a href="/blog/{{this._id}}"><h3>Listen</h3></a>
     </div>
   </div>
   <div class="episode-info">
-    <a><h3 class="episode-title">Episode 1 - Pancakes</h3></a>
-    <p class="episode-caption">Today we discuss pancakes.</p>
+    <a href="/blog/{{this._id}}"><h3 class="episode-title">{{this.title}}</h3></a>
+    <p class="episode-caption">{{this.body}}</p>
   </div>
 </div>
-<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center episode-post">
-  <div class="img-episode">
-    <img src="assets/img/blog_01.jpg" class="img-responsive">
-    <div class="magnifier">
-      <a href="#"><h3>Listen</h3></a>
-    </div>
-  </div>
-  <div class="episode-info">
-    <a><h3 class="episode-title">Episode 2 - Parking Lots</h3></a>
-    <p class="episode-caption">Parking lots are everywhere. We ask 'why?' and also discuss ways to help from letting underground parking end these modern wonders lifespans.</p>
-  </div>
-</div>
+{{/each}}
