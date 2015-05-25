@@ -11,7 +11,6 @@ exports.getPosts = function(req, res) {
 };
 
 exports.getPost = function(req, res) {
-  console.log(req.params.id)
   var query = Post.where({ _id: req.params.id });
   query.findOne(function(err, post) {
     if (err) res.send(err);

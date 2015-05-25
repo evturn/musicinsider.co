@@ -6,4 +6,7 @@ blog.route('/')
   .get(BlogCtrl.getPosts)
   .post(BlogCtrl.postPosts);
 
+blog.route('/:id')
+  .get(BlogCtrl.getPost);
+
 module.exports = blog;

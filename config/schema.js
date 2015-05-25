@@ -4,7 +4,6 @@ exports.post = function() {
   return new mongoose.Schema({
     title     : {type: String},
     body      : {type: String},
-    link      : {type: String},
     createdAt : {type: Date, default: Date.now}
   });
 };

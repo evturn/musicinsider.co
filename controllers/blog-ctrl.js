@@ -24,11 +24,13 @@ exports.postPosts = function(req, res) {
 };
 
 exports.getPost = function(req, res) {
-  Post.findById(req.params._id, function(err, post) {
-    if (err)
-      res.send(err);
+  var query = Post.where({ _id: req.params.id });
+  query.findOne(function(err, post) {
+    if (err) res.send(err);
+    if (post) {
       console.log(post);
-      res.send({post: post});
+      res.render('blog/show', {post: post});
+    }
   });
 };
 
