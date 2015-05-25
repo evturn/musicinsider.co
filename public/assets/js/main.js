@@ -1,22 +1,33 @@
-new WOW({delay: 2000}).init();
+$(function() {
 
-$(".header .menu-wrapper").affix({
-  offset: {
-    top: 200, 
-    bottom: function () {
-    return (this.bottom = $('.copyrights').outerHeight(true))
-    }
-  }
-});
+  new WOW({delay: 2000}).init();
 
-$(window).scroll(function(){
-    if ($(this).scrollTop() > 1) {
-        $('.dmtop').css({bottom:"25px"});
-    } else {
-        $('.dmtop').css({bottom:"-100px"});
+  $(window).load(function() {
+    $("#preloader").delay(500).fadeOut();
+    $(".preloader").delay(600).fadeOut("slow");
+  });
+
+  $(".header .menu-wrapper").affix({
+    offset: {
+      top: 200, 
+      bottom: function () {
+      return (this.bottom = $('.copyrights').outerHeight(true))
+      }
     }
-});
-$('.dmtop').click(function(){
-    $('html, body').animate({scrollTop: '0px'}, 800);
-    return false;
+  });
+
+  $(window).scroll(function(){
+      if ($(this).scrollTop() > 1) {
+          $('.dmtop').css({bottom:"25px"});
+      } else {
+          $('.dmtop').css({bottom:"-100px"});
+      }
+  });
+  $('.dmtop').click(function(){
+      $('html, body').animate({scrollTop: '0px'}, 800);
+      return false;
+  });
+
+  $('[data-toggle="tooltip"]').tooltip();
+
 });

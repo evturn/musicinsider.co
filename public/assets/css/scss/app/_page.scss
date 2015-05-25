@@ -3,15 +3,27 @@ p.lead {
   color: $black;
 }
 
+.btn-general {
+  color: $white;
+  background: $secondarylight;
+  border: 2px solid $primarylight;
+  border-radius: 4%;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 17px 40px;
+  letter-spacing: 0px;
+  font-size: 17px;
+}
+
 button.btn-red {
-  font-family: $primarysans;
+  font-family: $primaryserif;
   background: $secondarylight;
   border-bottom: 2px solid $secondarydark;
   border-radius: 2px;
   border-top: none;
   color: $white;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: normal;
   text-transform: uppercase;
   outline: 0;
   height: 50px;
@@ -24,7 +36,7 @@ button.btn-red {
     background: $secondarylight;
     border-bottom: 2px solid $secondarydark;
     border-radius: 4px;
-    color: $primarydark;
+    color: $primarylight;
     margin-bottom: -2px;
   }
   &:focus {
