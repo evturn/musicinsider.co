@@ -8616,7 +8616,36 @@ h6 {
   font-size: 16px;
 }
 
-/* line 18, scss/app/_page.scss */
+/* line 17, scss/app/_page.scss */
+.section-title {
+  z-index: 2;
+  letter-spacing: 0.1em;
+  position: relative;
+  text-transform: uppercase;
+}
+
+/* line 24, scss/app/_page.scss */
+.section-title .font-backend {
+  bottom: -30px;
+  color: white;
+  font-family: "Cochin";
+  font-size: 120px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  height: 120px;
+  line-height: 120px;
+}
+
+/* line 38, scss/app/_page.scss */
+.section-title .lead {
+  font-size: 18px;
+  line-height: 2;
+  margin-top: 40px;
+}
+
+/* line 44, scss/app/_page.scss */
 .btn-general {
   color: white;
   background: #dd4438;
@@ -8629,7 +8658,7 @@ h6 {
   font-size: 17px;
 }
 
-/* line 30, scss/app/_page.scss */
+/* line 56, scss/app/_page.scss */
 button.btn-red {
   font-family: "Dosis";
   background: #dd4438;
@@ -8648,7 +8677,7 @@ button.btn-red {
   padding-left: 1em;
   padding-right: 1em;
 }
-/* line 47, scss/app/_page.scss */
+/* line 73, scss/app/_page.scss */
 button.btn-red:hover {
   background: #dd4438;
   border-bottom: 2px solid #b94721;
@@ -8656,14 +8685,14 @@ button.btn-red:hover {
   color: #cfe7f0;
   margin-bottom: -2px;
 }
-/* line 54, scss/app/_page.scss */
+/* line 80, scss/app/_page.scss */
 button.btn-red:focus {
   background: #dd4438;
   border-bottom: 2px solid #b94721;
   color: white;
 }
 
-/* line 61, scss/app/_page.scss */
+/* line 87, scss/app/_page.scss */
 .form-control {
   border: 1px solid #dd4438;
   border-radius: 2px;
@@ -8792,52 +8821,57 @@ button.btn-red:focus {
   font-size: 36px;
 }
 
-/* line 4, scss/app/_landing.scss */
+/* line 3, scss/app/_landing.scss */
+.landing {
+  height: 100vh;
+  margin-bottom: 100px;
+}
+/* line 6, scss/app/_landing.scss */
 .landing .landing-content {
   position: relative;
 }
-/* line 6, scss/app/_landing.scss */
+/* line 8, scss/app/_landing.scss */
 .landing .landing-content .landing-text {
   font-family: "Dosis";
   text-transform: uppercase;
   position: absolute;
 }
 @media (min-width: 768px) {
-  /* line 6, scss/app/_landing.scss */
+  /* line 8, scss/app/_landing.scss */
   .landing .landing-content .landing-text {
     margin-top: 5%;
   }
 }
 @media (min-width: 992px) {
-  /* line 6, scss/app/_landing.scss */
+  /* line 8, scss/app/_landing.scss */
   .landing .landing-content .landing-text {
     margin-top: 10%;
   }
 }
-/* line 16, scss/app/_landing.scss */
+/* line 18, scss/app/_landing.scss */
 .landing .landing-content .landing-text h1 {
   color: #40768c;
 }
-/* line 19, scss/app/_landing.scss */
+/* line 21, scss/app/_landing.scss */
 .landing .landing-content .landing-text h4 {
   line-height: 1.4em;
   color: black;
   font-weight: normal;
 }
 @media (min-width: 320px) {
-  /* line 19, scss/app/_landing.scss */
+  /* line 21, scss/app/_landing.scss */
   .landing .landing-content .landing-text h4 {
     font-size: 16px;
   }
 }
 @media (min-width: 480px) {
-  /* line 19, scss/app/_landing.scss */
+  /* line 21, scss/app/_landing.scss */
   .landing .landing-content .landing-text h4 {
     font-size: 18px;
   }
 }
 @media (min-width: 768px) {
-  /* line 19, scss/app/_landing.scss */
+  /* line 21, scss/app/_landing.scss */
   .landing .landing-content .landing-text h4 {
     font-size: 20px;
   }
@@ -8972,37 +9006,6 @@ button.btn-red:focus {
 }
 
 /* line 110, scss/app/_contact.scss */
-.section-title h3 {
-  z-index: 2;
-  font-size: 30px;
-  letter-spacing: 0.1em;
-  position: relative;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-/* line 119, scss/app/_contact.scss */
-.section-title .lead {
-  font-size: 18px;
-  line-height: 2;
-  margin-top: 40px;
-}
-
-/* line 125, scss/app/_contact.scss */
-.section-title h3 .font-backend {
-  bottom: -30px;
-  color: #f2f2f2;
-  font-family: Cochin;
-  font-size: 120px;
-  left: 0;
-  position: absolute;
-  right: 0;
-  z-index: -1;
-  height: 120px;
-  line-height: 120px;
-}
-
-/* line 138, scss/app/_contact.scss */
 #preloader {
   width: 100%;
   height: 100%;
@@ -9016,7 +9019,7 @@ button.btn-red:focus {
   display: block;
 }
 
-/* line 151, scss/app/_contact.scss */
+/* line 123, scss/app/_contact.scss */
 .preloader {
   position: absolute;
   margin: 0 auto;
@@ -9034,7 +9037,7 @@ button.btn-red:focus {
   border-radius: 50%;
 }
 
-/* line 168, scss/app/_contact.scss */
+/* line 140, scss/app/_contact.scss */
 #spinner {
   position: relative;
   height: 95px;
@@ -9049,7 +9052,7 @@ button.btn-red:focus {
   animation: rotation 0.750s infinite linear;
 }
 
-/* line 182, scss/app/_contact.scss */
+/* line 154, scss/app/_contact.scss */
 #spinner:before {
   content: "";
   display: block;
@@ -9066,54 +9069,54 @@ button.btn-red:focus {
 }
 
 @-webkit-keyframes rotation {
-  /* line 198, scss/app/_contact.scss */
+  /* line 170, scss/app/_contact.scss */
   from {
     -webkit-transform: rotate(0deg);
   }
 
-  /* line 199, scss/app/_contact.scss */
+  /* line 171, scss/app/_contact.scss */
   to {
     -webkit-transform: rotate(359deg);
   }
 }
 
 @-moz-keyframes rotation {
-  /* line 202, scss/app/_contact.scss */
+  /* line 174, scss/app/_contact.scss */
   from {
     -moz-transform: rotate(0deg);
   }
 
-  /* line 203, scss/app/_contact.scss */
+  /* line 175, scss/app/_contact.scss */
   to {
     -moz-transform: rotate(359deg);
   }
 }
 
 @-o-keyframes rotation {
-  /* line 206, scss/app/_contact.scss */
+  /* line 178, scss/app/_contact.scss */
   from {
     -o-transform: rotate(0deg);
   }
 
-  /* line 207, scss/app/_contact.scss */
+  /* line 179, scss/app/_contact.scss */
   to {
     -o-transform: rotate(359deg);
   }
 }
 
 @keyframes rotation {
-  /* line 210, scss/app/_contact.scss */
+  /* line 182, scss/app/_contact.scss */
   from {
     transform: rotate(0deg);
   }
 
-  /* line 211, scss/app/_contact.scss */
+  /* line 183, scss/app/_contact.scss */
   to {
     transform: rotate(359deg);
   }
 }
 
-/* line 214, scss/app/_contact.scss */
+/* line 186, scss/app/_contact.scss */
 .dmtop {
   background-color: #0b0b0b;
   background-image: url(../img/arrow.png);
@@ -9135,7 +9138,7 @@ button.btn-red:focus {
   overflow: auto;
 }
 
-/* line 235, scss/app/_contact.scss */
+/* line 207, scss/app/_contact.scss */
 .magnifier .buttons {
   visibility: hidden;
   position: absolute;
@@ -9154,48 +9157,48 @@ button.btn-red:focus {
   transition: all .3s ease 0;
 }
 
-/* line 254, scss/app/_contact.scss */
+/* line 226, scss/app/_contact.scss */
 .magnifier .buttons .social-icons span a i,
 .magnifier .buttons .social-icons span a  {
   color: #8e8e8e;
 }
 
-/* line 259, scss/app/_contact.scss */
+/* line 231, scss/app/_contact.scss */
 .magnifier .buttons .social-icons span:hover a i,
 .magnifier .buttons .social-icons span:hover a {
   color: #0b0b0b;
 }
 
-/* line 263, scss/app/_contact.scss */
+/* line 235, scss/app/_contact.scss */
 .magnifier .buttons .social-icons span a {
   border: none;
 }
 
-/* line 266, scss/app/_contact.scss */
+/* line 238, scss/app/_contact.scss */
 .magnifier .buttons p {
   margin: 0 0 30px;
 }
 
-/* line 269, scss/app/_contact.scss */
+/* line 241, scss/app/_contact.scss */
 .magnifier:hover .buttons {
   opacity: 1;
   visibility: visible;
 }
 
-/* line 273, scss/app/_contact.scss */
+/* line 245, scss/app/_contact.scss */
 .entry:hover .magnifier {
   opacity: 1;
   visibility: visible;
 }
 
-/* line 277, scss/app/_contact.scss */
+/* line 249, scss/app/_contact.scss */
 .entry {
   display: block;
   overflow: hidden;
   position: relative;
 }
 
-/* line 282, scss/app/_contact.scss */
+/* line 254, scss/app/_contact.scss */
 .magnifier {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.9);
@@ -9213,7 +9216,7 @@ button.btn-red:focus {
   transition: all .3s ease-in-out;
 }
 
-/* line 299, scss/app/_contact.scss */
+/* line 271, scss/app/_contact.scss */
 .entry img {
   zoom: 1;
   filter: alpha(opacity=100);
@@ -9225,14 +9228,14 @@ button.btn-red:focus {
   transition: all 0.9s ease 0s;
 }
 
-/* line 309, scss/app/_contact.scss */
+/* line 281, scss/app/_contact.scss */
 .entry:hover img {
   zoom: 1;
   filter: alpha(opacity=50);
   opacity: 0.5;
 }
 
-/* line 316, scss/app/_contact.scss */
+/* line 288, scss/app/_contact.scss */
 .magnifier .buttons h3,
 .teambox .desc h3 {
   margin: 20px 0 0;
