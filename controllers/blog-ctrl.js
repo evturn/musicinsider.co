@@ -24,7 +24,7 @@ exports.postPosts = function(req, res) {
 };
 
 exports.getPost = function(req, res) {
-
+  
 };
 
 exports.putPost = function(req, res) {

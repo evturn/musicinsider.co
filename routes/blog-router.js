@@ -1,5 +1,5 @@
 var express = require('express');
-var BlogCtrl = require('../controllers/blog');
+var BlogCtrl = require('../controllers/blog-ctrl');
 var blog = express.Router();
 
 blog.route('/')

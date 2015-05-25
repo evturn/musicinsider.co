@@ -1,6 +1,6 @@
 var express = require('express');
-var BlogCtrl = require('../controllers/blog');
-var AdminCtrl = require('../controllers/admin');
+var BlogCtrl = require('../controllers/blog-ctrl');
+var AdminCtrl = require('../controllers/admin-ctrl');
 var Post = require('../models/post');
 
 var admin = express.Router();
