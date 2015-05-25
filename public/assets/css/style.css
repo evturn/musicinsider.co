@@ -549,17 +549,17 @@ h6 {
 }
 
 /* line 2, scss/admin/_tools.scss */
-.admin .admin-tools {
-  margin-top: -75px;
+.admin .navbar-default {
+  margin-bottom: 25px;
 }
-/* line 4, scss/admin/_tools.scss */
+/* line 6, scss/admin/_tools.scss */
 .admin .admin-tools ul.tools-list li {
   display: inline-block;
   padding-right: 15px;
   color: black;
   position: relative;
 }
-/* line 10, scss/admin/_tools.scss */
+/* line 12, scss/admin/_tools.scss */
 .admin .admin-tools .tools-list {
   border-bottom: 1px solid #ddd;
   padding-top: 20px;
@@ -567,11 +567,11 @@ h6 {
   margin-bottom: 35px;
   padding-left: 0;
 }
-/* line 16, scss/admin/_tools.scss */
+/* line 18, scss/admin/_tools.scss */
 .admin .admin-tools .tools-list a {
   cursor: pointer;
 }
-/* line 17, scss/admin/_tools.scss */
+/* line 19, scss/admin/_tools.scss */
 .admin .admin-tools .tools-list .fa {
   background: #dd4438;
   border-bottom: 2px solid #b94721;
@@ -584,7 +584,7 @@ h6 {
   text-align: center;
   width: 50px;
 }
-/* line 28, scss/admin/_tools.scss */
+/* line 30, scss/admin/_tools.scss */
 .admin .admin-tools .tools-list .fa:hover {
   background: #dd4438;
   border-bottom: 2px solid #b94721;
@@ -592,7 +592,7 @@ h6 {
   color: white;
   margin-bottom: -2px;
 }
-/* line 35, scss/admin/_tools.scss */
+/* line 37, scss/admin/_tools.scss */
 .admin .admin-tools .tools-list .fa:focus {
   background: #dd4438;
   border-bottom: 2px solid #b94721;

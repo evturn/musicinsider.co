@@ -1,15 +1,18 @@
 <div class="container admin-new">
   <div class="row">
+    <div class="section-title text-center">
+      <h2>New Post</h2>
+    </div>
     <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
       <form class="form-horizontal wow fadeInUp">
         <div class="form-group">
-          <input type="text" class="form-control">
+          <input name="title" type="text" class="form-control" placeholder="Title">
         </div>
         <div class="form-group">
-          <textarea class="form-control" rows="10"></textarea> 
+          <textarea name="body" class="form-control" rows="10"></textarea> 
         </div>
         <div class="form-group">
-          <a class="btn btn-default btn-lg btn-general btn-form-admin-create">Publish</a>
+          <button method="post" type="submit" class="btn-red">Publish</button>
         </div>
       </form>
     </div>
