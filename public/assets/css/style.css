@@ -1,61 +1,45 @@
-/* line 2, scss/admin/_tools.scss */
-.admin ul.tools-list li {
-  display: inline-block;
-  padding-right: 15px;
-  color: #000;
-  position: relative;
+@import url(http://fonts.googleapis.com/css?family=Raleway:700,400);
+/* line 1, scss/app/_page.scss */
+p.lead {
+  font-family: Raleway;
+  color: black;
 }
-/* line 8, scss/admin/_tools.scss */
-.admin .tools-list {
-  border-bottom: 1px solid #ddd;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin-bottom: 35px;
-  padding-left: 0;
-}
-/* line 14, scss/admin/_tools.scss */
-.admin .tools-list a {
-  cursor: pointer;
-}
-/* line 15, scss/admin/_tools.scss */
-.admin .tools-list .fa {
+
+/* line 6, scss/app/_page.scss */
+button.btn-red {
+  font-family: Raleway;
   background: #dd4438;
   border-bottom: 2px solid #b94721;
   border-radius: 2px;
   border-top: none;
-  color: #fff;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
   outline: 0;
   height: 50px;
   line-height: 1.8em;
   text-align: center;
-  width: 50px;
+  width: auto;
+  padding-left: 1em;
+  padding-right: 1em;
 }
-/* line 26, scss/admin/_tools.scss */
-.admin .tools-list .fa:hover {
+/* line 23, scss/app/_page.scss */
+button.btn-red:hover {
   background: #dd4438;
   border-bottom: 2px solid #b94721;
   border-radius: 4px;
-  color: #fff;
+  color: #40768c;
   margin-bottom: -2px;
 }
-/* line 33, scss/admin/_tools.scss */
-.admin .tools-list .fa:focus {
+/* line 30, scss/app/_page.scss */
+button.btn-red:focus {
   background: #dd4438;
   border-bottom: 2px solid #b94721;
-  color: #fff;
+  color: white;
 }
 
-/* line 2, scss/admin/_form.scss */
-.admin .form-control {
-  font-weight: bold;
-}
-/* line 6, scss/admin/_form.scss */
-.admin textarea {
-  height: 80%;
-  resize: vertical;
-}
-
-/* line 1, scss/app/_page.scss */
+/* line 37, scss/app/_page.scss */
 .form-control {
   border: 1px solid #dd4438;
   border-radius: 2px;
@@ -111,4 +95,109 @@
 /* line 33, scss/app/_navbar.scss */
 .header .navbar-default .navbar-nav .navbar-right li a {
   outline: none;
+}
+
+/* line 1, scss/app/_episodes.scss */
+.episode-info {
+  color: black;
+}
+/* line 3, scss/app/_episodes.scss */
+.episode-info a {
+  text-decoration: none;
+}
+/* line 6, scss/app/_episodes.scss */
+.episode-info .episode-title {
+  cursor: pointer;
+  text-align: center;
+}
+/* line 9, scss/app/_episodes.scss */
+.episode-info .episode-title:hover {
+  color: #40768c;
+}
+/* line 13, scss/app/_episodes.scss */
+.episode-info .episode-caption {
+  padding: 0 5em 1em 5em;
+  text-align: left;
+  color: black;
+}
+
+/* line 3, scss/app/_landing.scss */
+.menufix {
+  background: #cfe7f0;
+}
+
+/* line 7, scss/app/_landing.scss */
+.btn.btn-default.btn-lg.btn-general {
+  color: white !important;
+  background: #dd4438;
+  border: 2px solid #cfe7f0;
+  border-radius: 4%;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 17px 40px;
+  letter-spacing: 0px;
+  font-size: 17px;
+}
+
+/* line 19, scss/app/_landing.scss */
+.btn.btn-default.btn-lg.btn-general.btn-admin-edit, .btn.btn-default.btn-lg.btn-general.btn-admin-delete {
+  width: 140px;
+  padding: 4% 10%;
+}
+
+/* line 2, scss/admin/_tools.scss */
+.admin ul.tools-list li {
+  display: inline-block;
+  padding-right: 15px;
+  color: black;
+  position: relative;
+}
+/* line 8, scss/admin/_tools.scss */
+.admin .tools-list {
+  border-bottom: 1px solid #ddd;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 35px;
+  padding-left: 0;
+}
+/* line 14, scss/admin/_tools.scss */
+.admin .tools-list a {
+  cursor: pointer;
+}
+/* line 15, scss/admin/_tools.scss */
+.admin .tools-list .fa {
+  background: #dd4438;
+  border-bottom: 2px solid #b94721;
+  border-radius: 2px;
+  border-top: none;
+  color: white;
+  outline: 0;
+  height: 50px;
+  line-height: 1.8em;
+  text-align: center;
+  width: 50px;
+}
+/* line 26, scss/admin/_tools.scss */
+.admin .tools-list .fa:hover {
+  background: #dd4438;
+  border-bottom: 2px solid #b94721;
+  border-radius: 4px;
+  color: white;
+  margin-bottom: -2px;
+}
+/* line 33, scss/admin/_tools.scss */
+.admin .tools-list .fa:focus {
+  background: #dd4438;
+  border-bottom: 2px solid #b94721;
+  color: white;
+}
+
+/* line 2, scss/admin/_form.scss */
+.admin .form-control {
+  font-weight: bold;
+}
+/* line 6, scss/admin/_form.scss */
+.admin textarea {
+  height: 80%;
+  resize: vertical;
 }

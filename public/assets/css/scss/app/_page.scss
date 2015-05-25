@@ -1,5 +1,41 @@
+p.lead {
+  font-family: $primarysans;
+  color: $black;
+}
+
+button.btn-red {
+  font-family: $primarysans;
+  background: $secondarylight;
+  border-bottom: 2px solid $secondarydark;
+  border-radius: 2px;
+  border-top: none;
+  color: $white;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  outline: 0;
+  height: 50px;
+  line-height: 1.8em;
+  text-align: center;
+  width: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  &:hover {
+    background: $secondarylight;
+    border-bottom: 2px solid $secondarydark;
+    border-radius: 4px;
+    color: $primarydark;
+    margin-bottom: -2px;
+  }
+  &:focus {
+    background: $secondarylight;
+    border-bottom: 2px solid $secondarydark;
+    color: $white;
+  }
+}
+
 .form-control {
-  border: 1px solid $primaryred;
+  border: 1px solid $secondarylight;
   border-radius: 2px;
   background:  $white;
   color: $black;

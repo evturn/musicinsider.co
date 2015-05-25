@@ -1,0 +1,18 @@
+.episode-info {
+  color: $black;
+  a {
+    text-decoration: none;
+  }
+  .episode-title {
+    cursor: pointer;
+    text-align: center;
+    &:hover {
+      color: $primarydark;
+    }
+  }
+  .episode-caption {
+    padding: 0 5em 1em 5em;
+    text-align: left;
+    color: $black;
+  }
+}
