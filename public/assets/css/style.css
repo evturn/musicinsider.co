@@ -60,3 +60,10 @@
   height: 80%;
   resize: vertical;
 }
+
+/* line 2, scss/app/_login.scss */
+.login .section-title {
+  padding-top: 50px;
+  text-align: center;
+  font-weight: bold;
+}
