@@ -608,3 +608,26 @@ h6 {
   height: 80%;
   resize: vertical;
 }
+
+/* line 3, scss/admin/_posts.scss */
+.admin .admin-posts .container-posts {
+  background-color: white;
+  padding: 0;
+}
+/* line 6, scss/admin/_posts.scss */
+.admin .admin-posts .container-posts .post-items {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+}
+/* line 11, scss/admin/_posts.scss */
+.admin .admin-posts .container-posts .post-items .post-item {
+  padding: 15px;
+  border-bottom: 1px solid #cfe7f0;
+}
+/* line 14, scss/admin/_posts.scss */
+.admin .admin-posts .container-posts .post-items .post-item p.lead {
+  line-height: 1.8em;
+  margin-bottom: 0;
+}
