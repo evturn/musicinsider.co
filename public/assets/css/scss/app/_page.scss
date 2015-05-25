@@ -1,7 +1,19 @@
-p.lead {
+@import url(http://fonts.googleapis.com/css?family=Dosis:400,500,300,200,600,700,800);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic,900,900italic,100,100italic);
+@import url(../css/lib/font-awesome.css);
+
+body { 
   font-family: $primarysans;
-  color: $black;
+  background-color: $primarylight;
 }
+
+h1 { font-size: 36px; }
+h2 { font-size: 30px; }
+h3 { font-size: 24px; }
+h4 { font-size: 20px; }
+h5 { font-size: 18px; }
+h6 { font-size: 16px; }
+
 
 .btn-general {
   color: $white;

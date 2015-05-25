@@ -7,15 +7,6 @@ $(function() {
     $(".preloader").delay(600).fadeOut("slow");
   });
 
-  $(".header .menu-wrapper").affix({
-    offset: {
-      top: 200, 
-      bottom: function () {
-      return (this.bottom = $('.copyrights').outerHeight(true))
-      }
-    }
-  });
-
   $(window).scroll(function(){
       if ($(this).scrollTop() > 1) {
           $('.dmtop').css({bottom:"25px"});

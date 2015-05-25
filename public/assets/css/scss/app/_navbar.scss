@@ -1,37 +1,64 @@
-.header {
-  .menu-wrapper.affix {
-    position: relative;
-    position: fixed;
-    background: $white;
+.navbar-default {
+  position: relative;
+  background: $white;
+  height: 50px;
+  width: 100%;
+  margin:0;
+  padding: 0;
+  margin-bottom: 100px;
+  top: 0;
+  right: 0;
+  z-index: 9000;
+  transition: all 0.8s;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  .container-fluid {
     height: 50px;
-    width: 100%;
-    padding:0;
-    margin:0;
-    top: 0;
-    right: 0;
-    z-index: 9000;
-    transition: all 0.8s;
-    -webkit-backface-visibility: hidden;
-    -webkit-transform: translateZ(0);
-    -webkit-transition: all 0.8s;
-    -moz-transition: all 0.8s;
-  }
-  .navbar-default {
     background: $white;
-    .navbar-toggle {
-      border: none;
-      background: none;
+    .navbar-header {
+      height: 50px;
+      .navbar-toggle {
+        padding: 0;
+        padding-right: 15px;
+        margin: 0;
+        height: 50px;
+        border: none;
+        background: none;
+      } 
     }
     .navbar-nav {
-      margin: 15px 10px -10px 10px;
       text-transform: uppercase;
       font-weight: normal;
       font-size: 19px;
       font-family: $primarysans;
       color: $primarydark;
       .navbar-right {
-        li a { 
-          outline: none;
+        background: $white;
+      }
+    }
+    .navbar-collapse {
+      text-transform: uppercase;
+      background: $white;
+      p {
+          font-size: 19px;
+          margin-bottom: 0;
+        }
+      a {
+        padding: 15px 15px 0 15px;
+      }
+      .nav.navbar-nav {
+        margin: 0;
+        text-align: right;
+      }
+      li {
+        &:hover {
+          background: $primarydark;
+          a { 
+            color: $white;
+            outline: none;
+          }
         }
       }
     }
