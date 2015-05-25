@@ -40,6 +40,6 @@ exports.putPost = function(req, res) {
 exports.deletePost = function(req, res) {
   Post.remove({_id: req.params.id}, function(err) {
     if (err) res.send(err);
-    res.redirect('admin/index', {message: 'Post successfully deleted'});
+    res.redirect('/admin');
   });
 };
