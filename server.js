@@ -4,6 +4,9 @@ var mongoose = require('mongoose');
 var db = require('./config/db')(mongoose);
 var logger = require('morgan');
 var hbs = require('./config/handlebars');
+var appRouter = require('./routes/app-router');
+var adminRouter = require('./routes/admin-router');
+var blogRouter = require('./routes/blog-router');
 
 var app = express();
 
@@ -18,9 +21,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/public'));
 app.use(logger('dev'));
 
-var appRouter = require('./routes/app-router');
-var adminRouter = require('./routes/admin-router');
-var blogRouter = require('./routes/blog-router');
 app.use('/', appRouter);
 app.use('/admin', adminRouter);
 app.use('/blog', blogRouter);
