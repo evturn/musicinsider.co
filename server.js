@@ -1,9 +1,11 @@
 var express = require('express');
+var mongoose = require('mongoose');
 var logger 	= require('morgan');
 var hbs = require('./config/handlebars');
 var appRouter = require('./routes/app-router');
 var adminRouter = require('./routes/admin-router');
 var blogRouter = require('./routes/blog-router');
+var db = require('./config/db')(mongoose);
 
 var app = express();
 
