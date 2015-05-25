@@ -20,3 +20,11 @@ exports.getPost = function(req, res) {
     }
   });
 };
+
+exports.getLogin = function(req, res) {
+  res.render('welcome/login');
+};
+
+exports.postLogin = function(req, res) {
+  res.redirect('/', {layout: 'admin'});
+};

@@ -8,15 +8,15 @@ var admin = express.Router();
 admin.route('/')
   .get(AdminCtrl.getPosts);
 
-admin.get('/new', function(req, res) {
-  res.render('admin/new', {layout: 'admin'});
-});
+admin.route('/new')
+  .get(function(req, res) { res.render('admin/new', {layout: 'admin'});
+ });
 
 admin.route('/:id')
   .get(AdminCtrl.getPost);
 
-admin.post('/login', function(req, res) {
-  res.redirect('/', {layout: 'admin'});
-});
+admin.route('/login')
+  .get(AdminCtrl.getLogin)
+  .post(AdminCtrl.postLogin);
 
 module.exports = admin;
