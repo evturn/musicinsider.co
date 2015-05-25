@@ -3,6 +3,7 @@
     .container-posts {
       background-color: $white;
       padding: 0;
+      border-radius: 2px;
       .post-items {
         margin: 0;
         padding: 0;
@@ -11,9 +12,18 @@
         .post-item {
           padding: 15px;
           border-bottom: 1px solid $primarylight;
+          a {
+            text-decoration: none;
+          }
           p.lead {
             line-height: 1.8em;
             margin-bottom: 0;
+          }
+          &:hover {
+            background-color: $primarydark;
+            p.lead {
+              color: $white;
+            }
           }
         }
       }
