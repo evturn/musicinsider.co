@@ -1,6 +1,7 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var logger 	= require('morgan');
+var bodyParser = require('body-parser');
 var hbs = require('./config/handlebars');
 var appRouter = require('./routes/app-router');
 var adminRouter = require('./routes/admin-router');
@@ -13,14 +14,15 @@ app.set('view engine', 'hbs');
 app.set('views', 'views');
 app.engine('hbs', hbs.engine);
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
 app.use(express.static(__dirname + '/public'));
 app.use(logger('dev'));
-
 
 app.use('/', appRouter);
 app.use('/admin', adminRouter);
 app.use('/blog', blogRouter);
-
 
 app.set('port', process.env.PORT || 3000);
 app.listen(app.get('port'), function() {
