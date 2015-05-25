@@ -34,7 +34,14 @@ exports.getPost = function(req, res) {
 };
 
 exports.putPost = function(req, res) {
-
+  Post.update({_id: req.params.id}, 
+    {
+      title : req.body.title,
+      body  : req.body.body
+    }, function(err) {
+      if (err) res.send(err);
+      res.redirect('/admin');
+  });
 };
 
 exports.deletePost = function(req, res) {
