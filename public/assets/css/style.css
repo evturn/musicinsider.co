@@ -8622,9 +8622,9 @@ h6 {
   letter-spacing: 0.1em;
   position: relative;
   text-transform: uppercase;
+  margin-bottom: 50px;
 }
-
-/* line 24, scss/app/_page.scss */
+/* line 23, scss/app/_page.scss */
 .section-title .font-backend {
   bottom: -30px;
   color: white;
@@ -8637,15 +8637,14 @@ h6 {
   height: 120px;
   line-height: 120px;
 }
-
-/* line 38, scss/app/_page.scss */
+/* line 35, scss/app/_page.scss */
 .section-title .lead {
   font-size: 18px;
   line-height: 2;
   margin-top: 40px;
 }
 
-/* line 44, scss/app/_page.scss */
+/* line 43, scss/app/_page.scss */
 .btn-general {
   color: white;
   background: #dd4438;
@@ -8658,8 +8657,8 @@ h6 {
   font-size: 17px;
 }
 
-/* line 56, scss/app/_page.scss */
-button.btn-red {
+/* line 55, scss/app/_page.scss */
+.btn-red {
   font-family: "Dosis";
   background: #dd4438;
   border-bottom: 2px solid #b94721;
@@ -8677,16 +8676,17 @@ button.btn-red {
   padding-left: 1em;
   padding-right: 1em;
 }
-/* line 73, scss/app/_page.scss */
-button.btn-red:hover {
+/* line 72, scss/app/_page.scss */
+.btn-red:hover {
   background: #dd4438;
   border-bottom: 2px solid #b94721;
   border-radius: 4px;
   color: #cfe7f0;
   margin-bottom: -2px;
+  text-decoration: none;
 }
 /* line 80, scss/app/_page.scss */
-button.btn-red:focus {
+.btn-red:focus {
   background: #dd4438;
   border-bottom: 2px solid #b94721;
   color: white;
@@ -8787,36 +8787,38 @@ button.btn-red:focus {
 }
 
 /* line 1, scss/app/_episodes.scss */
-.episode-info {
-  color: black;
+.episodes {
+  padding-bottom: 100px;
 }
 /* line 3, scss/app/_episodes.scss */
-.episode-info a {
+.episodes .episode-info {
+  color: black;
+}
+/* line 5, scss/app/_episodes.scss */
+.episodes .episode-info a {
   text-decoration: none;
 }
-/* line 6, scss/app/_episodes.scss */
-.episode-info .episode-title {
+/* line 8, scss/app/_episodes.scss */
+.episodes .episode-info .episode-title {
   cursor: pointer;
   text-align: center;
 }
-/* line 9, scss/app/_episodes.scss */
-.episode-info .episode-title:hover {
+/* line 11, scss/app/_episodes.scss */
+.episodes .episode-info .episode-title:hover {
   color: #40768c;
 }
-/* line 13, scss/app/_episodes.scss */
-.episode-info .episode-caption {
+/* line 15, scss/app/_episodes.scss */
+.episodes .episode-info .episode-caption {
   padding: 0 5em 1em 5em;
   text-align: left;
   color: black;
 }
-
-/* line 20, scss/app/_episodes.scss */
-.post-media {
+/* line 22, scss/app/_episodes.scss */
+.episodes .post-media {
   margin-bottom: 20px;
 }
-
-/* line 24, scss/app/_episodes.scss */
-.blog-title h3 {
+/* line 26, scss/app/_episodes.scss */
+.episodes .blog-title h3 {
   text-transform: none;
   font-size: 36px;
 }
@@ -9240,6 +9242,11 @@ button.btn-red:focus {
 .teambox .desc h3 {
   margin: 20px 0 0;
   text-transform: uppercase;
+}
+
+/* line 1, scss/app/_about.scss */
+.about {
+  margin-bottom: 100px;
 }
 
 /* line 2, scss/admin/_tools.scss */

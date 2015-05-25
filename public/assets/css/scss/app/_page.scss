@@ -19,27 +19,26 @@ h6 { font-size: 16px; }
   letter-spacing: 0.1em;
   position: relative;
   text-transform: uppercase;
-}
-
-.section-title .font-backend {
-  bottom: -30px;
-  color: $white;
-  font-family: $secondaryserif;
-  font-size: 120px;
-  left: 0;
-  position: absolute;
-  right: 0;
-  z-index: -1;
-  height: 120px;
-  line-height: 120px;
-}
-
-
-.section-title .lead {
+  margin-bottom: 50px;
+  .font-backend {
+    bottom: -30px;
+    color: $white;
+    font-family: $secondaryserif;
+    font-size: 120px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    height: 120px;
+    line-height: 120px;
+  }
+  .lead {
     font-size: 18px;
     line-height: 2;
     margin-top: 40px;
+  }
 }
+
 
 .btn-general {
   color: $white;
@@ -53,7 +52,7 @@ h6 { font-size: 16px; }
   font-size: 17px;
 }
 
-button.btn-red {
+.btn-red {
   font-family: $primaryserif;
   background: $secondarylight;
   border-bottom: 2px solid $secondarydark;
@@ -76,6 +75,7 @@ button.btn-red {
     border-radius: 4px;
     color: $primarylight;
     margin-bottom: -2px;
+    text-decoration: none;
   }
   &:focus {
     background: $secondarylight;

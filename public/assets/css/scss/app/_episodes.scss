@@ -1,27 +1,30 @@
-.episode-info {
-  color: $black;
-  a {
-    text-decoration: none;
-  }
-  .episode-title {
-    cursor: pointer;
-    text-align: center;
-    &:hover {
-      color: $primarydark;
+.episodes {
+  padding-bottom: 100px;
+  .episode-info {
+    color: $black;
+    a {
+      text-decoration: none;
+    }
+    .episode-title {
+      cursor: pointer;
+      text-align: center;
+      &:hover {
+        color: $primarydark;
+      }
+    }
+    .episode-caption {
+      padding: 0 5em 1em 5em;
+      text-align: left;
+      color: $black;
     }
   }
-  .episode-caption {
-    padding: 0 5em 1em 5em;
-    text-align: left;
-    color: $black;
+
+  .post-media {
+      margin-bottom: 20px;
   }
-}
 
-.post-media {
-    margin-bottom: 20px;
-}
-
-.blog-title h3 {
-    text-transform: none;
-    font-size:36px;
+  .blog-title h3 {
+      text-transform: none;
+      font-size:36px;
+  }
 }
