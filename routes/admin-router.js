@@ -9,5 +9,8 @@ router.get('/new', function(req, res) {
   res.render('admin/new', {layout: 'admin'});
 });
 
+router.post('/login', function(req, res) {
+  res.redirect('/', {layout: 'admin'});
+});
 
 module.exports = router;

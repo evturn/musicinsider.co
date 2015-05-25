@@ -47,18 +47,22 @@
 
 /* line 2, scss/admin/_form.scss */
 .admin .form-control {
-  border: 1px solid #dd4438;
-  border-radius: 2px;
-  background: #fff;
-  color: #000;
-  font-family: Raleway;
-  font-size: 20px;
   font-weight: bold;
 }
-/* line 12, scss/admin/_form.scss */
+/* line 6, scss/admin/_form.scss */
 .admin textarea {
   height: 80%;
   resize: vertical;
+}
+
+/* line 1, scss/app/_page.scss */
+.form-control {
+  border: 1px solid #dd4438;
+  border-radius: 2px;
+  background: white;
+  color: black;
+  font-family: Raleway;
+  font-size: 20px;
 }
 
 /* line 2, scss/app/_login.scss */
@@ -66,4 +70,45 @@
   padding-top: 50px;
   text-align: center;
   font-weight: bold;
+}
+
+/* line 2, scss/app/_navbar.scss */
+.header .menu-wrapper.affix {
+  position: relative;
+  position: fixed;
+  background: white;
+  height: 50px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  right: 0;
+  z-index: 9000;
+  transition: all 0.8s;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+}
+/* line 19, scss/app/_navbar.scss */
+.header .navbar-default {
+  background: white;
+}
+/* line 21, scss/app/_navbar.scss */
+.header .navbar-default .navbar-toggle {
+  border: none;
+  background: none;
+}
+/* line 25, scss/app/_navbar.scss */
+.header .navbar-default .navbar-nav {
+  margin: 15px 10px -10px 10px;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 19px;
+  font-family: Raleway;
+  color: #40768c;
+}
+/* line 33, scss/app/_navbar.scss */
+.header .navbar-default .navbar-nav .navbar-right li a {
+  outline: none;
 }

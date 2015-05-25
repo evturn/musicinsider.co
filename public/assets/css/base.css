@@ -1,12 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:700,400);
 
-.menu-wrapper.affix-top {
-  max-height: 50px;
-}
 
-.menu-wrapper.affix {
-  max-height: 50px;
-}
 
 span.tagline {
   line-height: 1.3em;
@@ -52,73 +46,7 @@ label {
   color: #fff;
 }
 
-.menufix .header-nav {
-  position: relative;
-  background: #fff;
-  padding:0;
-  margin:0;
-}
 
-.navbar-default {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.navbar-default .navbar-nav > li > a {
-  color: #40768c !important;
-  font-size: 19px;
-}
-
-.navbar-nav {
-  margin: 15px 10px -10px 10px;
-}
-
-.navbar-nav > li > a {
-  color: #fff;
-  font-size: 14px;
-  font-weight: 400;
-  margin: 0;
-  outline: none;
-  padding: 0px 21px;
-  text-transform: uppercase;
-}
-
-.navbar-nav > li > a {
-  font-family: 'Raleway', sans-serif;
-}
-
-.header .menu-wrapper.affix .navbar-default {
-  padding: 0;
-}
-
-.header .menu-wrapper.affix {
-  width: 100%;
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateZ(0);
-  top: 0;
-  background: #fff;
-  right: 0;
-  margin-top: 0;
-  margin: 0;
-  position: fixed;
-  z-index: 9000;
-  -webkit-transition: all 0.8s;
-  -moz-transition: all 0.8s;
-  transition: all 0.8s;
-}
-
-.yamm .container-fluid {
-  position: relative;
-  float: right;
-}
-
-.navbar-default {
-  padding: 0;
-}
-
-button.navbar-toggle.collapsed:hover {
-  background: none;
-}
 
 .btn-admin-site {
   color: #fff;
@@ -188,27 +116,4 @@ button.navbar-toggle.collapsed:hover {
 
 .section-about p.lead {
   text-align: left;
-}
-
-@media only screen and (max-width: 768px) {
-  .menu-wrapper {
-    background: #fff;
-    color: #fff;
-  }
-  .navbar-default .navbar-toggle {
-    border: none;
-  }
-  .admin-tools-container {
-    width: 100%;
-    margin-top: 0;
-  }
-
-}
-
-@media only screen and (max-width: 768px) {
-  .navbar-toggle {
-    padding: 0;
-    margin-top: -3px;
-    margin-right: -15px
-  }
 }
