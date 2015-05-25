@@ -1,3 +1,4 @@
+var express = ('express');
 var handlebars = require('express-handlebars');
 
 var viewDirectories = [

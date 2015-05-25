@@ -5,7 +5,7 @@ module.exports = function(mongoose) {
 
   var dbName = 'music-insider';
 
-  mongoose.connect('mongodb://localhost/' + dbName, function(error) {
+  mongoose.connect('mongodb://localhost:27017/' + dbName, function(error) {
     if (error) {
       console.log('Ensure you\'re connected');
     }

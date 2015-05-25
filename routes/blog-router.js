@@ -1,9 +1,9 @@
 var express = require('express');
-var postsCtrl = require('../controllers/posts');
+var BlogCtrl = require('../controllers/blog');
 var blog = express.Router();
 
 blog.route('/')
-  .get(postsCtrl.getPosts)
-  .post(postsCtrl.postPosts);
+  .get(BlogCtrl.getPosts)
+  .post(BlogCtrl.postPosts);
 
 module.exports = blog;
