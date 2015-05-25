@@ -1,0 +1,15 @@
+.admin {
+  input.form-control.admin-input, textarea.form-control.admin-input {
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    background:  #dd4438;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  textarea.form-control.admin-input {
+    height: 80%;
+    resize: vertical;
+  }
+}

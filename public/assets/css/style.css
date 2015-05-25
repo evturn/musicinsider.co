@@ -1,72 +1,24 @@
-/* line 5, scss/admin/_dashboard.scss */
-.admin-form-container {
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-top: 3%;
-  padding-bottom: 2%;
-  margin-bottom: 25px;
-  background: #cfe7f0;
-  color: #fff;
-  border: 1px solid #fff;
-  text-transform: uppercase;
-}
-
-/* line 17, scss/admin/_dashboard.scss */
-.admin-form-container h1 {
-  font-family: 'Raleway', sans-serif;
-  color: #fff;
-  font-weight: 500;
-}
-
-/* line 23, scss/admin/_dashboard.scss */
-.btn-admin-site {
-  color: #fff;
-  float: left;
-  cursor: pointer;
-}
-
-/* line 29, scss/admin/_dashboard.scss */
-.admin-form-login {
-  z-index: 1000;
-}
-
-/* line 33, scss/admin/_dashboard.scss */
-input.form-control.admin-input, textarea.form-control.admin-input {
-  border: 1px solid #ddd;
-  border-radius: 2px;
-  background: #dd4438;
-  color: #fff;
-  font-size: 20px;
-  font-weight: 500;
-}
-
-/* line 42, scss/admin/_dashboard.scss */
-textarea.form-control.admin-input {
-  height: 80%;
-  resize: vertical;
-}
-
-/* line 2, scss/admin/_admin-tools.scss */
-.admin ul.admin-tools-list li {
+/* line 2, scss/admin/_tools.scss */
+.admin ul.tools-list li {
   display: inline-block;
   padding-right: 15px;
   color: #000;
   position: relative;
 }
-/* line 8, scss/admin/_admin-tools.scss */
-.admin .admin-tools-list {
+/* line 8, scss/admin/_tools.scss */
+.admin .tools-list {
   border-bottom: 1px solid #ddd;
   padding-top: 20px;
   padding-bottom: 20px;
   margin-bottom: 35px;
   padding-left: 0;
 }
-/* line 14, scss/admin/_admin-tools.scss */
-.admin .admin-tools-list a {
+/* line 14, scss/admin/_tools.scss */
+.admin .tools-list a {
   cursor: pointer;
 }
-/* line 15, scss/admin/_admin-tools.scss */
-.admin .admin-tools-list .fa {
+/* line 15, scss/admin/_tools.scss */
+.admin .tools-list .fa {
   background: #dd4438;
   border-bottom: 2px solid #b94721;
   border-radius: 2px;
@@ -78,17 +30,32 @@ textarea.form-control.admin-input {
   text-align: center;
   width: 50px;
 }
-/* line 26, scss/admin/_admin-tools.scss */
-.admin .admin-tools-list .fa:hover {
+/* line 26, scss/admin/_tools.scss */
+.admin .tools-list .fa:hover {
   background: #dd4438;
   border-bottom: 2px solid #b94721;
   border-radius: 4px;
   color: #fff;
   margin-bottom: -2px;
 }
-/* line 33, scss/admin/_admin-tools.scss */
-.admin .admin-tools-list .fa:focus {
+/* line 33, scss/admin/_tools.scss */
+.admin .tools-list .fa:focus {
   background: #dd4438;
   border-bottom: 2px solid #b94721;
   color: #fff;
+}
+
+/* line 2, scss/admin/_form.scss */
+.admin input.form-control.admin-input, .admin textarea.form-control.admin-input {
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  background: #dd4438;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+}
+/* line 11, scss/admin/_form.scss */
+.admin textarea.form-control.admin-input {
+  height: 80%;
+  resize: vertical;
 }
