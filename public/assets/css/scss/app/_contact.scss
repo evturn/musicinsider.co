@@ -1,111 +1,37 @@
-.social-icons {
-    margin-left: 10px;
-}
-
-.social-icons a {
-    border:1px solid #959697;
-    color:#fff;
+.contact {
+  background: $black;
+  color: $white;
+  font-family: $primarysans;
+  list-style-type: none;
+  .social-icons a {
+    border:1px solid $white;
+    border-radius: 50%;
+    color: $white;
     width: 40px;
     height: 40px;
-    outline:none;
+    outline: none;
     line-height: 38px;
     display: inline-block;
     text-align: center;
     margin-left: 10px
+  }
+  ul {
+    padding-left: 0;
+    li {
+      list-style: none;
+      margin-bottom: 8px;
+      font-size: 16px;
+      a {
+      color: $primarylight;
+      text-decoration: none;
+      &:hover {
+        color: $secondarylight;
+      }
+      }
+    }
+  }
 }
 
-.about-widget img {
-    margin-bottom: 38px;
-}
-.contact-widget {
-    font-size:16px;
-    line-height: 1.6;
-}
-.footer ul li {
-    list-style: none;
-    margin-bottom: 8px;
-    font-size:16px;
-    color:#0b0b0b;
-}
-
-.footer a {
-    outline: none;
-    color:#0b0b0b;
-}
-
-.footer {
-    background:#fff;
-    padding: 80px 0;
-    position:relative;
-    display:block;
-    font-size:18px;
-    line-height:2;
-    box-sizing: border-box;
-    width: 100%;
-    z-index: 1;
-}
-
-.darkcopyrights,
-.darkfooter {
-    background: #0b0b0b;
-}
-
-.darkcopyrights {
-    border-top-color: #242424;
-    color:#fff;
-}
-
-.darkfooter .social-icons a:hover,
-.darkfooter a,
-.darkfooter p,
-.darkfooter h3 {
-    color:#fff;
-}
-
-.darkfooter hr {
-    border-color:#242424;
-}
-
-.darkfooter .social-icons a {
-    color:#6d6d6d;
-    border-color:#6d6d6d;
-}
-
-.darkfooter .social-icons a:hover {
-    border-color:#fff;
-}
-
-.copyrights {
-    background:#fff;
-    padding:35px 0;
-    font-family: "Dosis",sans-serif;
-    font-size:16px;
-    color:#0b0b0b;
-    font-weight: 500;
-    letter-spacing: 0.4px;
-    text-align: center;
-    position:relative;
-    display:block;
-    border-top:1px solid #f9f9f9;
-}
-
-.footer .social-icons a {
-    margin-left: 0;
-    margin-right: 10px;
-    font-size:14px;
-    border-color:#d8d8d8;
-    color:#d8d8d8;
-}
-
-.footer .social-icons {
-    margin-left: 0;
-    margin-top: 30px;
-}
-
-.footer .social-icons a:hover {
-    border-color:#0b0b0b;
-    color:#0b0b0b;
-}
 
 #preloader {
     width: 100%;
@@ -202,12 +128,4 @@
     -ms-transition: all .7s ease-in-out;
     transition: all .7s ease-in-out;
     overflow: auto;
-}
-
-
-
-.magnifier .buttons h3,
-.teambox .desc h3 {
-  margin:20px 0 0;
-  text-transform: uppercase;
 }
