@@ -85,6 +85,8 @@ h6 {
   background: #dd4438;
   border-bottom: 2px solid #b94721;
   border-radius: 2px;
+  border-right: 2px solid #dd4438;
+  border-left: 2px solid #dd4438;
   border-top: none;
   color: white;
   font-size: 20px;
@@ -92,29 +94,33 @@ h6 {
   text-transform: uppercase;
   outline: 0;
   height: 50px;
-  line-height: 1.8em;
+  line-height: 2em;
   text-align: center;
   width: auto;
   padding-left: 1em;
   padding-right: 1em;
 }
-/* line 72, scss/app/_page.scss */
+/* line 74, scss/app/_page.scss */
 .btn-red:hover {
-  background: #dd4438;
-  border-bottom: 2px solid #b94721;
+  border-bottom: 2px solid #dd4438;
+  border-right: 2px solid #b94721;
+  border-top: 2px solid #b94721;
+  border-left: 2px solid #b94721;
+}
+/* line 79, scss/app/_page.scss */
+.btn-red:hover p {
   border-radius: 4px;
-  color: #cfe7f0;
-  margin-bottom: -2px;
+  margin-bottom: -1px;
   text-decoration: none;
 }
-/* line 80, scss/app/_page.scss */
-.btn-red:focus {
+/* line 86, scss/app/_page.scss */
+.btn-red:focus p {
   background: #dd4438;
   border-bottom: 2px solid #b94721;
   color: white;
 }
 
-/* line 87, scss/app/_page.scss */
+/* line 93, scss/app/_page.scss */
 .form-control {
   border: 1px solid #dd4438;
   border-radius: 2px;
@@ -373,27 +379,43 @@ h6 {
   text-align: center;
   margin-left: 10px;
 }
-/* line 18, scss/app/_contact.scss */
+/* line 17, scss/app/_contact.scss */
+.contact .social-icons a:hover {
+  border: 1px solid #dd4438;
+  color: #dd4438;
+}
+/* line 22, scss/app/_contact.scss */
 .contact ul {
   padding-left: 0;
 }
-/* line 20, scss/app/_contact.scss */
+/* line 24, scss/app/_contact.scss */
 .contact ul li {
   list-style: none;
   margin-bottom: 8px;
   font-size: 16px;
 }
-/* line 24, scss/app/_contact.scss */
+/* line 28, scss/app/_contact.scss */
 .contact ul li a {
   color: #cfe7f0;
   text-decoration: none;
 }
-/* line 27, scss/app/_contact.scss */
+/* line 31, scss/app/_contact.scss */
 .contact ul li a:hover {
   color: #dd4438;
 }
 
-/* line 36, scss/app/_contact.scss */
+/* line 1, scss/app/_about.scss */
+.about {
+  margin-bottom: 100px;
+}
+
+/* line 1, scss/app/_footer.scss */
+.footer {
+  padding-top: 20px;
+  color: #40768c;
+}
+
+/* line 6, scss/app/_footer.scss */
 #preloader {
   width: 100%;
   height: 100%;
@@ -407,7 +429,7 @@ h6 {
   display: block;
 }
 
-/* line 49, scss/app/_contact.scss */
+/* line 19, scss/app/_footer.scss */
 .preloader {
   position: absolute;
   margin: 0 auto;
@@ -425,7 +447,7 @@ h6 {
   border-radius: 50%;
 }
 
-/* line 66, scss/app/_contact.scss */
+/* line 36, scss/app/_footer.scss */
 #spinner {
   position: relative;
   height: 95px;
@@ -440,7 +462,7 @@ h6 {
   animation: rotation 0.750s infinite linear;
 }
 
-/* line 80, scss/app/_contact.scss */
+/* line 50, scss/app/_footer.scss */
 #spinner:before {
   content: "";
   display: block;
@@ -457,56 +479,56 @@ h6 {
 }
 
 @-webkit-keyframes rotation {
-  /* line 96, scss/app/_contact.scss */
+  /* line 66, scss/app/_footer.scss */
   from {
     -webkit-transform: rotate(0deg);
   }
 
-  /* line 97, scss/app/_contact.scss */
+  /* line 67, scss/app/_footer.scss */
   to {
     -webkit-transform: rotate(359deg);
   }
 }
 
 @-moz-keyframes rotation {
-  /* line 100, scss/app/_contact.scss */
+  /* line 70, scss/app/_footer.scss */
   from {
     -moz-transform: rotate(0deg);
   }
 
-  /* line 101, scss/app/_contact.scss */
+  /* line 71, scss/app/_footer.scss */
   to {
     -moz-transform: rotate(359deg);
   }
 }
 
 @-o-keyframes rotation {
-  /* line 104, scss/app/_contact.scss */
+  /* line 74, scss/app/_footer.scss */
   from {
     -o-transform: rotate(0deg);
   }
 
-  /* line 105, scss/app/_contact.scss */
+  /* line 75, scss/app/_footer.scss */
   to {
     -o-transform: rotate(359deg);
   }
 }
 
 @keyframes rotation {
-  /* line 108, scss/app/_contact.scss */
+  /* line 78, scss/app/_footer.scss */
   from {
     transform: rotate(0deg);
   }
 
-  /* line 109, scss/app/_contact.scss */
+  /* line 79, scss/app/_footer.scss */
   to {
     transform: rotate(359deg);
   }
 }
 
-/* line 112, scss/app/_contact.scss */
+/* line 82, scss/app/_footer.scss */
 .dmtop {
-  background-color: #0b0b0b;
+  background-color: #dd4438;
   background-image: url(../img/arrow.png);
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -524,11 +546,7 @@ h6 {
   -ms-transition: all .7s ease-in-out;
   transition: all .7s ease-in-out;
   overflow: auto;
-}
-
-/* line 1, scss/app/_about.scss */
-.about {
-  margin-bottom: 100px;
+  border-radius: 6px;
 }
 
 /* line 2, scss/admin/_tools.scss */

@@ -57,6 +57,8 @@ h6 { font-size: 16px; }
   background: $secondarylight;
   border-bottom: 2px solid $secondarydark;
   border-radius: 2px;
+  border-right: 2px solid $secondarylight;
+  border-left: 2px solid $secondarylight;
   border-top: none;
   color: $white;
   font-size: 20px;
@@ -64,20 +66,24 @@ h6 { font-size: 16px; }
   text-transform: uppercase;
   outline: 0;
   height: 50px;
-  line-height: 1.8em;
+  line-height: 2em;
   text-align: center;
   width: auto;
   padding-left: 1em;
   padding-right: 1em;
   &:hover {
-    background: $secondarylight;
-    border-bottom: 2px solid $secondarydark;
-    border-radius: 4px;
-    color: $primarylight;
-    margin-bottom: -2px;
-    text-decoration: none;
+    border-bottom: 2px solid $secondarylight;
+    border-right:2px solid $secondarydark;
+    border-top:2px solid $secondarydark;
+    border-left: 2px solid $secondarydark;
+    p {
+      border-radius: 4px;
+      margin-bottom: -1px;
+      text-decoration: none;
+    }
   }
-  &:focus {
+
+  &:focus p {
     background: $secondarylight;
     border-bottom: 2px solid $secondarydark;
     color: $white;
