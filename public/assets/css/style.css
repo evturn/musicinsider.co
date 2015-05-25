@@ -1,70 +1,4 @@
-/* line 1, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/admin/_dashboard.scss */
-span.dashboard-close i {
-  color: #000;
-  margin-top: 5px;
-  float: right;
-  cursor: pointer;
-}
-
-/* line 8, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/admin/_dashboard.scss */
-p.dashboard-thanks {
-  margin-top: 35px;
-  font-size: 30px;
-}
-
-/* line 13, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/admin/_dashboard.scss */
-.admin-tools-list {
-  border-bottom: 1px solid #ddd;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin-bottom: 35px;
-  padding-left: 0;
-}
-
-/* line 21, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/admin/_dashboard.scss */
-ul.admin-tools-list li {
-  display: inline-block;
-  padding-right: 15px;
-  color: #000;
-  position: relative;
-}
-
-/* line 28, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/admin/_dashboard.scss */
-ul.admin-tools-list li a {
-  cursor: pointer;
-}
-
-/* line 32, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/admin/_dashboard.scss */
-.admin-tools-list i {
-  background: #dd4438;
-  border-bottom: 2px solid #b94721;
-  border-radius: 2px;
-  border-top: none;
-  color: #fff;
-  outline: 0;
-  height: 50px;
-  line-height: 1.8em;
-  text-align: center;
-  width: 50px;
-}
-
-/* line 45, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/admin/_dashboard.scss */
-.admin-tools-list i:hover {
-  background: #dd4438;
-  border-bottom: 2px solid #b94721;
-  border-radius: 4px;
-  color: #fff;
-  margin-bottom: -2px;
-}
-
-/* line 53, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/admin/_dashboard.scss */
-.admin-tools-list i:focus {
-  background: #dd4438;
-  border-bottom: 2px solid #b94721;
-  color: #fff;
-}
-
-/* line 59, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/admin/_dashboard.scss */
+/* line 5, scss/admin/_dashboard.scss */
 .admin-form-container {
   padding-left: 5%;
   padding-right: 5%;
@@ -77,26 +11,26 @@ ul.admin-tools-list li a {
   text-transform: uppercase;
 }
 
-/* line 71, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/admin/_dashboard.scss */
+/* line 17, scss/admin/_dashboard.scss */
 .admin-form-container h1 {
   font-family: 'Raleway', sans-serif;
   color: #fff;
   font-weight: 500;
 }
 
-/* line 77, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/admin/_dashboard.scss */
+/* line 23, scss/admin/_dashboard.scss */
 .btn-admin-site {
   color: #fff;
   float: left;
   cursor: pointer;
 }
 
-/* line 83, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/admin/_dashboard.scss */
+/* line 29, scss/admin/_dashboard.scss */
 .admin-form-login {
   z-index: 1000;
 }
 
-/* line 87, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/admin/_dashboard.scss */
+/* line 33, scss/admin/_dashboard.scss */
 input.form-control.admin-input, textarea.form-control.admin-input {
   border: 1px solid #ddd;
   border-radius: 2px;
@@ -106,8 +40,55 @@ input.form-control.admin-input, textarea.form-control.admin-input {
   font-weight: 500;
 }
 
-/* line 96, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/admin/_dashboard.scss */
+/* line 42, scss/admin/_dashboard.scss */
 textarea.form-control.admin-input {
   height: 80%;
   resize: vertical;
+}
+
+/* line 2, scss/admin/_admin-tools.scss */
+.admin ul.admin-tools-list li {
+  display: inline-block;
+  padding-right: 15px;
+  color: #000;
+  position: relative;
+}
+/* line 8, scss/admin/_admin-tools.scss */
+.admin .admin-tools-list {
+  border-bottom: 1px solid #ddd;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 35px;
+  padding-left: 0;
+}
+/* line 14, scss/admin/_admin-tools.scss */
+.admin .admin-tools-list a {
+  cursor: pointer;
+}
+/* line 15, scss/admin/_admin-tools.scss */
+.admin .admin-tools-list .fa {
+  background: #dd4438;
+  border-bottom: 2px solid #b94721;
+  border-radius: 2px;
+  border-top: none;
+  color: #fff;
+  outline: 0;
+  height: 50px;
+  line-height: 1.8em;
+  text-align: center;
+  width: 50px;
+}
+/* line 26, scss/admin/_admin-tools.scss */
+.admin .admin-tools-list .fa:hover {
+  background: #dd4438;
+  border-bottom: 2px solid #b94721;
+  border-radius: 4px;
+  color: #fff;
+  margin-bottom: -2px;
+}
+/* line 33, scss/admin/_admin-tools.scss */
+.admin .admin-tools-list .fa:focus {
+  background: #dd4438;
+  border-bottom: 2px solid #b94721;
+  color: #fff;
 }
