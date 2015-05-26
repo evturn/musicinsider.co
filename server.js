@@ -9,7 +9,7 @@ var hbs = require('./config/handlebars');
 var appRouter = require('./routes/app-router');
 var adminRouter = require('./routes/admin-router');
 var blogRouter = require('./routes/blog-router');
-
+var root = __dirname + '/public';
 var app = express();
 
 app.set('view engine', 'hbs');
@@ -26,8 +26,13 @@ app.use(methodOverride(function(req, res){
   }
 }));
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(root));
+appRouter.use(express.static(root));
+blogRouter.use(express.static(root));
+adminRouter.use(express.static(root));
+
 app.use(logger('dev'));
+
 
 app.use('/', appRouter);
 app.use('/admin', adminRouter);
