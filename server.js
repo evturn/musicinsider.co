@@ -1,43 +1,32 @@
 var express = require('express');
-var methodOverride = require('method-override');
-var connect = require('connect')
-var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
-var db = require('./config/db')(mongoose);
-var logger = require('morgan');
-var hbs = require('./config/handlebars');
-var appRouter = require('./routes/app-router');
-var adminRouter = require('./routes/admin-router');
-var blogRouter = require('./routes/blog-router');
-var root = __dirname + '/public';
+    methodOverride = require('method-override'),
+    _method = require('./method-override'),
+    connect = require('connect',
+    bodyParser = require('body-parser'),
+    mongoose = require('mongoose'),
+    db = require('./config/db')(mongoose),
+    logger = require('morgan'),
+    hbs = require('./config/handlebars'),
+    appRouter = require('./routes/app-router'),
+    adminRouter = require('./routes/admin-router'),
+    blogRouter = require('./routes/blog-router'),
+    root = __dirname + '/public';
 
 var app = module.exports = express();
 
 app.set('view engine', 'hbs');
 app.set('views', 'views');
 app.engine('hbs', hbs.engine);
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(methodOverride(function(req, res){
-  if (req.body && typeof req.body === 'object' && '_method' in req.body) {
-    var method = req.body._method
-    delete req.body._method
-    return method
-  }
-}));
-
+app.use(methodOverride(_method));
 app.use(express.static(root));
 appRouter.use(express.static(root));
 blogRouter.use(express.static(root));
 adminRouter.use(express.static(root));
-
 app.use(logger('dev'));
-
-
 app.use('/', appRouter);
 app.use('/admin', adminRouter);
 app.use('/blog', blogRouter);
-
 
 var http = require('./config/http');

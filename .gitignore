@@ -3,3 +3,4 @@ node_modules
 .DS_store
 .sass-cache
 public/assets/css/scss
+npm-debug.log
