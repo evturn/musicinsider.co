@@ -1,12 +1,11 @@
 var express = require('express');
 var Post = require('../models/post');
+var AppCtrl = require('../controllers/app-ctrl'),
+    getPosts = AppCtrl.getPosts;
+
 var router = express.Router();
 
-router.get('/', function(req, res) {
-  Post.find(function(err, posts) {
-    if (err) res.send(err);
-    res.render('welcome/index', {posts: posts});
-  });
-});
+router.route('/')
+  .get(getPosts);
 
 module.exports = router;
