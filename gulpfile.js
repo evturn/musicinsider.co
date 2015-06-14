@@ -18,3 +18,34 @@ gulp.task('compileSass', function() {
   .pipe(sourcemaps.write())
   .pipe(gulp.dest('public/assets/css'));
 });
+
+gulp.task('client-jshint', function() {
+  return gulp.src('public/assets/**/*.js')
+    .pipe(jshint())
+    .pipe(jshint.reporter(stylish));
+});
+
+gulp.task('server-jshint', function() {
+  return gulp.src(serverJS)
+    .pipe(jshint())
+    .pipe(jshint.reporter(stylish))
+    .pipe(livereload());
+});
+
+gulp.task('serve', function() {
+  livereload.listen();
+  nodemon({
+    script: 'server.js',
+    stdout: false
+  }).on('readable', function() {
+    this.stdout.on('data', function(chunk) {
+      if (/^listening/.test(chunk)) {
+        livereload.reload();
+      }
+      process.stdout.write(chunk);
+    });
+  });
+  gulp.watch('public/assets/css/scss/**/*.scss', ['compileSass']);
+  gulp.watch('public/assets/**/*.js', ['client-jshint']);
+  gulp.watch(serverJS, ['server-jshint']);
+});
