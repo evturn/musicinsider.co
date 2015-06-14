@@ -1,5 +1,3 @@
-var express = require('express');
-var mongoose = require('mongoose');
 var Post = require('../models/post');
 
 exports.getPosts = function(req, res) {
