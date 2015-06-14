@@ -1,6 +1,5 @@
-var app = require('../server.js');
+var app = require('../server');
 
-app.set('port', process.env.PORT || 3000);
-app.listen(app.get('port'), function() {
-  console.log('Listening on port ' + app.get('port'));
+  app.listen(3000, function(){
+    console.log('Listening on 3000');
 });

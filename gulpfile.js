@@ -6,8 +6,17 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
     nodemon = require('nodemon'),
     sourcemaps = require('gulp-sourcemaps');
+    
+var serverJS = [ 
+    './controllers/**/*.js',
+    './config/**/*.js',
+    './models/**/*.js',
+    './routes/**/*.js',
+    './models/**/*.js',
+    './gulpfile.js',
+    './server.js'];
 
-gulp.task('default', function() {
+gulp.task('default', ['serve'], function() {
   gutil.log('Gulp running');
 });
 
@@ -35,7 +44,7 @@ gulp.task('server-jshint', function() {
 gulp.task('serve', function() {
   livereload.listen();
   nodemon({
-    script: 'server.js',
+    script: './config/http.js',
     stdout: false
   }).on('readable', function() {
     this.stdout.on('data', function(chunk) {
