@@ -1,10 +1,10 @@
 var gulp = require('gulp'),
+    livereload = require('gulp-livereload'),
+    nodemon = require('nodemon'),
     gutil = require('gulp-util'),
     jshint = require('gulp-jshint'),
     stylish = require('jshint-stylish'),
     sass = require('gulp-sass'),
-    livereload = require('gulp-livereload'),
-    nodemon = require('nodemon'),
     sourcemaps = require('gulp-sourcemaps');
     
 var serverJS = [ 
@@ -16,13 +16,15 @@ var serverJS = [
     './gulpfile.js',
     './server.js'];
 
-gulp.task('default', ['serve'], function() {
+gulp.task('default', ['serve', 'sass'], function() {
   gutil.log('Gulp running');
 });
 
 gulp.task('sass', function() {
   return gulp.src('./public/assets/css/scss/**/*.scss')
-    .pipe(sass())
+    .pipe(sass({sourceComments: 'map',
+      sourceMap: 'sass',
+      outputStyle: 'nested'}))
     .pipe(gulp.dest('./public/assets/css'));
 });
 

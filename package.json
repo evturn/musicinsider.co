@@ -34,6 +34,7 @@
     "passport-local-mongoose": "^1.0.0"
   },
   "devDependencies": {
+    "browser-sync": "^2.7.10",
     "gulp": "^3.9.0",
     "gulp-jshint": "^1.11.0",
     "gulp-livereload": "^3.8.0",
