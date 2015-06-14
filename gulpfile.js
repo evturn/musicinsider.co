@@ -21,7 +21,7 @@ gulp.task('default', ['serve'], function() {
 });
 
 gulp.task('compileSass', function() {
-  return gulp.src('public/assets/css/**/*.scss')
+  return gulp.src('public/assets/css/style.scss')
   .pipe(sourcemaps.init())
   .pipe(sass())
   .pipe(sourcemaps.write())
@@ -54,7 +54,7 @@ gulp.task('serve', function() {
       process.stdout.write(chunk);
     });
   });
-  gulp.watch('public/assets/css/scss/**/*.scss', ['compileSass']);
+  gulp.watch('public/assets/css/**/*.scss', ['compileSass']);
   gulp.watch('public/assets/**/*.js', ['client-jshint']);
   gulp.watch(serverJS, ['server-jshint']);
 });
