@@ -1,7 +1,7 @@
-var express = require('express');
+var express = require('express'),
     methodOverride = require('method-override'),
     _method = require('./method-override'),
-    connect = require('connect',
+    connect = require('connect'),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
     db = require('./config/db')(mongoose),
