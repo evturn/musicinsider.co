@@ -20,12 +20,10 @@ gulp.task('default', ['serve'], function() {
   gutil.log('Gulp running');
 });
 
-gulp.task('compileSass', function() {
-  return gulp.src('public/assets/css/style.scss')
-  .pipe(sourcemaps.init())
-  .pipe(sass())
-  .pipe(sourcemaps.write())
-  .pipe(gulp.dest('public/assets/css'));
+gulp.task('sass', function() {
+  return gulp.src('./public/assets/css/scss/**/*.scss')
+    .pipe(sass())
+    .pipe(gulp.dest('./public/assets/css'));
 });
 
 gulp.task('client-jshint', function() {
@@ -54,7 +52,7 @@ gulp.task('serve', function() {
       process.stdout.write(chunk);
     });
   });
-  gulp.watch('public/assets/css/**/*.scss', ['compileSass']);
+  gulp.watch('public/assets/css/scss/**/*.scss', ['sass']);
   gulp.watch('public/assets/**/*.js', ['client-jshint']);
   gulp.watch(serverJS, ['server-jshint']);
 });
