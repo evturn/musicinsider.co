@@ -10,7 +10,8 @@ var appRouter = require('./routes/app-router');
 var adminRouter = require('./routes/admin-router');
 var blogRouter = require('./routes/blog-router');
 var root = __dirname + '/public';
-var app = express();
+
+var app = module.exports = express();
 
 app.set('view engine', 'hbs');
 app.set('views', 'views');
@@ -39,7 +40,4 @@ app.use('/admin', adminRouter);
 app.use('/blog', blogRouter);
 
 
-app.set('port', process.env.PORT || 3000);
-app.listen(app.get('port'), function() {
-	console.log('Listening on port ' + app.get('port'));
-});
+var http = require('./config/http');
