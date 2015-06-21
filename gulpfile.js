@@ -1,11 +1,15 @@
 var gulp = require('gulp'),
+    gutil = require('gulp-util'),
     livereload = require('gulp-livereload'),
     nodemon = require('nodemon'),
-    gutil = require('gulp-util'),
     jshint = require('gulp-jshint'),
     stylish = require('jshint-stylish'),
     sass = require('gulp-sass'),
-    sourcemaps = require('gulp-sourcemaps');
+    sourcemaps = require('gulp-sourcemaps'),
+    uglify = require('gulp-uglify'),
+    concat = require('gulp-concat'),
+    minifyCss = require('gulp-minify-css'),
+    notify = require('gulp-notify');
     
 var serverJS = [ 
     './controllers/**/*.js',
@@ -16,14 +20,16 @@ var serverJS = [
     './gulpfile.js',
     './server.js'];
 
-gulp.task('default', ['serve', 'sass']);
+gulp.task('default', ['serve', 'compileSass', 'server-jshint']);
 
-gulp.task('sass', function() {
-  return gulp.src('./public/assets/css/scss/**/*.scss')
+gulp.task('compileSass', function() {
+  return gulp.src('public/assets/css/scss/**/*.scss')
     .pipe(sass({sourceComments: 'map',
       sourceMap: 'sass',
       outputStyle: 'nested'}))
-    .pipe(gulp.dest('./public/assets/css'));
+    .pipe(gulp.dest('public/assets/css'))
+    .pipe(notify('SCSS compilled'))
+    .on('error', gutil.log);
 });
 
 gulp.task('client-jshint', function() {
@@ -52,7 +58,7 @@ gulp.task('serve', function() {
       process.stdout.write(chunk);
     });
   });
-  gulp.watch('public/assets/css/scss/**/*.scss', ['sass']);
+  gulp.watch('public/assets/css/scss/**/*.scss', ['compileSass']);
   gulp.watch('public/assets/**/*.js', ['client-jshint']);
   gulp.watch(serverJS, ['server-jshint']);
 });
