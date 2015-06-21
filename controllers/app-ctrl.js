@@ -5,4 +5,4 @@ exports.getPosts = function(req, res) {
     if (err) res.send(err);
     res.render('welcome/index', {posts: posts});
   });
-}
+};

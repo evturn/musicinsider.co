@@ -20,7 +20,7 @@ var serverJS = [
     './gulpfile.js',
     './server.js'];
 
-gulp.task('default', ['serve', 'compileSass', 'server-jshint']);
+gulp.task('default', ['serve', 'compileSass', 'server-jshint', 'client-jshint']);
 
 gulp.task('compileSass', function() {
   return gulp.src('public/assets/css/scss/**/*.scss')
@@ -28,20 +28,19 @@ gulp.task('compileSass', function() {
       sourceMap: 'sass',
       outputStyle: 'nested'}))
     .pipe(gulp.dest('public/assets/css'))
-    .pipe(notify('SCSS compilled'))
     .on('error', gutil.log);
 });
 
 gulp.task('client-jshint', function() {
   return gulp.src('public/assets/**/*.js')
     .pipe(jshint())
-    .pipe(jshint.reporter(stylish));
+    .pipe(lintError);
 });
 
 gulp.task('server-jshint', function() {
   return gulp.src(serverJS)
     .pipe(jshint())
-    .pipe(jshint.reporter(stylish))
+    .pipe(lintError)
     .pipe(livereload());
 });
 
@@ -61,4 +60,16 @@ gulp.task('serve', function() {
   gulp.watch('public/assets/css/scss/**/*.scss', ['compileSass']);
   gulp.watch('public/assets/**/*.js', ['client-jshint']);
   gulp.watch(serverJS, ['server-jshint']);
+});
+
+var lintError = notify(function(file) {
+  if (file.jshint.success) {
+    return false;
+  }
+  var errors = file.jshint.results.map(function(data) {
+    if (data.error) {
+      return "(" + data.error.line + ':' + data.error.character + ') ' + data.error.reason;
+    }
+  }).join("\n");
+  return file.relative + " (" + file.jshint.results.length + " errors)\n" + errors;
 });
