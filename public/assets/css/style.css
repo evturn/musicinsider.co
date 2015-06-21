@@ -311,7 +311,7 @@ h6 {
   letter-spacing: 0.1em;
   position: relative;
   text-transform: uppercase;
-  margin-bottom: 50px; }
+  margin-bottom: 90px; }
   /* line 19, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/partials/app/_page.scss */
   .section-title .font-backend {
     bottom: -30px;
@@ -533,7 +533,10 @@ h6 {
     .episodes .episode-info .episode-caption {
       padding: 0 5em 1em 5em;
       text-align: left;
-      color: #000; }
+      color: #000;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
 
 /* line 1, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/partials/app/_landing.scss */
 .landing {
@@ -616,7 +619,40 @@ h6 {
 
 /* line 1, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/partials/app/_about.scss */
 .about {
+  border-bottom: 1px solid #ffffff;
   margin-bottom: 100px; }
+  /* line 4, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/partials/app/_about.scss */
+  .about .about-content {
+    margin-bottom: 15px;
+    font-family: "Dosis";
+    color: #000;
+    text-transform: uppercase;
+    height: 100%; }
+  /* line 11, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/partials/app/_about.scss */
+  .about .about-img-container {
+    display: none; }
+    @media (min-width: 768px) {
+      /* line 11, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/partials/app/_about.scss */
+      .about .about-img-container {
+        display: block;
+        width: 350px;
+        height: 350px; }
+        /* line 17, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/partials/app/_about.scss */
+        .about .about-img-container .about-img {
+          border-radius: 50%;
+          background-size: cover;
+          padding: 50%; } }
+  /* line 24, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/partials/app/_about.scss */
+  .about .lead {
+    line-height: 1.8em; }
+  /* line 27, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/partials/app/_about.scss */
+  .about li .lead {
+    font-size: 17px; }
+  /* line 30, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/partials/app/_about.scss */
+  .about .emphasis {
+    padding: 20px;
+    font-size: 25px;
+    text-align: center; }
 
 /* line 1, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/partials/app/_footer.scss */
 .footer {
@@ -731,22 +767,22 @@ h6 {
   overflow: auto;
   border-radius: 6px; }
 
-/* line 2, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/partials/blog/_posts.scss */
-.blog-posts .blog-item {
+/* line 1, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/partials/blog/_posts.scss */
+.blog-item {
   background-color: #ffffff;
   margin-bottom: 15px;
   border-radius: 2px;
   padding: 25px;
   border-bottom: 1px solid #d0d2d3;
   border-right: 1px solid #e6e7e8; }
-  /* line 9, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/partials/blog/_posts.scss */
-  .blog-posts .blog-item .blog-header {
+  /* line 8, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/partials/blog/_posts.scss */
+  .blog-item .blog-header {
     text-transform: uppercase; }
-  /* line 12, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/partials/blog/_posts.scss */
-  .blog-posts .blog-item a {
+  /* line 11, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/partials/blog/_posts.scss */
+  .blog-item a {
     text-decoration: none; }
-  /* line 16, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/partials/blog/_posts.scss */
-  .blog-posts .blog-item .blog-img img {
+  /* line 15, /Users/evanturner/src/projects/music-insider/public/assets/css/scss/partials/blog/_posts.scss */
+  .blog-item .blog-img img {
     float: right;
     max-width: 200px; }
 

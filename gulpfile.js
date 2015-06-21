@@ -16,9 +16,7 @@ var serverJS = [
     './gulpfile.js',
     './server.js'];
 
-gulp.task('default', ['serve', 'sass'], function() {
-  gutil.log('Gulp running');
-});
+gulp.task('default', ['serve', 'sass']);
 
 gulp.task('sass', function() {
   return gulp.src('./public/assets/css/scss/**/*.scss')
