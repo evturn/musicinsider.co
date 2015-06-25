@@ -5,13 +5,15 @@ var AC = require('../controllers/admin-ctrl'),
     login = AC.login,
     authenticate = AC.authenticate,
     getAdmin = AC.getAdmin,
+    postAdmin = AC.postAdmin,
     getPost = AC.getPost,
     newPost = AC.newPost;
 
 var admin = express.Router();
 
 admin.route('/')
-  .get(isAdmin, getAdmin);
+  .get(isAdmin, getAdmin)
+  .post(postAdmin);
   
 admin.route('/login')
   .post(authenticate);

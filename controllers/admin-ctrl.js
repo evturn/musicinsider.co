@@ -63,3 +63,20 @@ exports.getPost = function(req, res) {
 exports.newPost = function(req, res) { 
   res.render('admin/new', {layout: 'admin'});
 };
+
+exports.postAdmin = function(req, res) {
+  Admin.register(new Admin({
+    username: req.body.username,
+    name: req.body.name,
+    password: req.body.password
+  }), req.body.password, function(err, user) {
+    if (err) {
+      return res.render('welcome/index', {
+        layout: 'main'
+      });
+    }
+    passport.authenticate('local')(req, res, function() {
+      res.redirect('/admin');
+    });
+  });
+};
