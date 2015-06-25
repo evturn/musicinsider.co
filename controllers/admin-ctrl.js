@@ -4,12 +4,12 @@ var Post = require('../models/post');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var LocalConfig = require('../config/passport-local');
-var User = require('../models/user');
+var Admin = require('../models/admin');
 
 
 exports.isAdmin = function(req, res, next) {
   if (req.isAuthenticated()) {
-    console.log('getAuth(): ', req);
+    console.log('isAdmin(): ', req);
     return next();
   }
   res.render('admin/login', {
@@ -17,7 +17,33 @@ exports.isAdmin = function(req, res, next) {
   });
 };
 
-exports.getPosts = function(req, res) {
+exports.login = function(req, res) {
+  res.render('admin/login', {
+    layout: 'main'
+  });
+};
+
+exports.authenticate = function(req, res, next) {
+  passport.authenticate('local', function(err, user, info) {
+    if (err) {
+      return next(err);
+    }
+    if (!user) {
+      return res.redirect('/admin/login', {
+        layout: 'main', 
+        message: 'Incorrect credentials'
+      });
+    }
+    req.logIn(user, function(err) {
+      if (err) {
+        return next(err);
+      }
+      return res.redirect('/admin');
+    });
+  })(req, res, next);
+};
+
+exports.getAdmin = function(req, res) {
   Post.find(function(err, posts) {
     if (err) res.send(err);
     res.render('admin/index', {layout: 'admin', posts: posts});
@@ -34,27 +60,6 @@ exports.getPost = function(req, res) {
   });
 };
 
-exports.createPost = function(req, res) { 
+exports.newPost = function(req, res) { 
   res.render('admin/new', {layout: 'admin'});
-};
-
-exports.getAdmin = function(req, res) {
-  res.render('admin/login');
-};
-
-exports.postAdmin = function(req, res, next) {
-  passport.authenticate('local', function(err, user, info) {
-    if (err) {
-      return next(err);
-    }
-    if (!user) {
-      return res.redirect('/');
-    }
-    req.logIn(user, function(err) {
-      if (err) {
-        return next(err);
-      }
-      return res.redirect('/admin');
-    });
-  })(req, res, next);
 };

@@ -1,24 +1,26 @@
 var express = require('express');
 var Post = require('../models/post');
-var AdminCtrl = require('../controllers/admin-ctrl'),
-    isAdmin = AdminCtrl.isAdmin,
-    getAdmin = AdminCtrl.getAdmin,
-    postAdmin = AdminCtrl.postAdmin,
-    getPosts = AdminCtrl.getPosts;
+var AC = require('../controllers/admin-ctrl'),
+    isAdmin = AC.isAdmin,
+    login = AC.login,
+    authenticate = AC.authenticate,
+    getAdmin = AC.getAdmin,
+    getPost = AC.getPost,
+    newPost = AC.newPost;
 
 var admin = express.Router();
 
 admin.route('/')
-  .get(isAdmin, getPosts);
+  .get(isAdmin, getAdmin);
+  
+admin.route('/login')
+  .post(authenticate);
 
 admin.route('/new')
-  .get(AdminCtrl.createPost);
+  .get(isAdmin, newPost);
 
 admin.route('/:id')
-  .get(AdminCtrl.getPost);
-
-admin.route('/login')
-  .get(AdminCtrl.getAdmin)
-  .post(AdminCtrl.postAdmin);
+  .get(isAdmin, getPost);
+  
 
 module.exports = admin;

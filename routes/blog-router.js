@@ -1,14 +1,15 @@
 var express = require('express');
 var BlogCtrl = require('../controllers/blog-ctrl');
+var isAdmin = require('../controllers/Admin-ctrl').isAdmin;
 var blog = express.Router();
 
 blog.route('/')
   .get(BlogCtrl.getPosts)
-  .post(BlogCtrl.postPosts);
+  .post(isAdmin, BlogCtrl.postPosts);
 
 blog.route('/:id')
   .get(BlogCtrl.getPost)
-  .put(BlogCtrl.putPost)
-  .delete(BlogCtrl.deletePost);
+  .put(isAdmin, BlogCtrl.putPost)
+  .delete(isAdmin, BlogCtrl.deletePost);
 
 module.exports = blog;

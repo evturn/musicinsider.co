@@ -11,7 +11,8 @@ var viewDirectories = [
 var hbs = handlebars.create({
   defaultLayout: 'main',
   extname: '.hbs',
-  partialsDir: viewDirectories
+  partialsDir: viewDirectories,
+  layoutsDir: 'views/layouts'
 });
 
 module.exports = hbs;

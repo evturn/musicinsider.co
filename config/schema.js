@@ -1,39 +1,19 @@
 var mongoose = require('mongoose');
 
-exports.post = function() {
+exports.Admin = function() {
   return new mongoose.Schema({
-    title: {
-      type: String
-    },
-    body: {
-      type: String
-    },
-    createdAt: {
-      type: Date,
-      default: Date.now
-    }
+    name      : {type: String},
+    password  : {type: String, required: true},
+    username  : {type: String, required: true, unique: true},
+    posts     : [postSchema]
+  });
+};
+exports.Post = function() {
+  return new mongoose.Schema({
+    title     : {type: String, required: true},
+    body      : {type: String, required: true},
+    createdAt : {type: Date, default: Date.now}
   });
 };
 
-exports.user = function() {
-  return new mongoose.Schema({
-    name: {
-      type: String,
-      required: true
-    },
-    password: {
-      type: String,
-      required: true
-    },
-    email: {
-      type: String,
-      required: true,
-      unique: true
-    },
-    username: {
-      type: String,
-      required: true,
-      unique: true
-    }
-  });
-};
+var postSchema = this.Post();
