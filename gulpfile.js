@@ -16,11 +16,11 @@ var paths = require('./config/paths');
 gulp.task('default', ['serve', 'compileSass', 'server-jshint', 'client-jshint']);
 
 gulp.task('compileSass', function() {
-  return gulp.src('public/assets/css/scss/**/*.scss')
+  return gulp.src(paths.scss.src)
     .pipe(sass({sourceComments: 'map',
       sourceMap: 'sass',
       outputStyle: 'nested'}))
-    .pipe(gulp.dest('public/assets/css'))
+    .pipe(gulp.dest(paths.scss.dest))
     .on('error', gutil.log);
 });
 
@@ -70,7 +70,7 @@ gulp.task('serve', function() {
       process.stdout.write(chunk);
     });
   });
-  gulp.watch('public/assets/css/scss/**/*.scss', ['compileSass']);
-  gulp.watch('public/assets/**/*.js', ['client-jshint']);
-  gulp.watch(serverJS, ['server-jshint']);
+  gulp.watch(paths.scss.src, ['compileSass']);
+  gulp.watch(paths.js.client, ['client-jshint']);
+  gulp.watch(paths.js.server, ['server-jshint']);
 });

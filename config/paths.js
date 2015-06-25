@@ -10,5 +10,14 @@ module.exports = {
     './server.js'],
     client: [
       'public/assets/**/*.js']
+  },
+  css: {
+    src: [
+      'public/assets/css']
+  },
+  scss: {
+    src: [
+      'public/assets/css/scss/**/*.scss'],
+    dest: 'public/assets/css'
   }
 };
