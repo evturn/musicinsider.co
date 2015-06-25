@@ -1,6 +1,6 @@
 var express = require('express');
 var BlogCtrl = require('../controllers/blog-ctrl');
-var isAdmin = require('../controllers/Admin-ctrl').isAdmin;
+var isAdmin = require('../controllers/admin-ctrl').isAdmin;
 var blog = express.Router();
 
 blog.route('/')
