@@ -11,14 +11,7 @@ var gulp = require('gulp'),
     minifyCss = require('gulp-minify-css'),
     notify = require('gulp-notify');
     
-var serverJS = [ 
-    './controllers/**/*.js',
-    './config/**/*.js',
-    './models/**/*.js',
-    './routes/**/*.js',
-    './models/**/*.js',
-    './gulpfile.js',
-    './server.js'];
+var paths = require('./config/paths');
 
 gulp.task('default', ['serve', 'compileSass', 'server-jshint', 'client-jshint']);
 
@@ -32,7 +25,7 @@ gulp.task('compileSass', function() {
 });
 
 gulp.task('client-jshint', function() {
-  return gulp.src('public/assets/**/*.js')
+  return gulp.src(paths.js.client)
     .pipe(jshint())
     .pipe(notify(function(file) {
     if (file.jshint.success) {
@@ -48,7 +41,7 @@ gulp.task('client-jshint', function() {
 });
 
 gulp.task('server-jshint', function() {
-  return gulp.src(serverJS)
+  return gulp.src(paths.js.server)
     .pipe(jshint())
     .pipe(notify(function(file) {
     if (file.jshint.success) {
