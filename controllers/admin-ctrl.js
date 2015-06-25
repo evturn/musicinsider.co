@@ -1,6 +1,21 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var Post = require('../models/post');
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
+var LocalConfig = require('../config/passport-local');
+var User = require('../models/user');
+
+
+exports.isAdmin = function(req, res, next) {
+  if (req.isAuthenticated()) {
+    console.log('getAuth(): ', req);
+    return next();
+  }
+  res.render('admin/login', {
+    layout: 'main'
+  });
+};
 
 exports.getPosts = function(req, res) {
   Post.find(function(err, posts) {
@@ -23,10 +38,23 @@ exports.createPost = function(req, res) {
   res.render('admin/new', {layout: 'admin'});
 };
 
-exports.getLogin = function(req, res) {
-  res.render('welcome/login');
+exports.getAdmin = function(req, res) {
+  res.render('admin/login');
 };
 
-exports.postLogin = function(req, res) {
-  res.redirect('/', {layout: 'admin'});
+exports.postAdmin = function(req, res, next) {
+  passport.authenticate('local', function(err, user, info) {
+    if (err) {
+      return next(err);
+    }
+    if (!user) {
+      return res.redirect('/');
+    }
+    req.logIn(user, function(err) {
+      if (err) {
+        return next(err);
+      }
+      return res.redirect('/admin');
+    });
+  })(req, res, next);
 };

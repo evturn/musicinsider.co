@@ -11,8 +11,8 @@ exports.getPosts = function(req, res) {
 
 exports.postPosts = function(req, res) {
   var post = new Post({
-    title: req.body.title,
-    body: req.body.body
+    title : req.body.title,
+    body  : req.body.body
   });
 
   post.save(function(err) {
